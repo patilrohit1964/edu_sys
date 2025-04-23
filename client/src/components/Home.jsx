@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -37,12 +38,16 @@ const Home = () => {
                         Tech Skills <span className="italic text-pink-500">Development</span>
                     </h3>
                     <div className="flex space-x-6 mt-8 max-w-md">
-                        <button className="bg-gradient-to-r from-purple-700 to-pink-500 text-white px-6 py-2 rounded font-light text-lg">
-                            Join Now
-                        </button>
-                        <button className="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-6 py-2 rounded font-light text-lg">
-                            Pay Your Fees
-                        </button>
+                        <Link to={"/"}>
+                            <button className="bg-gradient-to-r from-purple-700 to-pink-500 text-white px-6 py-2 rounded font-light text-lg cursor-pointer">
+                                Join Now
+                            </button>
+                        </Link>
+                        <Link to={"/"}>
+                            <button className="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-6 py-2 rounded font-light text-lg cursor-pointer">
+                                Pay Your Fees
+                            </button>
+                        </Link>
                     </div>
                     <div className="flex items-center space-x-4 mt-10">
                         <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-white text-xl cursor-pointer">
