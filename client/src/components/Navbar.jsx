@@ -3,14 +3,14 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'All Courses', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-  { name: 'Blogs', href: '#', current: false },
+  { name: 'Explore Programs', href: '#', current: false },
+  { name: 'Placement', href: '#', current: false },
+  { name: 'Hire From Us', href: '#', current: false },
+  { name: 'Refer and Earn', href: '#', current: false },
 ]
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
@@ -28,14 +28,14 @@ export default function Navbar() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center">
+            <div className="flex shrink-0 items-center h-[57px] w-[57px] mb-1">
               <img
                 alt="Your Company"
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                src="./images/logo.png"
+                className="h-auto w-auto"
               />
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block pt-4">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
