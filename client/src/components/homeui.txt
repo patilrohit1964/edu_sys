@@ -1,0 +1,73 @@
+import React from 'react'
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
+const Home = () => {
+    return (
+        <>
+            <div
+                className="relative"
+                data-aos="fade-right"
+            // style={{
+            //     background:
+            //         "radial-gradient(ellipse at top left, #ed3a85 0%, transparent 30%), radial-gradient(ellipse at bottom left, #000 0%, transparent 100%), radial-gradient(ellipse at top right, #81039b 0%, transparent 40%)",
+            //     backgroundColor: "black"
+            // }}
+            >
+                {/* <div className="flex flex-col md:w-1/2 max-w-lg text-left text-white relative z-10 mb-36">
+                <div className="mt-10 md:mt-0">
+                    <h1 className="sm:text-5xl font-normal leading-tight mb-1 flex items-center space-x-3">
+                        <span className='text-[80px]'>India's No.1</span>
+                        <div className='h-18 w-18'>
+                            <img src="./images/firebg.png" alt="" className='h-full w-full object-cover' />
+                        </div>
+                    </h1>
+                    <h2 className="text-[70px] sm:text-6xl font-normal leading-tight mb-1 text-pink-500 border-b border-pink-500 pb-1">
+                        Institute for
+                    </h2>
+                    <h3 className="text-[75px] sm:text-6xl font-normal leading-tight text-white border-b border-pink-500 pb-1 italic">
+                        Tech Skills <span className="italic text-pink-500 text-[70px]">Development</span>
+                    </h3>
+                    <div className="flex space-x-6 mt-8 max-w-md">
+                        <Link to={"/"}>
+                            <button className="bg-gradient-to-r from-purple-700 to-pink-500 text-white px-6 py-2 rounded font-light text-lg cursor-pointer">
+                                Join Now
+                            </button>
+                        </Link>
+                        <Link to={"/"}>
+                            <button className="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-6 py-2 rounded font-light text-lg cursor-pointer">
+                                Pay Your Fees
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="flex items-center space-x-4 mt-10">
+                        <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-white text-xl cursor-pointer">
+                            <FaLongArrowAltRight />
+                        </div>
+                        <div className="flex space-x-3 text-pink-500 text-2xl">
+                            <span>•</span>
+                            <span>•</span>
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='h-[750px] w-[750px]' data-aos="fade-up">
+                
+            </div> */}
+                <img src="./images/bha.jpg" controls className='h-full w-full' loop autoPlay></img>
+                <div className='absolute w-[470px] border flex justify-between bottom-[260px] left-[100px]'>
+                    <Link to="/placement">
+                        <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-[221px] py-3 cursor-pointer px-10 text-white'>Join Now</button>
+                    </Link>
+                    <Link to="/refer-earn">
+                        <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-[221px] py-3 cursor-pointer px-10 text-white'>Pay Your Fees</button>
+                    </Link>
+                </div>
+            </div>
+            <h1 className='text-5xl text-center mt-10 font-mono'>Top Hiring</h1>
+        </>
+    )
+}
+
+export default Home;
