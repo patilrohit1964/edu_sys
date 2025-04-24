@@ -33,7 +33,7 @@ export default function Navbar() {
               <img
                 alt="Your Company"
                 src="./images/logo.png"
-                className="h-auto w-auto"
+                className="h-auto w-auto cursor-pointer"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block pt-4">
