@@ -7,7 +7,8 @@ import Explore_Programs from './pages/Explore_Programs'
 import Placement from './pages/Placement'
 import Hire from './pages/Hire'
 import Refer_Earn from './pages/Refer_Earn'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -26,6 +27,10 @@ const App = () => {
         });
       }
     };
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
     return null;
   }, [])
   return (
