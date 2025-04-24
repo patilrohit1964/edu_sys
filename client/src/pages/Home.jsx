@@ -44,9 +44,9 @@ export default Home;
 
 
 const companies = [
-    { name: 'TCS', logo: 'https://logos-world.net/wp-content/uploads/2021/02/TCS-Logo.png' },
-    { name: 'Wipro', logo: 'https://1000logos.net/wp-content/uploads/2021/10/Wipro-Logo.png' },
-    { name: 'Infosys', logo: 'https://companieslogo.com/img/orig/INFY_BIG-bbba90b3.png?t=1632523694' },
+    { name: 'TCS', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8nviwscycHoCH9Uu_7cTAln1FD5DMnA6VHQ&s' },
+    { name: 'Wipro', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJWz0x6wPY8ll39vR-0PSYDCFJ5UnbRizLA&s' },
+    { name: 'Infosys', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNqry-FhX4d1mq_NMkxrIwJNW2sOW89VOB_Q&s' },
     { name: 'Amazon', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
     { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
     { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
@@ -54,22 +54,22 @@ const companies = [
     { name: 'IBM', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg' },
     { name: 'Deloitte', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShZPguIZ1BOke9vRuQGD7j9vo260_vS6td1A&s' },
     { name: 'HCL', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYMcsSX0qDudgkDGbFxOHHbVSYjgx87PyUVw&s' },
-    { name: 'Tech Mahindra', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVyOzZibJKEF1rv-7Fo9u97SY20jJlKWXxA&s' },
+    { name: 'Tech Mahindra', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAp7ZMhZM_RWBkU1FuA1m779bmPLuvgQMDDg&s' },
     { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2ZicVxzhJMQ17O5sBUG0p-VH_KpyfSSzgg&s' },
     { name: 'Cisco', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9v0pmVusLhqhHF52jVvXwLAhxSNMF9YaMA&s' },
     { name: 'Accenture', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR18i6UjpWI0P3cGWo02kxlDqBBp-49SZPYaw&s' },
-    { name: 'Flipkart', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/12/Flipkart_logo.png' },
+    { name: 'Flipkart', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeslN4b3kNaNqPpBWWUu7bQiyiYUBOydzrw&s' },
     { name: 'Cognizant', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ34EvxoJXMNn3_pwm51bVbl4NQcTE8NR7Hog&s' },
-    { name: 'Byju\'s', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgrgAsBVylE8itejXnXhPQixFXKHD4mMQWEQ&s' },
+    { name: 'Jp Morgan', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEMX4n_oPg-kQ7aLnw5FDQQlscqxYqMMoXyg&s' },
     { name: 'Zoho', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlgSVY-g5htp7WIXUuZVDCZaiTgssj4pcTXQ&s' },
-    { name: 'Freshworks', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmELtS7pt3nRKfiWUZ6xTirAwPBR0a5KLyCg&s' },
-    { name: 'Paytm', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdzu-_prFnRn1huB8oiBqHYHvjLomlq5rDKA&s' },
+    { name: 'Lenovo', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhspQWp--H50rj2t3X7cYN96xTRmS_a3ILSA&s' },
+    { name: 'Paytm', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKsMQbLUxt1q_JSJL1Nxu9ulFT940gymCDg&s' },
     { name: 'PhonePe', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiuepQRdgOS4iohfLkyB4g-X_48TE99D9Tg&s' },
     { name: 'Tata Digital', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKhnqcCi-vJpW7MO8FYhN6p80SpSovF-2_vA&s' },
     { name: 'L&T', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqTx4netOiYcxhxWfH2etiZT8cb2BE_hhbHQ&s' },
     { name: 'Samsung', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg' },
     { name: 'Bosch', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0VL6ETfNzY4PzoaCOwPxZMePyuCEvkoXwKg&s' },
-    { name: 'Adobe', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/Adobe_Systems_logo_and_wordmark.svg' },
+    { name: 'Adobe', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BdTRc8A-_c91xFMzkr-kYRQFM0KKu0QA3A&s' },
     { name: 'Intel', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0HncX4B_UiQnmbeVf4ewhi1WC2qKFWRQ9Wg&s' },
     { name: 'Nvidia', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRanV-9JSqPLuk_DZNVMS_3eh0xj1eouy2Upw&s' },
     { name: 'Uber', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiiSWDZlNLnAnPvhfV-Dkt8cdivdFKwLgdVw&s' },
@@ -98,7 +98,7 @@ const HiringCompanies = () => {
                                 <img
                                     src={company.logo}
                                     alt={company.name}
-                                    className="h-16 object-contain grayscale hover:grayscale-0 transition duration-300"
+                                    className="h-16 object-contain  transition duration-300"
                                 />
                             </div>
                         ))}
