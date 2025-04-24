@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div
-            className="relative flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-20 pt-8 md:pt-12 pb-20 md:pb-0 w-full max-w-7xl border"
+            className="relative flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-20 pt-8 md:pt-12 pb-20 md:pb-0 w-full"
             style={{
                 background:
                     "radial-gradient(ellipse at top left, #6f1a3d 0%, transparent 60%), radial-gradient(ellipse at bottom left, #3f0a3a 0%, transparent 60%), radial-gradient(ellipse at top right, #3a0a3f 0%, transparent 60%)",
+                backgroundColor: "black"
             }}
         >
             <div className="flex flex-col md:w-1/2 max-w-lg text-left text-white relative z-10 mb-36">

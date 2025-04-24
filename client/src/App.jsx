@@ -29,7 +29,7 @@ const App = () => {
     return null;
   }, [])
   return (
-    <div className='bg-black'>
+    <div className=''>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />}></Route>
