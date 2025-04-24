@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Button } from './components/ui/button'
 import Navbar from './components/Navbar'
-import Home from './components/Home'
+import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
 import Explore_Programs from './pages/Explore_Programs'
 import Placement from './pages/Placement'
