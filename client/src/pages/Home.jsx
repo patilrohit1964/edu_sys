@@ -36,6 +36,29 @@ const Home = () => {
             </div>
             <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir]'>Top Hiring Companies</h1>
             <HiringCompanies />
+            <div className="mt-10">
+                <h1 className="text-3xl text-center font-[agrandir]">Why Tech Mind Education</h1>
+
+                <div className="h-[550px] overflow-hidden relative mt-5">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1000 120"
+                        className="absolute top-0 left-0 w-full h-full object-cover"
+                        preserveAspectRatio="none"
+                    >
+                        <rect fill="#000000" width="1000" height="120" />
+                        <g fill="none" stroke="#222" strokeWidth="10" strokeOpacity="1">
+                            <path d="M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                            <path d="M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                            <path d="M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                            <path d="M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                            <path d="M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                            <path d="M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
         </>
     )
 }
@@ -92,7 +115,9 @@ const HiringCompanies = () => {
         <div className="bg-white py-6 mt-10">
             {chunkedCompanies.map((group, index) => (
                 <div key={index} className="mb-20">
-                    <Marquee speed={50 + index * 10} gradient={true} pauseOnHover={false}>
+                    <Marquee speed={50 + index * 10} gradient={true} pauseOnHover={false}
+                        direction={index == 0 ? "right" : index == 2 ? 'right' : 'left'}
+                    >
                         {group.map((company, idx) => (
                             <div key={idx} className="mx-8 flex items-center w-[100px] h-[100px]">
                                 <img
