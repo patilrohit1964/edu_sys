@@ -2,7 +2,7 @@ import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
-
+import { FaStarHalfAlt } from "react-icons/fa";
 const Home = () => {
     return (
         <>
@@ -36,10 +36,10 @@ const Home = () => {
             </div>
             <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir]'>Top Hiring Companies</h1>
             <HiringCompanies />
-            <div className="mt-10">
+            <div>
                 <h1 className="text-3xl text-center font-[agrandir]">Why Tech Mind Education</h1>
 
-                <div className="h-[550px] overflow-hidden relative mt-5">
+                <div className="h-[650px] overflow-hidden relative mt-5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1000 120"
@@ -56,7 +56,42 @@ const Home = () => {
                             <path d="M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
                         </g>
                     </svg>
+                    {/* 4 boxes */}
+                    <div className="absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10">
+                        <div className="h-[480px] w-[300px] border-8 border-white  text-center text-white font-bold py-4">
+                            <h2 className='text-2xl font-[agrandir] mb-4'>Professional Conseling</h2>
+                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
+                                <ul className='p-2'>
+                                    <li>
+                                        <div className='flex items-center justify-center'>
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                        </div>
+                                        <p className='text-black text-xl pt-2 font-bold'>
+                                            Get Free Counseling From India's Best Professional Counsellers
+                                        </p>
+                                        <div>
+                                            <img src="./images/lady-bg.png" alt="" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold mt-20">
+                            Box 2
+                        </div>
+                        <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold">
+                            Box 3
+                        </div>
+                        <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold mt-20">
+                            Box 4
+                        </div>
+                    </div>
                 </div>
+                <div className='h-96'></div>
             </div>
 
         </>
