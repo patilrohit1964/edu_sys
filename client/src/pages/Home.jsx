@@ -3,6 +3,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { FaStarHalfAlt } from "react-icons/fa";
+import mySvg from '../../public/images/svg.svg'
+import box2 from '../../public/images/box2.svg'
 const Home = () => {
     return (
         <>
@@ -58,7 +60,7 @@ const Home = () => {
                     </svg>
                     {/* 4 boxes */}
                     <div className="absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10">
-                        <div className="h-[480px] w-[300px] border-8 border-white  text-center text-white font-bold py-4">
+                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
                             <h2 className='text-2xl font-[agrandir] mb-4'>Professional Conseling</h2>
                             <div className='h-36 w-[250px] bg-white border border-white m-auto'>
                                 <ul className='p-2'>
@@ -73,15 +75,34 @@ const Home = () => {
                                         <p className='text-black text-xl pt-2 font-bold'>
                                             Get Free Counseling From India's Best Professional Counsellers
                                         </p>
-                                        <div>
-                                            <img src="./images/lady-bg.png" alt="" />
-                                        </div>
                                     </li>
                                 </ul>
                             </div>
+                            <div className='h-[390px] w-full'>
+                                <img src={mySvg} alt="" className='w-full h-full block -mt-10' />
+                            </div>
                         </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold mt-20">
-                            Box 2
+                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4 overhi">
+                            <h2 className='text-3xl font-[agrandir] mb-4'>Quality Training</h2>
+                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
+                                <ul className='p-2'>
+                                    <li>
+                                        <div className='flex items-center justify-center'>
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                        </div>
+                                        <p className='text-black text-xl pt-2 font-bold'>
+                                            Get Trained By India's Best Professional Trainers
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='h-[390px] w-full'>
+                                <img src="./images/men.jpg" alt="" className='w-full h-full block -mt-10' />
+                            </div>
                         </div>
                         <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold">
                             Box 3
