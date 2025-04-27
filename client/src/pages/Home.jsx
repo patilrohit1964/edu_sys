@@ -4,44 +4,49 @@ import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { FaStarHalfAlt } from "react-icons/fa";
 import mySvg from '../../public/images/svg.svg'
-import box2 from '../../public/images/box2.svg'
+import box2 from '../../public/images/tr.svg'
+import final from '../../public/images/final.svg'
+import robot from '../../public/images/box2.svg'
+import course from '../../public/images/course-bg.svg'
 const Home = () => {
     return (
         <>
-            <div
-                className="relative w-full"
-                data-aos="fade-right"
-            >
-                <img src="./images/bha.jpg" controls className='h-full w-full object-cover' loop autoPlay></img>
-                <div className='absolute hidden md:w-[562px] px-4 md:px-0 md:flex flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4 md:gap-0'>
-                    <Link to="/placement" className='w-full md:w-auto'>
-                        <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 cursor-pointer px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
-                    </Link>
-                    <Link to="/refer-earn" className='w-full md:w-auto'>
-                        <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 cursor-pointer px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2'>Pay Your Fees</button>
-                    </Link>
+            <section>
+                <div
+                    className="relative w-full"
+                    data-aos="fade-right"
+                >
+                    <img src="./images/bha.jpg" className='h-full w-full object-cover'></img>
+                    <div className='absolute hidden md:w-[562px] px-4 md:px-0 md:flex flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4 md:gap-0'>
+                        <Link to="/placement" className='w-full md:w-auto'>
+                            <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 cursor-pointer px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
+                        </Link>
+                        <Link to="/refer-earn" className='w-full md:w-auto'>
+                            <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 cursor-pointer px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2'>Pay Your Fees</button>
+                        </Link>
+                    </div>
+                    <div className='absolute bottom-[100px] left-[150px] text-white flex-wrap hidden'>
+                        <div>
+                            <p>Over 22K+ Courses views</p>
+                        </div>
+                        <div>
+                            <p>More than 10 Years of Experience</p>
+                        </div>
+                        <div>
+                            <p>1 on 1 Mentorship Session</p>
+                        </div>
+                        <div>
+                            <p>No Job, No Fees</p>
+                        </div>
+                    </div>
                 </div>
-                <div className='absolute bottom-[100px] left-[150px] flex text-white flex-wrap'>
-                    <div>
-                        <p>Over 22K+ Courses views</p>
-                    </div>
-                    <div>
-                        <p>More than 10 Years of Experience</p>
-                    </div>
-                    <div>
-                        <p>1 on 1 Mentorship Session</p>
-                    </div>
-                    <div>
-                        <p>No Job, No Fees</p>
-                    </div>
-                </div>
-            </div>
-            <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir]'>Top Hiring Companies</h1>
+            </section>
+            <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-inset border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
             <HiringCompanies />
-            <div>
-                <h1 className="text-3xl text-center font-[agrandir]">Why Tech Mind Education</h1>
+            <section>
 
-                <div className="h-[650px] overflow-hidden relative mt-5">
+                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 border-inset lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
+                <div className="lg:h-[650px] relative mt-5 lg:overflow-hidden">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1000 120"
@@ -60,8 +65,8 @@ const Home = () => {
                     </svg>
                     {/* 4 boxes */}
                     <div className="absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10">
-                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
-                            <h2 className='text-2xl font-[agrandir] mb-4'>Professional Conseling</h2>
+                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4 mt-3">
+                            <h2 className='text-2xl font-[agrandir] mb-4 truncate'>Professional Conseling</h2>
                             <div className='h-36 w-[250px] bg-white border border-white m-auto'>
                                 <ul className='p-2'>
                                     <li>
@@ -79,11 +84,11 @@ const Home = () => {
                                 </ul>
                             </div>
                             <div className='h-[390px] w-full'>
-                                <img src={mySvg} alt="" className='w-full h-full block -mt-10' />
+                                <img src={mySvg} alt="" className='w-full h-full -mt-10' />
                             </div>
                         </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4 overhi">
-                            <h2 className='text-3xl font-[agrandir] mb-4'>Quality Training</h2>
+                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
+                            <h2 className='text-2xl font-[agrandir] mb-4'>Quality Training</h2>
                             <div className='h-36 w-[250px] bg-white border border-white m-auto'>
                                 <ul className='p-2'>
                                     <li>
@@ -100,19 +105,67 @@ const Home = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className='h-[390px] w-full'>
-                                <img src="./images/men.jpg" alt="" className='w-full h-full block -mt-10' />
+                            <div className='h-[420px] w-full mt-5'>
+                                <img src={box2} alt="" className='w-full h-full -mt-10' />
                             </div>
                         </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold">
-                            Box 3
+                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
+                            <h2 className='text-2xl font-[agrandir] mb-4'>100% Practical</h2>
+                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
+                                <ul className='p-2'>
+                                    <li>
+                                        <div className='flex items-center justify-center'>
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                        </div>
+                                        <p className='text-black text-xl pt-2 font-bold'>
+                                            Get Unlimited Live Projects  Assignments from the industry
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='h-[390px] w-full mt-5'>
+                                <img src={robot} alt="" className='w-full h-full -mt-10' />
+                            </div>
                         </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white flex items-center justify-center text-white font-bold mt-20">
-                            Box 4
+                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
+                            <h2 className='text-2xl font-[agrandir] mb-4'>Pay After Placement</h2>
+                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
+                                <ul className='p-2'>
+                                    <li>
+                                        <div className='flex items-center justify-center'>
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
+                                        </div>
+                                        <p className='text-black text-xl py-3 font-extrabold'>
+                                            #No Job  <br /> No Fees <br /> Get Hired Pay Later
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='h-[400px] w-full mt-5'>
+                                <img src={final} alt="" className='w-full h-full -mt-12' />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className='h-96'></div>
+            </section>
+            <h1 className='text-3xl md:text-5xl text-ceter mt-10 font-[agrandir] borde-8 border-inset border-orange-500 ml-10 m-auto mb-16'>CARRIER TRACKS <br /> Build your carrier</h1>
+            <div className={`relative`}>
+                <img src={course} alt="" />
+                <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
+                    {[1, 2, 3, 4].map(el => (
+                        <div className='h-[400px] w-[45%] border border-white ml-2'>
+                            djfkd
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </>
