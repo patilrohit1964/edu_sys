@@ -8,6 +8,7 @@ import box2 from '../../public/images/tr.svg'
 import final from '../../public/images/final.svg'
 import robot from '../../public/images/box2.svg'
 import course from '../../public/images/course-bg.svg'
+import { FcBullish } from "react-icons/fc";
 const Home = () => {
     return (
         <>
@@ -156,13 +157,23 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <h1 className='text-3xl md:text-5xl text-ceter mt-10 font-[agrandir] borde-8 border-inset border-orange-500 ml-10 m-auto mb-16'>CARRIER TRACKS <br /> Build your carrier</h1>
+            <div
+                className='flex items-center justify-around my-20'
+                style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}>
+                <div>
+                    <FcBullish size={240} />
+                </div>
+                <h1 className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 p-5 border-inset border-orange-500 mb-16'>CAREER TRACKS <br /> Build your Career</h1>
+                <div>
+                    <FcBullish size={240} />
+                </div>
+            </div >
             <div className={`relative`}>
                 <img src={course} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
                     {[1, 2, 3, 4].map(el => (
-                        <div className='h-[400px] w-[45%] border border-white ml-2'>
-                            djfkd
+                        <div className='h-[400px] w-[45%] border border-black ml-2'>
+                                
                         </div>
                     ))}
                 </div>
