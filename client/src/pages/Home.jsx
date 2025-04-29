@@ -9,6 +9,7 @@ import final from '../../public/images/final.svg'
 import robot from '../../public/images/box2.svg'
 import course from '../../public/images/course-bg.svg'
 import { FcBullish } from "react-icons/fc";
+import DataAnalyticsCard from './DataAnalyticCard';
 const Home = () => {
     return (
         <>
@@ -171,10 +172,8 @@ const Home = () => {
             <div className={`relative`}>
                 <img src={course} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
-                    {[1, 2, 3, 4].map(el => (
-                        <div className='h-[400px] w-[45%] border border-black ml-2'>
-                                
-                        </div>
+                    {[{ courseName: "Data with Science Analytics and AI" }, { courseName: "Data Science With Machine Learning and AI" }, { courseName: "Data Analytics and Ai" }, { courseName: "Data Analytics and Ai" }].map(el => (
+                        <DataAnalyticsCard courseName={el.courseName} />
                     ))}
                 </div>
             </div>
