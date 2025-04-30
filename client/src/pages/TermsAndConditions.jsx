@@ -41,10 +41,35 @@ const TermsAndConditions = () => {
                     </li>
                 </ul>
             </div>
-            <div className='my-12 mb-8'>
-                <h3 className='text-4xl text-[#140342] font-bold'>Usage Of The Website And Services</h3>
+            <div className='my-12'>
+                <h3 className='text-xl text-[#140342] font-semibold mb-8'>Usage Of The Website And Services</h3>
                 <p className='text-gray-700 leading-8'>
                     We Grant You A Personal, Restricted, Non-Transferable, Non-Exclusive, And Revocable License To Use The Website, The Services, And The Content And Courseware Offered Through The Website Till The Time The Completion Of The Certification Training Course That You Have Enrolled For Or The Termination Of This Agreement According To The Terms And Conditions Set Forth Herein, Whichever Is Earlier. The Services And The Content And Courseware Are Provided Solely For Your Personal And Non-Commercial Use To Assist You In Completing The Certification Training Course You Have Registered For (“Restricted Purpose”).
+                </p>
+                <p className='my-8 text-gray-700 leading-8'>You Are Permitted Online Access To The Website, The Services, And The Content And Courseware And May Download, Save, Or Print The Content And Courseware Solely For The Restricted Purpose.</p>
+                <p className='text-gray-700 leading-8'>You Are Not Permitted To Reproduce, Transmit, Distribute, Sub-License, Broadcast, Disseminate, Or Prepare Derivative Works Of The Content And Courseware, Or Any Part Thereof, In Any Manner Or Through Any Communication Channels Or Means, For Any Purpose Other Than The Restricted Purpose, Without Our Prior Written Consent.</p>
+            </div>
+            <div>
+                <h3 className='text-xl text-[#140342] font-semibold mb-8'>Content and Courseware.</h3>
+                <p className='text-gray-700 leading-8 mb-8'>
+                    As A Part Of Our Services Offered Through Our Website, We Shall Grant You Access To Our Content, Courseware, Practice Tests, And Other Information, Documents, And Data Which May Be In Audio, Video, Written, Graphic, Recorded, Photographic, Or Any Machine-Readable Format In Relation To The Specific Certification Training Course You Have Registered For (“Content And Courseware”).
+                </p>
+                <p className='text-gray-700 leading-8'>We Reserve The Right To Amend, Revise Or Update The Content And Courseware Offered To You. In The Event Such An Amendment, Revision Or Updating Occurs, We May Require You Pay An Additional Fee To Access Such Amended, Revised, Or Updated Content And Courseware.</p>
+            </div>
+            <div className='my-12'>
+                <h3 className='text-xl text-[#140342] font-semibold mb-8'>Usage Of Personal Information Of Participants</h3>
+                <p className='leading-8 text-gray-700'>
+                    We Reserve The Right To Feature Your Picture In Any Photos, Videos, Or Other Promotional Material Used By Us. Further, We May Use Your Personal Information To Inform You About Other Certification Training Courses Offered By Us. However, We Shall Not Distribute Or Share Your Personal Information With Any Third Party Marketing Database Or Disclose Your Personal Information To Any Third Party Except On A Case-To-Case Basis After Proper Verification Of Such Third Party Or If Required Under Any Applicable Law.
+                </p>
+            </div>
+            <div>
+                <h3 className='text-xl text-[#140342] font-semibold mb-8'>Intellectual Property Right.</h3>
+                <p className='text-gray-700 leading-8'>While you are granted a limited and non-exclusive right to use the Website, the Services, and the Content and Courseware for the Restricted Purpose as set forth in this Agreement, you acknowledge and agree that We are the sole and exclusive owner of the Website, the Services and the Content and Courseware and as such are vested with all Intellectual Property Rights and other proprietary rights in the Website, the Services, and the Content and Courseware. You acknowledge and agree that this Agreement other than permitting you to use the Website, the Services, and the Content and Courseware for the Restricted Purpose does not convey to you in any manner or form any right, title or interest of a proprietary, or any other nature in the Website, the Services, and the Content and Courseware.</p>
+            </div>
+            <div className='my-12'>
+                <h3 className='text-xl text-[#140342] font-semibold mb-8'>Limitation of Liability.</h3>
+                <p className="text-gray-700 leading-8">
+                    You expressly agree that use of the Website, the Services, and the Content and Courseware are at your sole risk. We do not warrant that the Website or the Services or access to the Content and Courseware will be uninterrupted or error free; nor is there any warranty as to the results that may be obtained from the use of the Website, the Services or the Content and Courseware or as to the accuracy or reliability of any information provided through the Website, the Services, or the Content and Courseware. In no event will We or any person or entity involved in creating, producing, or distributing the Website, the Services, or the Content and Courseware be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use of or inability to use the Website, the Services, or the Content and Courseware. The disclaimer of liability contained in this clause applies to any and all damages or injury caused by any failure of performance, error, omission, interruption, deletion, defect, delay in operation or transmission, computer virus, communication line failure, theft or destruction or unauthorized access to, alteration of, or use of records or any other material, whether for breach of contract, negligence, or under any other cause of action. You hereby specifically acknowledge that We are not liable for any defamatory, offensive, wrongful, or illegal conduct of third parties, or other users of the Website, the Services or the Content and Courseware and that the risk of damage or injury from the foregoing rests entirely with each user. You agree that Our liability or the liability of Our affiliates, directors, officers, employees, agents, and licensors, if any, arising out of any kind of legal claim (whether in contract, tort or otherwise) in any way connected with the Services or the Content and Courseware shall not exceed the fee you paid to Us for the particular training course.
                 </p>
             </div>
         </div>
