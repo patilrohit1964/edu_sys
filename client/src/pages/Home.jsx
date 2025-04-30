@@ -172,10 +172,27 @@ const Home = () => {
             <div className={`relative`}>
                 <img src={course} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
-                    {[{ courseName: "Data Science With Analytics and AI" }, { courseName: "Data Science With Machine Learning and AI" }, { courseName: "Data Analytics and Ai" }, { courseName: "Data Analytics and Ai" }].map(el => (
-                        <DataAnalyticsCard courseName={el.courseName} />
-                    ))}
+                    {[{ courseName: "Data Science With Analytics and AI" }, { courseName: "Data Science With Machine Learning and AI" }, { courseName: "Product Management With Analytics and A.I" }, { courseName: "Career Catalyst Pro With AI" }].map((el, index) => {
+                        if (index === 0) {
+                            const parts = el.courseName.split(/ (AI|Ai)/i);
+                            return (
+                                <DataAnalyticsCard
+                                    key={index}
+                                    courseName={
+                                        <>
+                                            {parts[0]}
+                                            <br />
+                                            {parts[1] && parts[1].toUpperCase()}
+                                        </>
+                                    }
+                                />
+                            );
+                        } else {
+                            return <DataAnalyticsCard key={index} courseName={el.courseName} />;
+                        }
+                    })}
                 </div>
+
             </div>
 
         </>

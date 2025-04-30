@@ -59,7 +59,7 @@ export default function DataAnalyticsCard({ courseName, courseInfo }) {
                         </div>
 
                         <div className="flex-grow">
-                            <h2 className="text-2xl font-bold text-gray-800">{courseName}</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 break-words">{courseName}</h2>
                             <p className="text-gray-500 mt-5">
                                 Understand the root cause of business problems by breaking down the
                                 details structurally before presenting solutions. Build and strengthen...
@@ -109,12 +109,12 @@ export default function DataAnalyticsCard({ courseName, courseInfo }) {
                     </div>
                 </div>
 
-                <div className="absolute top-16 right-4 flex flex-col space-y-2">
-                    <div className="bg-orange-500 text-white px-3 py-1 rounded-md text-sm font-medium">
+                <div className="absolute top-12 right-4 flex flex-col space-y-2">
+                    <div className="bg-orange-500 text-white px-3 py-1 rounded-md text-lg font-medium">
                         Limited Seats
                     </div>
-                    <div className="bg-green-400 text-white px-3 py-1 rounded-md text-sm font-medium mt-6">
-                        20% Off
+                    <div className="bg-green-400 text-white px-3 py-1 rounded-md text-lg font-medium mt-10">
+                        30% Off
                     </div>
                 </div>
             </div>
