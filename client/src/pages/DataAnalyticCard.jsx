@@ -1,7 +1,7 @@
 import { Play, FileText, Clock, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 
-export default function DataAnalyticsCard({courseName,courseInfo}) {
+export default function DataAnalyticsCard({ courseName, courseInfo }) {
     const [isHovered, setIsHovered] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [formData, setFormData] = useState({
@@ -60,7 +60,7 @@ export default function DataAnalyticsCard({courseName,courseInfo}) {
 
                         <div className="flex-grow">
                             <h2 className="text-2xl font-bold text-gray-800">{courseName}</h2>
-                            <p className="text-gray-500 mt-2">
+                            <p className="text-gray-500 mt-5">
                                 Understand the root cause of business problems by breaking down the
                                 details structurally before presenting solutions. Build and strengthen...
                             </p>
@@ -113,7 +113,7 @@ export default function DataAnalyticsCard({courseName,courseInfo}) {
                     <div className="bg-orange-500 text-white px-3 py-1 rounded-md text-sm font-medium">
                         Limited Seats
                     </div>
-                    <div className="bg-green-400 text-white px-3 py-1 rounded-md text-sm font-medium">
+                    <div className="bg-green-400 text-white px-3 py-1 rounded-md text-sm font-medium mt-6">
                         20% Off
                     </div>
                 </div>

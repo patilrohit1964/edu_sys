@@ -172,7 +172,7 @@ const Home = () => {
             <div className={`relative`}>
                 <img src={course} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
-                    {[{ courseName: "Data with Science Analytics and AI" }, { courseName: "Data Science With Machine Learning and AI" }, { courseName: "Data Analytics and Ai" }, { courseName: "Data Analytics and Ai" }].map(el => (
+                    {[{ courseName: "Data Science With Analytics and AI" }, { courseName: "Data Science With Machine Learning and AI" }, { courseName: "Data Analytics and Ai" }, { courseName: "Data Analytics and Ai" }].map(el => (
                         <DataAnalyticsCard courseName={el.courseName} />
                     ))}
                 </div>
