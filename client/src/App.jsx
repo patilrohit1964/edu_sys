@@ -9,6 +9,7 @@ import Hire from './pages/Hire'
 import Refer_Earn from './pages/Refer_Earn'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from './components/Footer'
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -31,7 +32,9 @@ const App = () => {
       duration: 1000, // animation duration
       once: true,     // whether animation should happen only once
     });
-    return null;
+    return () => {
+      return null;
+    };
   }, [])
   return (
     <div className=''>
@@ -43,6 +46,7 @@ const App = () => {
         <Route path='/hire' element={<Hire />}></Route>
         <Route path='/refer-earn' element={<Refer_Earn />}></Route>
       </Routes>
+      <Footer />
     </div>
   )
 }

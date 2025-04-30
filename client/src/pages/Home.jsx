@@ -1,206 +1,170 @@
-import React from 'react'
-import { FaLongArrowAltRight } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaStarHalfAlt } from "react-icons/fa";
-import mySvg from '../../public/images/svg.svg'
-import box2 from '../../public/images/tr.svg'
-import final from '../../public/images/final.svg'
-import robot from '../../public/images/box2.svg'
-import course from '../../public/images/course-bg.svg'
 import { FcBullish } from "react-icons/fc";
-import DataAnalyticsCard from './DataAnalyticCard';
+import { Link } from 'react-router-dom';
+import robot from '../../public/images/box2.svg';
+import course from '../../public/images/course-bg.svg';
+import final from '../../public/images/final.svg';
+import mySvg from '../../public/images/svg.svg';
+import box2 from '../../public/images/tr.svg';
+import DataAnalyticsCard from "./DataAnalyticCard"
+
+const features = [
+    {
+        title: 'Professional Counseling',
+        description: "Get Free Counseling From India's Best Professional Counsellors",
+        img: mySvg,
+    },
+    {
+        title: 'Quality Training',
+        description: "Get Trained By India's Best Professional Trainers",
+        img: box2,
+    },
+    {
+        title: '100% Practical',
+        description: "Get Unlimited Live Projects Assignments from the industry",
+        img: robot,
+    },
+    {
+        title: 'Pay After Placement',
+        description: "#No Job\nNo Fees\nGet Hired Pay Later",
+        img: final,
+    },
+];
+
+const FeatureCard = ({ title, description, img }) => (
+    <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
+        <h2 className='text-2xl font-[agrandir] mb-4 truncate'>{title}</h2>
+        <div className='h-36 w-[250px] bg-white border border-white m-auto p-2'>
+            <div className='flex items-center justify-center'>
+                {[...Array(5)].map((_, i) => (
+                    <FaStarHalfAlt key={i} color='yellow' size={35} className='border border-black bg-black' />
+                ))}
+            </div>
+            <p className='text-black text-xl pt-2 font-bold whitespace-pre-line'>{description}</p>
+        </div>
+        <div className='h-[390px] w-full mt-5'>
+            <img src={img} alt={title} className='w-full h-full object-contain -mt-10' />
+        </div>
+    </div>
+);
+
 const Home = () => {
     return (
         <>
+            {/* Hero Section */}
             <section>
-                <div
-                    className="relative w-full"
-                    data-aos="fade-right"
-                >
-                    <img src="./images/bha.jpg" className='h-full w-full object-cover'></img>
-                    <div className='absolute hidden md:w-[562px] px-4 md:px-0 md:flex flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4 md:gap-0'>
+                <div className="relative w-full" data-aos="fade-right">
+                    <img src="./images/bha.jpg" className='w-full object-cover' alt="Hero" />
+                    <div className='absolute hidden md:flex md:w-[562px] flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4'>
                         <Link to="/placement" className='w-full md:w-auto'>
-                            <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 cursor-pointer px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
+                            <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
                         </Link>
                         <Link to="/refer-earn" className='w-full md:w-auto'>
-                            <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 cursor-pointer px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2'>Pay Your Fees</button>
+                            <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2'>Pay Your Fees</button>
                         </Link>
                     </div>
-                    <div className='absolute bottom-[100px] left-[150px] text-white flex-wrap hidden'>
-                        <div>
-                            <p>Over 22K+ Courses views</p>
-                        </div>
-                        <div>
-                            <p>More than 10 Years of Experience</p>
-                        </div>
-                        <div>
-                            <p>1 on 1 Mentorship Session</p>
-                        </div>
-                        <div>
-                            <p>No Job, No Fees</p>
-                        </div>
-                    </div>
                 </div>
             </section>
-            <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-inset border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
-            <HiringCompanies />
-            <section>
 
-                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 border-inset lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
+            {/* Top Hiring Companies */}
+            <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
+            <HiringCompanies />
+
+            {/* Why Tech Minds Education */}
+            <section>
+                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
                 <div className="lg:h-[650px] relative mt-5 lg:overflow-hidden">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1000 120"
-                        className="absolute top-0 left-0 w-full h-full object-cover"
-                        preserveAspectRatio="none"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" className="absolute top-0 left-0 w-full h-full object-cover" preserveAspectRatio="none">
                         <rect fill="#000000" width="1000" height="120" />
                         <g fill="none" stroke="#222" strokeWidth="10" strokeOpacity="1">
-                            <path d="M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-                            <path d="M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-                            <path d="M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-                            <path d="M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-                            <path d="M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-                            <path d="M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+                            {[15, -15, 45, 75, 105, 135].map((y, i) => (
+                                <path key={i} d={`M-500 ${y}c0 0 125-30 250-30S0 ${y} 0 ${y}s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30`} />
+                            ))}
                         </g>
                     </svg>
-                    {/* 4 boxes */}
+
                     <div className="absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10">
-                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4 mt-3">
-                            <h2 className='text-2xl font-[agrandir] mb-4 truncate'>Professional Conseling</h2>
-                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
-                                <ul className='p-2'>
-                                    <li>
-                                        <div className='flex items-center justify-center'>
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                        </div>
-                                        <p className='text-black text-xl pt-2 font-bold'>
-                                            Get Free Counseling From India's Best Professional Counsellers
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className='h-[390px] w-full'>
-                                <img src={mySvg} alt="" className='w-full h-full -mt-10' />
-                            </div>
-                        </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
-                            <h2 className='text-2xl font-[agrandir] mb-4'>Quality Training</h2>
-                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
-                                <ul className='p-2'>
-                                    <li>
-                                        <div className='flex items-center justify-center'>
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                        </div>
-                                        <p className='text-black text-xl pt-2 font-bold'>
-                                            Get Trained By India's Best Professional Trainers
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className='h-[420px] w-full mt-5'>
-                                <img src={box2} alt="" className='w-full h-full -mt-10' />
-                            </div>
-                        </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
-                            <h2 className='text-2xl font-[agrandir] mb-4'>100% Practical</h2>
-                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
-                                <ul className='p-2'>
-                                    <li>
-                                        <div className='flex items-center justify-center'>
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                        </div>
-                                        <p className='text-black text-xl pt-2 font-bold'>
-                                            Get Unlimited Live Projects  Assignments from the industry
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className='h-[390px] w-full mt-5'>
-                                <img src={robot} alt="" className='w-full h-full -mt-10' />
-                            </div>
-                        </div>
-                        <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
-                            <h2 className='text-2xl font-[agrandir] mb-4'>Pay After Placement</h2>
-                            <div className='h-36 w-[250px] bg-white border border-white m-auto'>
-                                <ul className='p-2'>
-                                    <li>
-                                        <div className='flex items-center justify-center'>
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                            <FaStarHalfAlt color='yellow' size={35} className='border border-black bg-black' />
-                                        </div>
-                                        <p className='text-black text-xl py-3 font-extrabold'>
-                                            #No Job  <br /> No Fees <br /> Get Hired Pay Later
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className='h-[400px] w-full mt-5'>
-                                <img src={final} alt="" className='w-full h-full -mt-12' />
-                            </div>
-                        </div>
+                        {features.map((feature, i) => (
+                            <FeatureCard key={i} {...feature} />
+                        ))}
                     </div>
                 </div>
             </section>
-            <div
-                className='flex items-center justify-around my-20'
-                style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}>
-                <div>
-                    <FcBullish size={240} />
-                </div>
-                <h1 className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 p-5 border-inset border-orange-500 mb-16'>CAREER TRACKS <br /> Build your Career</h1>
-                <div>
-                    <FcBullish size={240} />
-                </div>
-            </div >
-            <div className={`relative`}>
+
+            {/* Career Tracks */}
+            <div className='flex items-center justify-around my-20' style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}>
+                <FcBullish size={240} />
+                <h1 className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 p-5 border-inset border-orange-500 mb-16 text-center'>
+                    CAREER TRACKS <br /> Build your Career
+                </h1>
+                <FcBullish size={240} />
+            </div>
+
+            {/* Course Background Image Section */}
+            <div className={'relative'}>
                 <img src={course} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
-                    {[{ courseName: "Data Science With Analytics and AI", courseInfo: "Master Analytics with AI. Pay nothing until placement. Guaranteed salary: ₹6–15 LPA For Freshers & 60% hike for experienced individual. Launch your high-paying career risk-free." }, { courseName: "Data Science With Machine Learning and AI", courseInfo: "No fees until you're hired! Master AI + ML with Data Science . Land ₹6–15 LPA jobs For Fresher and 60% Hike for Experienced Individual. Zero risk. All reward." }, { courseName: "Product Management With Analytics and A.I", courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program." }, { courseName: "Career Catalyst Pro With AI", courseInfo: "Level up your career! Master communication, confidence, and growth skills with Career Catalyst Pro. Be job-ready, earn more, shine bright" }].map((el, index) => {
-                        if (index === 0) {
-                            const parts = el.courseName.split(/ (AI|Ai)/i);
-                            return (
-                                <DataAnalyticsCard
+                    {[
+                        {
+                            courseName: "Data Science With Analytics and AI",
+                            courseInfo: "Master Data Analytics with AI. Pay nothing until placement. Guaranteed salary: ₹6–15 LPA. Launch your high-paying career risk-free.",
+                            infrollments: "18k"
+                        },
+                        {
+                            courseName: "Data Science With Machine Learning and AI",
+                            courseInfo: "No fees until you're hired! Master AI + ML with Data Science . Land ₹6–15 LPA jobs For Fresher and 60% Hike for Experienced Individual. Zero risk. All reward.",
+                            infrollments: "22k"
+                        },
+                        {
+                            courseName: "Product Management With Analytics and A.I",
+                            courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program.",
+                            infrollments: "16k"
+                        },
+                        {
+                            courseName: "Career Catalyst Pro With AI",
+                            courseInfo: "Level up your career! Master communication, confidence, and growth skills with Career Catalyst Pro. Be job-ready, earn more, shine bright",
+                            infrollments: "30k"
+                        }].map((el, index) => {
+                            if (index === 0) {
+                                const parts = el.courseName.split(/ (AI|Ai)/i);
+                                return (
+                                    <DataAnalyticsCard
+                                        key={index}
+                                        courseName={
+                                            <>
+                                                {parts[0]}
+                                                <br />
+                                                {parts[1] && parts[1].toUpperCase()}
+                                            </>
+                                        }
+                                        courseInfo={el.courseInfo}
+                                        infrollments={el.infrollments}
+                                        index={index}
+                                    />
+                                );
+                            } else {
+                                return <DataAnalyticsCard
                                     key={index}
-                                    courseName={
-                                        <>
-                                            {parts[0]}
-                                            <br />
-                                            {parts[1] && parts[1].toUpperCase()}
-                                        </>
-                                    }
+                                    courseName={el.courseName}
                                     courseInfo={el.courseInfo}
-                                />
-                            );
-                        } else {
-                            return <DataAnalyticsCard key={index} courseName={el.courseName} courseInfo={el.courseInfo} />;
-                        }
-                    })}
+                                    infrollments={el.infrollments}
+                                    index={index}
+                                />;
+                            }
+                        })}
                 </div>
 
             </div>
 
+
         </>
-    )
-}
+    );
+};
 
 export default Home;
+
 
 
 const companies = [

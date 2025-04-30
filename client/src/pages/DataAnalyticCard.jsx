@@ -1,7 +1,7 @@
 import { Play, FileText, Clock, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 
-export default function DataAnalyticsCard({ courseName, courseInfo }) {
+export default function DataAnalyticsCard({ courseName, courseInfo, infrollments, index }) {
     const [isHovered, setIsHovered] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [formData, setFormData] = useState({
@@ -31,14 +31,14 @@ export default function DataAnalyticsCard({ courseName, courseInfo }) {
     return (
         <div className="max-w-2xl mx-auto">
             <div className="relative p-4 rounded-t-lg">
-                <div className="absolute top-4 right-4 flex space-x-2">
+                <div className="absolute top-4 right-[35%] flex space-x-2">
                     <div className="bg-white rounded-full py-1 px-3 text-xs flex items-center">
                         <div className="flex -space-x-2 mr-2">
                             <div className="w-5 h-5 rounded-full bg-gray-300"></div>
                             <div className="w-5 h-5 rounded-full bg-gray-400"></div>
                             <div className="w-5 h-5 rounded-full bg-gray-500"></div>
                         </div>
-                        <span className="text-gray-600">10k+ enrollments</span>
+                        <span className="text-gray-600 text-xl">{infrollments} enrollments</span>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@ export default function DataAnalyticsCard({ courseName, courseInfo }) {
                     <div className="bg-orange-500 text-white px-3 py-1 rounded-md text-lg font-medium">
                         Limited Seats
                     </div>
-                    <div className="bg-green-400 text-white px-3 py-1 rounded-md text-lg font-medium mt-10">
+                    <div className={`bg-green-400 text-white px-3 py-1 rounded-md text-lg font-medium ${index == 3 ? 'mt-2' : 'mt-10'}`}>
                         30% Off
                     </div>
                 </div>
