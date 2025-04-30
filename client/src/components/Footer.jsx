@@ -24,21 +24,21 @@ const Footer = () => {
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content flex items-center justify-around p-10">
                 <nav>
                     <h6 className="footer-title">Company</h6>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Success Story</a>
-                    <a className="link link-hover">Payment</a>
+                    <Link className="link link-hover">About us</Link>
+                    <Link className="link link-hover">Success Story</Link>
+                    <Link className="link link-hover">Payment</Link>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Placement</h6>
-                    <a className="link link-hover">Placement reviews</a>
-                    <a className="link link-hover">Hire From Us</a>
+                    <Link className="link link-hover">Placement reviews</Link>
+                    <Link className="link link-hover">Hire From Us</Link>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Terms</h6>
-                    <a className="link link-hover">Terms & Condition</a>
+                    <Link className="link link-hover" to={"/terms-conditions"}>Terms & Condition</Link>
                     <Link className="link link-hover" to={"/privacy-policy"}>Privacy policy</Link>
-                    <a className="link link-hover">Return Policy</a>
-                    <a className="link link-hover">Contact</a>
+                    <Link className="link link-hover">Return Policy</Link>
+                    <Link className="link link-hover">Contact</Link>
                 </nav>
             </footer>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
