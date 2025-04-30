@@ -172,7 +172,7 @@ const Home = () => {
             <div className={`relative`}>
                 <img src={course} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
-                    {[{ courseName: "Data Science With Analytics and AI" }, { courseName: "Data Science With Machine Learning and AI" }, { courseName: "Product Management With Analytics and A.I" }, { courseName: "Career Catalyst Pro With AI" }].map((el, index) => {
+                    {[{ courseName: "Data Science With Analytics and AI", courseInfo: "Master Analytics with AI. Pay nothing until placement. Guaranteed salary: ₹6–15 LPA For Freshers & 60% hike for experienced individual. Launch your high-paying career risk-free." }, { courseName: "Data Science With Machine Learning and AI", courseInfo: "No fees until you're hired! Master AI + ML with Data Science . Land ₹6–15 LPA jobs For Fresher and 60% Hike for Experienced Individual. Zero risk. All reward." }, { courseName: "Product Management With Analytics and A.I", courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program." }, { courseName: "Career Catalyst Pro With AI", courseInfo: "Level up your career! Master communication, confidence, and growth skills with Career Catalyst Pro. Be job-ready, earn more, shine bright" }].map((el, index) => {
                         if (index === 0) {
                             const parts = el.courseName.split(/ (AI|Ai)/i);
                             return (
@@ -185,10 +185,11 @@ const Home = () => {
                                             {parts[1] && parts[1].toUpperCase()}
                                         </>
                                     }
+                                    courseInfo={el.courseInfo}
                                 />
                             );
                         } else {
-                            return <DataAnalyticsCard key={index} courseName={el.courseName} />;
+                            return <DataAnalyticsCard key={index} courseName={el.courseName} courseInfo={el.courseInfo} />;
                         }
                     })}
                 </div>

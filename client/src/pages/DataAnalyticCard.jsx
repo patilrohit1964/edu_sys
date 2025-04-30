@@ -61,8 +61,7 @@ export default function DataAnalyticsCard({ courseName, courseInfo }) {
                         <div className="flex-grow">
                             <h2 className="text-2xl font-bold text-gray-800 break-words">{courseName}</h2>
                             <p className="text-gray-500 mt-5">
-                                Understand the root cause of business problems by breaking down the
-                                details structurally before presenting solutions. Build and strengthen...
+                                {courseInfo}
                             </p>
 
                             <div className="flex flex-wrap gap-4 mt-6">
