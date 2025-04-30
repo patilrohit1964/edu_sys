@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -22,33 +22,70 @@ export default function Peopleslider() {
                 pagination={{
                     clickable: true,
                 }}
-                modules={[FreeMode, Pagination]}
+                modules={[FreeMode]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <div>
-                        <h3 className='text-left text-[#6440FB] font-semibold'>Best Platform</h3>
-                        <p className='py-8'>"One Of the best platform to update your skills and professional career knowledge and getting hands of experience to projects they focus more on practical knowledge".</p>
-                    </div>
-                    <div className='flex items-center justify-around border-t border-t-gray-500 w-full'>
-                        <div className='h-[50px] w-[50px] rounded-full'>
-                            <img src="https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-11.49.04-AM.jpeg.webp" alt="https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-11.49.04-AM.jpeg.webp" className='h-full w-full' />
-                        </div>
-                        <div className='flex flex-col'>
-                            <h3>Anubhuti Singh</h3>
-                            <p>Seniour Data Scientist</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+                {
+                    [
+                        {
+                            name: "Anubhuti Singh",
+                            img: "https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-11.49.04-AM.jpeg.webp",
+                            profession: "Seniour Data Scientist",
+                            about: "One Of the best platform to update your skills and professional career knowledge and getting hands of experience to projects they focus more on practical knowledge"
+                        },
+                        {
+                            name: "Shriyan",
+                            img: "https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-4.00.07-PM.jpeg.webp",
+                            profession: "Business Analyst",
+                            about: "Tech Minds Education courses offer clear and concise content, making complex topics easily understandable.The practical approach and real- world examples enhance learning, making it a valuable."
+                        },
+                        {
+                            name: "Anjaneya",
+                            img: "https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-3.59.10-PM.jpeg.webp",
+                            profession: "Cloud Architech",
+                            about: "Exceptional Courses, Delivering an unparalleled blend of clarity, real world relevance and making it an indispensable resource for us and for others aspiring tech enthusiasts."
+                        },
+                        {
+                            name: "Vibhor Sharma",
+                            img: "https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-3.58.13-PM.jpeg.webp",
+                            profession: "Data Analyst",
+                            about: "Tech Minds Education Data Analyst program provides an engaging and comprehensive learning experience. The instructor deliver complex technical concept in an accessible manner"
+                        },
+                        {
+                            name: "Sanvi",
+                            img: "https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-3.58.34-PM.jpeg.webp",
+                            profession: "Research Analyst",
+                            about: "I found the practical experience provided by Tech Minds is one of the best in industry and they mainly focuses on providing quality education with hands on experience on project"
+                        },
+                        {
+                            name: "Rutvi",
+                            img: "https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-3.59.44-PM.jpeg.webp",
+                            profession: "ML Engineer.",
+                            about: "I am very grateful to tech mind education for helping me in grasping  hands-on approach and real-world application enhances skills, making these courses valuable for anyone looking to excel in the industry."
+                        },
+                    ].map((el) => (
+
+                        <SwiperSlide>
+                            <div>
+                                <h3 className='text-left text-[#6440FB] font-semibold'>Best Platform</h3>
+                                <p className='py-8 text-gray-500'>{el.about}</p>
+                            </div>
+                            <div className='flex items-center justify-around border-t border-t-gray-500 w-full'>
+                                <div className='h-[50px] w-[50px] rounded-full'>
+                                    <img src={el.img} className='h-full w-full' />
+                                </div>
+                                <div className='flex flex-col'>
+                                    <h3>{el.name}</h3>
+                                    <p>{el.profession}</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
             </Swiper>
         </>
     );
 }
+
+
+

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import Peopleslider from '../pages/PeopleSlider';
@@ -8,6 +8,17 @@ const Footer = () => {
 
             <div className='border bg-[#6440FB] mt-25'>
                 <Peopleslider />
+                <div className='flex items-center justify-around pb-10'>
+                    {
+                        [
+                            { target: 1000, title: "Years of experience" },
+                            { target: 1000, title: "Total Course Views" },
+                            { target: 1000, title: "Number of Requests" },
+                            { target: 1000, title: "Hiring Companies" },
+                        ].map(el => (
+                            <AnimatedCounter target={el.target} title={el.title} />
+                        ))}
+                </div>
             </div>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
                 <nav>
@@ -61,3 +72,42 @@ const Footer = () => {
 }
 
 export default Footer
+
+
+import { motion, useAnimationFrame } from "framer-motion";
+
+
+function AnimatedCounter({ target = 1000, duration = 2, title }) {
+    const [count, setCount] = useState(0);
+    const start = 0;
+    const frameRate = 60;
+    const increment = Math.ceil((target - start) / (duration * frameRate));
+
+    useEffect(() => {
+        let current = start;
+        const interval = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(interval);
+            }
+            setCount(current);
+        }, 1000 / frameRate);
+
+        return () => clearInterval(interval);
+    }, [target, duration]);
+
+    return (
+        <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            style={{ fontSize: "3rem", textAlign: "center", marginTop: "50px", color: "#00FF84" }}
+        >
+            <div className='flex flex-col items-center justify-center'>
+                {count}+
+                <p className='text-sm'>{title}</p>
+            </div>
+        </motion.h1>
+    );
+}
