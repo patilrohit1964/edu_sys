@@ -111,6 +111,12 @@ const TermsAndConditions = () => {
                 <h3 className='text-xl text-[#140342] font-semibold mb-8'>Job Guarantee Programs</h3>
                 <p className='text-gray-700 leading-8'>In case you have enrolled to our Job Guaranteed Program Please read our Job Guaranteed Programs terms and condition prior to your enrolment.</p>
             </div>
+            <div>
+                <h3 className='text-xl text-[#140342] font-semibold mb-8'>Grievance Redressal</h3>
+                <p className='text-gray-700 leading-8'>In Case You Have Any Concerns Or Queries, Please Reach Out To Our Grievance Team. Our Grievance Officer Shall Undertake All Reasonable Efforts To Address Your Grievances In The Shortest Possible Time. You May Contact Us At following.</p>
+                <p className='my-5'>Grievance Officer:- Munu Bhat.</p>
+                <p>Email Id:- support@techmindseducation.com</p>
+            </div>
         </div>
     )
 }
