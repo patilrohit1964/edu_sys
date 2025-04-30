@@ -11,10 +11,10 @@ const Footer = () => {
                 <div className='flex items-center justify-around pb-10'>
                     {
                         [
-                            { target: 1000, title: "Years of experience" },
-                            { target: 1000, title: "Total Course Views" },
-                            { target: 1000, title: "Number of Requests" },
-                            { target: 1000, title: "Hiring Companies" },
+                            { target: 10, title: "Years of experience" },
+                            { target: 22289, title: "Total Course Views" },
+                            { target: 18010, title: "Number of Requests" },
+                            { target: 350, title: "Hiring Companies" },
                         ].map(el => (
                             <AnimatedCounter target={el.target} title={el.title} />
                         ))}
@@ -35,7 +35,7 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title">Terms</h6>
                     <a className="link link-hover">Terms & Condition</a>
-                    <a className="link link-hover">Privacy policy</a>
+                    <Link className="link link-hover" to={"/privacy-policy"}>Privacy policy</Link>
                     <a className="link link-hover">Return Policy</a>
                     <a className="link link-hover">Contact</a>
                 </nav>

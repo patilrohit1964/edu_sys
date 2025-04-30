@@ -10,6 +10,7 @@ import Refer_Earn from './pages/Refer_Earn'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -45,6 +46,7 @@ const App = () => {
         <Route path='/placement' element={<Placement />}></Route>
         <Route path='/hire' element={<Hire />}></Route>
         <Route path='/refer-earn' element={<Refer_Earn />}></Route>
+        <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
       </Routes>
       <Footer />
     </div>

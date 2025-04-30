@@ -2,7 +2,7 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FcBullish } from "react-icons/fc";
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import robot from '../../public/images/box2.svg';
 import course from '../../public/images/course-bg.svg';
 import final from '../../public/images/final.svg';
@@ -157,8 +157,6 @@ const Home = () => {
                 </div>
 
             </div>
-
-
         </>
     );
 };
