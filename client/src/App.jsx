@@ -11,6 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsAndConditions from './pages/TermsAndConditions'
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -47,6 +48,7 @@ const App = () => {
         <Route path='/hire' element={<Hire />}></Route>
         <Route path='/refer-earn' element={<Refer_Earn />}></Route>
         <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
+        <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
       </Routes>
       <Footer />
     </div>

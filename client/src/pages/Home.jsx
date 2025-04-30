@@ -2,34 +2,29 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FcBullish } from "react-icons/fc";
-import { Link, Outlet } from 'react-router-dom';
-import robot from '../../public/images/box2.svg';
-import course from '../../public/images/course-bg.svg';
-import final from '../../public/images/final.svg';
-import mySvg from '../../public/images/svg.svg';
-import box2 from '../../public/images/tr.svg';
-import DataAnalyticsCard from "./DataAnalyticCard"
+import { Link } from 'react-router-dom';
+import DataAnalyticsCard from "./DataAnalyticCard";
 
 const features = [
     {
         title: 'Professional Counseling',
         description: "Get Free Counseling From India's Best Professional Counsellors",
-        img: mySvg,
+        img: "./images/svg.svg",
     },
     {
         title: 'Quality Training',
         description: "Get Trained By India's Best Professional Trainers",
-        img: box2,
+        img: "./images/tr.svg",
     },
     {
         title: '100% Practical',
         description: "Get Unlimited Live Projects Assignments from the industry",
-        img: robot,
+        img: "./images/box2.svg",
     },
     {
         title: 'Pay After Placement',
         description: "#No Job\nNo Fees\nGet Hired Pay Later",
-        img: final,
+        img: './images/final.svg',
     },
 ];
 
@@ -104,7 +99,7 @@ const Home = () => {
 
             {/* Course Background Image Section */}
             <div className={'relative'}>
-                <img src={course} alt="" />
+                <img src={"./images/course-bg.svg"} alt="" />
                 <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around m-auto'>
                     {[
                         {
