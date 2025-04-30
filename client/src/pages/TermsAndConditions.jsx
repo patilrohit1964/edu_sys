@@ -19,27 +19,33 @@ const TermsAndConditions = () => {
                 </p>
             </div>
             <div>
-                <h3 className='text-xl font-semibold text-[#140342]'>Terms Of Services.</h3>
-                <ul className='list-disc'>
+                <h3 className='text-xl font-semibold text-[#140342] mb-8'>Terms Of Services.</h3>
+                <ul className='list-disc pl-10 text-gray-700'>
                     <li>
                         The information on the pages of this website is for your general information and use only. It is, therefore, subject to change without any notice.
                     </li>
-                    <li>
+                    <li className='my-3 leading-8'>
                         By sharing your email address & phone number with us, you consent to be contacted via phone calls, SMS notifications, mobile applications, email, and/or any other electronic mode of communication in case of upcoming events, program updates, and deadline.
                     </li>
-                    <li>
+                    <li className='leading-8'>
                         Under no situations or circumstances, will the Tech Minds Education be liable for any change in the content which it provides on the Website through its products and services, including but not limited to any errors, omissions, loss, or damage experienced in connection with the use of any content made available via our products, services, or various resources such as email, blog posts, etc.
                     </li>
-                    <li>
+                    <li className='my-3 leading-8'>
                         You are solely responsible for safeguarding your password (“Password”) at all times and shall keep your Password secure at all times. You shall be solely responsible for all activity on your Account, and you shall notify us immediately of any breach of security or any unauthorized use of your Account. Similarly, you shall never use another’s Account without our permission. You agree that you will not misrepresent yourself or represent yourself as another Services user.
                     </li>
-                    <li>
+                    <li className='leading-8'>
                         Neither we nor any third parties offer any warranty or guarantee as to the correctness, timeliness, performance, or stability of the information and materials found or provided on this website for any specific purpose. You accept that such information and materials may comprise inaccuracies or errors, and we explicitly exclude liability for any such gaps or errors to the fullest extent permitted by the law.
                     </li>
-                    <li>
+                    <li className='mt-3 leading-8'>
                         You hereby expressly acknowledge and agree that you will be liable for your losses, damages, and expenses (direct or indirect) caused by unauthorized use of your Account. Notwithstanding the foregoing, you may be liable for our losses or others due to such unauthorized use.
                     </li>
                 </ul>
+            </div>
+            <div className='my-12 mb-8'>
+                <h3 className='text-4xl text-[#140342] font-bold'>Usage Of The Website And Services</h3>
+                <p className='text-gray-700 leading-8'>
+                    We Grant You A Personal, Restricted, Non-Transferable, Non-Exclusive, And Revocable License To Use The Website, The Services, And The Content And Courseware Offered Through The Website Till The Time The Completion Of The Certification Training Course That You Have Enrolled For Or The Termination Of This Agreement According To The Terms And Conditions Set Forth Herein, Whichever Is Earlier. The Services And The Content And Courseware Are Provided Solely For Your Personal And Non-Commercial Use To Assist You In Completing The Certification Training Course You Have Registered For (“Restricted Purpose”).
+                </p>
             </div>
         </div>
     )

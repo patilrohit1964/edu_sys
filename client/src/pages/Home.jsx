@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FcBullish } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import DataAnalyticsCard from "./DataAnalyticCard";
+import Peopleslider from './PeopleSlider';
+import { motion } from "framer-motion";
 
 const features = [
     {
@@ -152,6 +154,20 @@ const Home = () => {
                 </div>
 
             </div>
+            <div className='border bg-[#6440FB] mt-25'>
+                <Peopleslider />
+                <div className='flex items-center justify-around pb-10'>
+                    {
+                        [
+                            { target: 10, title: "Years of experience" },
+                            { target: 22289, title: "Total Course Views" },
+                            { target: 18010, title: "Number of Requests" },
+                            { target: 350, title: "Hiring Companies" },
+                        ].map((el, idx) => (
+                            <AnimatedCounter target={el.target} title={el.title} key={idx} />
+                        ))}
+                </div>
+            </div>
         </>
     );
 };
@@ -227,3 +243,38 @@ const HiringCompanies = () => {
         </div>
     );
 };
+
+function AnimatedCounter({ target = 1000, duration = 2, title }) {
+    const [count, setCount] = useState(0);
+    const start = 0;
+    const frameRate = 60;
+    const increment = Math.ceil((target - start) / (duration * frameRate));
+
+    useEffect(() => {
+        let current = start;
+        const interval = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(interval);
+            }
+            setCount(current);
+        }, 1000 / frameRate);
+
+        return () => clearInterval(interval);
+    }, [target, duration]);
+
+    return (
+        <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            style={{ fontSize: "3rem", textAlign: "center", marginTop: "50px", color: "#00FF84" }}
+        >
+            <div className='flex flex-col items-center justify-center'>
+                {count}+
+                <p className='text-sm'>{title}</p>
+            </div>
+        </motion.h1>
+    );
+}

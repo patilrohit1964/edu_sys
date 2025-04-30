@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <>
 
-            <div className='border bg-[#6440FB] mt-25'>
+            {/* <div className='border bg-[#6440FB] mt-25'>
                 <Peopleslider />
                 <div className='flex items-center justify-around pb-10'>
                     {
@@ -20,7 +20,7 @@ const Footer = () => {
                             <AnimatedCounter target={el.target} title={el.title} />
                         ))}
                 </div>
-            </div>
+            </div> */}
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content flex items-center justify-around p-10">
                 <nav>
                     <h6 className="footer-title">Company</h6>
@@ -68,37 +68,3 @@ export default Footer
 
 
 
-function AnimatedCounter({ target = 1000, duration = 2, title }) {
-    const [count, setCount] = useState(0);
-    const start = 0;
-    const frameRate = 60;
-    const increment = Math.ceil((target - start) / (duration * frameRate));
-
-    useEffect(() => {
-        let current = start;
-        const interval = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(interval);
-            }
-            setCount(current);
-        }, 1000 / frameRate);
-
-        return () => clearInterval(interval);
-    }, [target, duration]);
-
-    return (
-        <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            style={{ fontSize: "3rem", textAlign: "center", marginTop: "50px", color: "#00FF84" }}
-        >
-            <div className='flex flex-col items-center justify-center'>
-                {count}+
-                <p className='text-sm'>{title}</p>
-            </div>
-        </motion.h1>
-    );
-}
