@@ -26,13 +26,14 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  height: 400px;
-  width: 400px;
-  /* Center slide text vertically */
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  border: 2px solid red;
+  justify-content: space-around;
 }
 
 .swiper-slide img {

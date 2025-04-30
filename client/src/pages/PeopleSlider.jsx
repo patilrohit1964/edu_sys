@@ -25,7 +25,21 @@ export default function Peopleslider() {
                 modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
+                <SwiperSlide>
+                    <div>
+                        <h3 className='text-left text-[#6440FB] font-semibold'>Best Platform</h3>
+                        <p className='py-8'>"One Of the best platform to update your skills and professional career knowledge and getting hands of experience to projects they focus more on practical knowledge".</p>
+                    </div>
+                    <div className='flex items-center justify-around border-t border-t-gray-500 w-full'>
+                        <div className='h-[50px] w-[50px] rounded-full'>
+                            <img src="https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-11.49.04-AM.jpeg.webp" alt="https://techmindseducation.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-11.49.04-AM.jpeg.webp" className='h-full w-full' />
+                        </div>
+                        <div className='flex flex-col'>
+                            <h3>Anubhuti Singh</h3>
+                            <p>Seniour Data Scientist</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
                 <SwiperSlide>Slide 2</SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>
