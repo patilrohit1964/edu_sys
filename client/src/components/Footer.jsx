@@ -1,9 +1,14 @@
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Peopleslider from '../pages/PeopleSlider';
 const Footer = () => {
     return (
         <>
+
+            <div className='border bg-[#6440FB] mt-25'>
+                <Peopleslider />
+            </div>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
                 <nav>
                     <h6 className="footer-title">Company</h6>

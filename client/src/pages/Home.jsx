@@ -105,7 +105,7 @@ const Home = () => {
             {/* Course Background Image Section */}
             <div className={'relative'}>
                 <img src={course} alt="" />
-                <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around border m-auto'>
+                <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around m-auto'>
                     {[
                         {
                             courseName: "Data Science With Analytics and AI",
