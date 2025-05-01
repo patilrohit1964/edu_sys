@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
         <p className='text-gray-700 leading-8'>Tech Minds Education uses this Privacy Policy to govern the use of personal information you provide to us. We use your personal information solely to provide our services to you. We also use your Personal Identifiable Information (PII) together with other Personally Non-Identifiable Information (Non – PII) To Help Us Better Understand Our Users And To Improve The Content And Functionality Of Our Site.</p>
       </div>
       <div>
-        <h3 className='text-xl font-semibold text-[#140342] mb-4' >Personal Identifiable Information</h3>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Personal Identifiable Information</h3>
         <p className='text-gray-700'>We may collect the following personal information from you in the following situations:-</p>
         <ul className='my-4 list-disc text-gray-700 ml-8'>
           <li>When You Visit Our Website And Voluntarily Provide The Following Information Via One Of Our Contact Forms, Via A Chat Or Phone Session, Or As Part Of A Purchase Of One Of Our Courses Or Register On Our Site.</li>
@@ -44,7 +44,33 @@ const PrivacyPolicy = () => {
           activities.
         </p>
       </div>
-      
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>USE</h3>
+        <p className='text-gray-600 leading-8 my-5'>We may use the personal information collected from within the Websites, chat box, mobile, email or when you use the Service(s) to:</p>
+        <ul className='list-disc ml-8 text-gray-700'>
+          <li className='mb-2'>Provide you with the Service(s).</li>
+          <li className='mb-2'>Send you communication </li>
+          <li className='mb-2'>from the Service(s)</li>
+          <li className='mb-2'>Assess The Needs Of Your Business To Determine Or Suggest Suitable Products.</li>
+          <li className='mb-2'>Send You Requested Product Or Service Information.</li>
+          <li className='mb-2'>Respond To Customer Service Requests.</li>
+          <li className='mb-2'>Administer Your Account.</li>
+          <li className='mb-2'>Send You Promotional And Marketing Communications.</li>
+          <li className='mb-2'>Facilitate Your Transactions With Other Users When You Use Our Service(S).</li>
+          <li className='mb-2'>Perform statistical analyses of user behavior and characteristics at an aggregate level in order to measure interest in and use of the various areas of the site.</li>
+          <li className='leading-8 mb-2'>
+            We use your personal information to communicate with you in relation to our tech minds education services including information regarding content,
+            courseware, products, inquiries, and services via different channels (e.g., by phone, email, chat) and by agreeing to this Privacy Policy
+            you give us explicit permission to do so. Regardless of whether you have registered yourself under DND or DNC or NCPR service, you still authorize us to contact you for the above mentioned purposes.
+          </li>
+        </ul>
+        <p>
+          When you provide us with personal information about your contacts we will only use this information for the specific reason for which it is provided.
+        </p>
+      </div>
+      <div>
+
+      </div>
     </div>
   )
 }
