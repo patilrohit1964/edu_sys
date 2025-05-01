@@ -70,13 +70,13 @@ export default function Peopleslider() {
                                 <h3 className='text-left text-[#6440FB] font-semibold'>Best Platform</h3>
                                 <p className='py-8 text-gray-500'>{el.about}</p>
                             </div>
-                            <div className='flex items-center justify-around border-t border-t-gray-500 w-full'>
-                                <div className='h-[50px] w-[50px] rounded-full'>
+                            <div className='flex items-center border-t border-t-gray-500 w-full'>
+                                <div className='h-[80px] w-[80px] rounded-full'>
                                     <img src={el.img} className='h-full w-full' />
                                 </div>
-                                <div className='flex flex-col'>
-                                    <h3>{el.name}</h3>
-                                    <p>{el.profession}</p>
+                                <div className='flex flex-col items-center'>
+                                    <h3 className='text-md text-gray-800 font-semibold'>{el.name}</h3>
+                                    <p className='text-sm text-gray-600'>{el.profession}</p>
                                 </div>
                             </div>
                         </SwiperSlide>
