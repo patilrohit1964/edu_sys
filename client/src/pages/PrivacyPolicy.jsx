@@ -207,6 +207,18 @@ const PrivacyPolicy = () => {
           We post customer testimonials/comments/reviews on our websites which may contain personal information. Prior to posting the testimonial, we obtain the customer’s consent to post their name along with their testimonial. If you want your testimonial removed, please reach out to us.
         </p>
       </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Children’s Personal Information</h3>
+        <p className='leading-8 text-gray-700'>
+          We do not knowingly collect any personal information from children under the age of 16. If you are under the age of 16, please do not submit any personal information through our websites or Service(s). We encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce this Policy by instructing their children never to provide personal information through our Service(s) or Websites without their permission. If you have reason to believe that a child under the age of 16 has provided personal information to us through our websites or Service(s), please contact us and we will endeavor to delete that information and terminate the child’s account from our databases.
+        </p>
+      </div>
+      <div className='my-12'>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Amendments</h3>
+        <p className='leading-8 text-gray-700'>
+          We have the discretion to update this Privacy Policy at any time. When we do, we will post a notification on the main page of our Site, revise the updated date at the bottom of this page and send you an email. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. Your continued use of this Websites or the Service(s) following the posting of any amendment, modification, or change to this Policy shall constitute your acceptance of the amendments to this Policy. You can choose to discontinue use of the Websites or Service(s), if you do not accept the terms of this Policy, or any modified version of this Policy.
+        </p>
+      </div>
     </div>
   )
 }
