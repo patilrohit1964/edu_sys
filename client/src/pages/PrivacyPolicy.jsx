@@ -107,10 +107,105 @@ const PrivacyPolicy = () => {
           information within our databases, access logs and other records in order to comply with other routine data audits and for legitimate business or any other legal or regulatory purposes or obligations under the applicable laws.</p>
         <p className='text-gray-700 leading-8'>Where the processing of your Personal Information is based on your consent, you have the right to withdraw your consent granted for processing of your Personal Information by issuing a written request to the Grievance officer.</p>
         <p className='text-gray-700 my-5'>You will have the opportunity to edit correct, amend, update or delete your Personal Information or withdraw your consent as follows:</p>
-        <ul>
-          <li>If you have independently signed up for our Services, you may access, update or export your Personal Information included in your online account at any time by logging into your account and going to your profile or by reaching out to us.</li>
-          <li>If You Are Using An Enterprise-Provided Account (Tech Minds Education Authorized Training Partner Or Your Employer) Please Review The Section Notice to End Users.</li>
+        <ul className='list-disc ml-8 text-gray-700'>
+          <li className='mb-4'>If you have independently signed up for our Services, you may access, update or export your Personal Information included in your online account at any time by logging into your account and going to your profile or by reaching out to us.</li>
+          <li className='mb-2'>If You Are Using An Enterprise-Provided Account (Tech Minds Education Authorized Training Partner Or Your Employer) Please Review The Section Notice to End Users.</li>
         </ul>
+      </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Data Subject’s Rights To Complain</h3>
+        <p className='text-gray-700'>Users in the European Economic Area (“EEA”) and United Kingdom (“UK”)</p>
+        <p className='leadin-8 text-gray-700 my-5 leading-8'>
+          If you are located in the EEA or UK, you have the right to request access to your data in a portable format and to request the rectification, erasure, restriction of processing, or objection to processing of your personal data. You may contact us via the means stated at the end of this Privacy Policy to submit your request. Additionally, if you are located in the EEA, UK, or Switzerland, you also have the right to lodge a complaint with the relevant Supervisory Authority in your jurisdiction, if you have concerns about our collection and use of your personal information that we cannot solve to your satisfaction.
+        </p>
+      </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>USERS IN CALIFORNIA</h3>
+        <p className='text-gray-700 leading-8'>
+          If you believe a business has violated the CCPA, you may file a consumer complaint with the Office of the Attorney General. If you choose to file a complaint with the Office of the Attorney General, explain exactly how the business violated the CCPA, and describe when and how the violation occurred.
+          Only the Attorney General can file an action against businesses and using consumer complaints and other information, the Attorney General may identify patterns of misconduct that may lead to investigations and actions on behalf of the collective legal interests of the people of California. Please note that the Attorney General does not represent individual California consumers hence cannot represent you or give you legal advice on how to resolve your individual complaint.
+        </p>
+      </div>
+      <div className='my-12'>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Cookies and Other Tracking Technologies.</h3>
+        <p className='text-gray-700 leading-8'>
+          Tech Minds Education and Our Third-Party Partners, Such as Our Advertising and Analytics Partners, (Listed Here) Use Cookies and Other Tracking Technologies (E.G., Web Beacons, Device Identifiers and Pixels) To Provide Functionality and To Recognize You Across Different Services and Devices.
+        </p>
+        <p className='text-gray-700 my-5'>The Types of Cookies we use includes:</p>
+        <p className='text-gray-700'><b>Essential Cookies:</b> These Cookies Are Essential for The Basic Functionalities Offered by The Site and Service(S). These Classes of Cookies Helps in Keeping a User Logged in To the Service(S) And Remember Relevant Information When They Return to The Service(S).</p>
+        <p className='text-gray-700 my-5'><b>Insight Cookies:</b> These Are Used for Tracking the User Activities Within the Service(S), Which in Turn Helps Us in Improving Your User Experience.</p>
+        <p className='text-gray-700'><b>Marketing Cookies:</b> These Are Used for Providing You with Customized and Interest-Based Ads Based on Your Browsing Behavior and Other Similar Activities on Our Websites.</p>
+        <p className='text-gray-700 my-5 leading-8'>You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser settings. Since each browser is different, look at your browser’s Help Menu to learn the correct way to modify your cookies.</p>
+        <p className='text-gray-700'>If You Turn Cookies Off, Some of The Features That Make Your Site Experience More Efficient May Not Function Properly.</p>
+      </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>ADVERTISEMENT</h3>
+        <p className='text-gray-700 leading-8'>
+          We Partner with Third Parties to Manage Our Advertising on Other Sites. Our Third-Party Partners May Use Technologies Such as Cookies to Gather Information About Your Activities on Our Website and Other Sites in Order to Provide You Advertising Based Upon Your Browsing Activities and Interests.
+        </p>
+      </div>
+      <div className='my-12'>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>DO NOT TRACK.</h3>
+        <p className='text-gray-700 leading-8'>
+          Currently, Various Browsers — Including Internet Explorer, Firefox, And Safari — Offer A “Do Not Track” Or “DNT” Option That Relies on A Technology Known as A DNT Header, Which Sends a Signal to Web Sites’ Visited by The User About the User’s Browser DNT Preference Setting. Tech Minds Education Does Not Currently Commit to Responding to Browsers’ DNT Signals with Respect to The Company’s Web Sites, In Part, Because No Common Industry Standard for DNT Has Been Adopted by Industry Groups, Technology Companies or Regulators, Including No Consistent Standard of Interpreting User Intent. Tech Minds Education Takes Privacy and Meaningful Choice Seriously and Will Make Efforts to Continue to Monitor Developments Around DNT Browser Technology and The Implementation of a Standard.
+        </p>
+      </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>LINKS TO THIRD PARTY SITES</h3>
+        <p className='leading-8 text-gray-700'>
+          Our websites contain links to other websites that are not owned or controlled by us. Please be aware that we are not responsible for the privacy practices of such other websites or third parties. We encourage you to be aware when you leave our websites and to read the privacy policies of each and every website that collects personal information.
+        </p>
+      </div>
+      <div className='my-12'>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Public Forums</h3>
+        <p className='leading-8 text-gray-700'>
+          We may provide bulletin boards, blogs, or community threads on the Company’s Web sites. Any personal information you choose to submit in such a forum may be read, collected, or used by others who visit these forums, and may be used to send you unsolicited messages. We are not responsible for the personal information you choose to submit in these forums.
+        </p>
+        <p className='text-gray-700 my-5'>Remember that when you share information publicly, it may be index able by search engines.</p>
+      </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Single Sign-On & Other social Media Features</h3>
+        <p className='leading-8 text-gray-700'>
+          Our websites include social media features, such as the Facebook “Like” button,  the “Share This” button or interactive mini-programs. Where we have your consent, these features may collect your IP address, which page you are visiting on our websites, and may set a cookie to enable the feature to function properly. Social media features and widgets are either hosted by a third party or hosted directly on our websites. Your interactions with these features are governed by the privacy policy of the company providing them.
+        </p>
+        <p className='my-5 text-gray-700'>
+          You can log in to our websites using sign-in services by LinkedIn. The services will authenticate your identity and provide you with the option to share certain personal information with us such as your name and email address.
+        </p>
+      </div>
+      <div className='my-12'>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>COMMUNICATIONS FROM THE WEBSITES</h3>
+        <p className='leading-8 text-gray-700'>
+          We may use your email address to send our newsletters and/or marketing communications. If you no longer wish to receive these communications, you can opt out by following the instructions contained in the emails you receive or by contacting us at support@techmindseducation.com
+        </p>
+        <p className='my-5 text-gray-700 leading-8'>
+          We will send you announcements related to the Service(s) on occasions when it is necessary to do so. For instance, if our Service is temporarily suspended for maintenance, we might send you an email. Generally, you may not opt-out of communications which are not promotional in nature. If you do not wish to receive them, you may delete your Account.
+        </p>
+      </div>
+      <div>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>Information Security</h3>
+        <p className='leading-8 text-gray-700'>
+          Our Websites and Service(s) have industry standard security measures in place to protect against the loss, misuse, and alteration of the information under our
+          control. When you provide us with sensitive information (such as credit card information or login credentials), we will encrypt that information via Secure
+          Socket Layer (SSL).
+        </p>
+        <p className='my-5 text-gray-700 leading-8'>
+          Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our websites or via the Service(s) and any transmission is at your own risk. Once we receive your personal information, we will use strict procedures and security features to try to prevent unauthorized access.
+        </p>
+        <p className='my-5 text-gray-700 leading-8'>
+          We adopt appropriate data collection, storage and processing practices and security measures to protect against unauthorized access, alteration, disclosure or destruction of your personal information, username, password, transaction information and data stored on our Site.
+        </p>
+        <ul className='list-disc ml-8 text-gray-700'>
+          <li className='mb-2'>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible.</li>
+          <li className='mb-2'>We use regular Malware Scanning.</li>
+          <li className='mb-2'>Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</li>
+          <li className='mb-2'>All payment transactions are processed through secure gateway providers and are not stored or processed on our servers</li>
+        </ul>
+      </div>
+      <div className='my-12'>
+        <h3 className='text-xl font-semibold text-[#140342] mb-4'>TESTIMONIALS</h3>
+        <p className='leading-8 text-gray-700'>
+          We post customer testimonials/comments/reviews on our websites which may contain personal information. Prior to posting the testimonial, we obtain the customer’s consent to post their name along with their testimonial. If you want your testimonial removed, please reach out to us.
+        </p>
       </div>
     </div>
   )
