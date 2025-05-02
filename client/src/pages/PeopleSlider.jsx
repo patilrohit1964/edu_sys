@@ -64,7 +64,6 @@ export default function Peopleslider() {
                             about: "I am very grateful to tech mind education for helping me in grasping  hands-on approach and real-world application enhances skills, making these courses valuable for anyone looking to excel in the industry."
                         },
                     ].map((el) => (
-
                         <SwiperSlide>
                             <div>
                                 <h3 className='text-left text-[#6440FB] font-semibold'>Best Platform</h3>
