@@ -1,46 +1,53 @@
-import * as React from "react"
-
-import { Button } from "@/components/ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuLabel,
-    DropdownMenuRadioGroup,
-    DropdownMenuRadioItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
-export default function CourseDropDown() {
-    const [position, setPosition] = React.useState("bottom")
-
-    return (
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button variant="outline">Open</Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-                    <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
-                </DropdownMenuRadioGroup>
-            </DropdownMenuContent>
-        </DropdownMenu>
-    )
-}
-
-
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, BookOpen, Code, Database, BarChart3, Globe, User, Briefcase, Server, Clock, LineChart } from 'lucide-react';
 
-export function HoverDropdown() {
+export function HoverDropdown({ isOpen, setIsOpen }) {
+    const dropdownRef = useRef(null);
+    const [position, setPosition] = useState({ left: 0, top: 0 });
+
+    // Calculate position based on the "Explore Programs" navigation item
+    useEffect(() => {
+        // Try to find the "Explore Programs" link
+        const exploreLink = document.querySelector('a[href="/explore-programs"]');
+
+        if (exploreLink && isOpen) {
+            const rect = exploreLink.getBoundingClientRect();
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Calculate dropdown position
+            const left = rect.left + scrollLeft;
+            const top = rect.bottom + scrollTop;
+
+            setPosition({ left, top });
+        }
+    }, [isOpen]);
+
+    // Handle window resize for responsiveness
+    useEffect(() => {
+        const handleResize = () => {
+            if (dropdownRef.current && isOpen) {
+                const dropdownWidth = dropdownRef.current.offsetWidth;
+                const windowWidth = window.innerWidth;
+
+                // Adjust position if dropdown would extend beyond screen
+                if (position.left + dropdownWidth > windowWidth) {
+                    const newLeft = Math.max(0, windowWidth - dropdownWidth - 20); // 20px padding
+                    setPosition(prev => ({ ...prev, left: newLeft }));
+                }
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        // Initial check
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isOpen, position.left]);
 
     const menuCategories = [
         {
-            title: "Technical",
+            title: "For Non Technical",
             items: [
                 { icon: <Code size={20} />, name: 'Web Development', description: 'HTML, CSS, JavaScript' },
                 { icon: <Server size={20} />, name: 'Cloud Computing', description: 'AWS, Azure, GCP' },
@@ -48,7 +55,7 @@ export function HoverDropdown() {
             ]
         },
         {
-            title: "Business",
+            title: "For Technical Learners",
             items: [
                 { icon: <LineChart size={20} />, name: 'Data Analytics', description: 'Excel, Tableau, Power BI' },
                 { icon: <Briefcase size={20} />, name: 'Investment Banking', description: 'Finance, Valuation, M&A' },
@@ -56,7 +63,7 @@ export function HoverDropdown() {
             ]
         },
         {
-            title: "Trending",
+            title: "Top Pay After Placement Course",
             items: [
                 { icon: <Clock size={20} />, name: 'MERN Stack', description: 'MongoDB, Express, React, Node' },
                 { icon: <Globe size={20} />, name: 'Java Full Stack', description: 'Spring Boot, Hibernate, React' },
@@ -65,64 +72,57 @@ export function HoverDropdown() {
         }
     ];
 
+    if (!isOpen) return null;
+
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-            <div className="relative">
-                {/* Dropdown trigger button */}
-                <button
-                    className="flex items-center justify-between gap-2 bg-blue-600 text-white font-medium px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                    onMouseEnter={() => setIsOpen(true)}
-                    onMouseLeave={() => setIsOpen(false)}
-                >
-                    <span className="text-lg">Explore Categories</span>
-                    <ChevronDown size={20} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-                </button>
+        <div
+            ref={dropdownRef}
+            className="fixed w-full min-w-max bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
+            style={{
+                left: position.left,
+                top: position.top,
+                width: window.innerWidth > 1024 ? '800px' : (window.innerWidth > 640 ? '90vw' : '95vw'),
+                maxWidth: '800px',
+                transform: window.innerWidth <= 640 ? 'translateX(-50%)' : 'none',
+                marginLeft: window.innerWidth <= 640 ? '50%' : 0,
+            }}
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+        >
+            <div className="p-4 md:p-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+                <h2 className="text-xl md:text-2xl font-bold mb-1">Popular Categories</h2>
+                <p className="text-blue-100 text-sm md:text-base">Find the perfect course from our extensive library</p>
+            </div>
 
-                {/* Large rectangular dropdown menu */}
-                {isOpen && (
-                    <div
-                        className="absolute mt-2 left-0 w-full min-w-max bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 max-w-6xl"
-                        style={{ width: '800px', left: '-350px' }}
-                        onMouseEnter={() => setIsOpen(true)}
-                        onMouseLeave={() => setIsOpen(false)}
-                    >
-                        <div className="p-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-                            <h2 className="text-2xl font-bold mb-1">Popular Categories</h2>
-                            <p className="text-blue-100">Find the perfect course from our extensive library</p>
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 md:p-6">
+                {menuCategories.map((category, categoryIndex) => (
+                    <div key={categoryIndex} className="space-y-3 md:space-y-4">
+                        <h3 className="font-bold text-base md:text-lg text-gray-800 border-b border-gray-200 pb-2">{category.title}</h3>
 
-                        <div className="grid grid-cols-3 gap-6 p-6">
-                            {menuCategories.map((category, categoryIndex) => (
-                                <div key={categoryIndex} className="space-y-4">
-                                    <h3 className="font-bold text-lg text-gray-800 border-b border-gray-200 pb-2">{category.title}</h3>
-
-                                    {category.items.map((item, itemIndex) => (
-                                        <div
-                                            key={itemIndex}
-                                            className="flex items-start gap-3 p-3 hover:bg-blue-50 rounded-md transition-colors cursor-pointer"
-                                        >
-                                            <div className="text-blue-600 mt-1">{item.icon}</div>
-                                            <div>
-                                                <h4 className="font-medium text-gray-800">{item.name}</h4>
-                                                <p className="text-sm text-gray-500">{item.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
+                        {category.items.map((item, itemIndex) => (
+                            <div
+                                key={itemIndex}
+                                className="flex items-start gap-3 p-2 md:p-3 hover:bg-blue-50 rounded-md transition-colors cursor-pointer"
+                            >
+                                <div className="text-blue-600 mt-1">{item.icon}</div>
+                                <div>
+                                    <h4 className="font-medium text-gray-800">{item.name}</h4>
+                                    <p className="text-xs md:text-sm text-gray-500">{item.description}</p>
                                 </div>
-                            ))}
-                        </div>
-
-                        <div className="border-t border-gray-200 p-4 bg-gray-50 flex justify-between items-center">
-                            <div className="flex items-center gap-2">
-                                <BookOpen size={18} className="text-blue-600" />
-                                <span className="text-gray-600">Over 10,000 courses available</span>
                             </div>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
-                                View All Courses
-                            </button>
-                        </div>
+                        ))}
                     </div>
-                )}
+                ))}
+            </div>
+
+            <div className="border-t border-gray-200 p-3 md:p-4 bg-gray-50 flex flex-col md:flex-row justify-between items-center gap-3">
+                <div className="flex items-center gap-2">
+                    <BookOpen size={18} className="text-blue-600" />
+                    <span className="text-sm text-gray-600">Over 10,000+ Enrollement</span>
+                </div>
+                {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-6 py-2 rounded-lg font-medium transition-colors w-full md:w-auto">
+                    View All Courses
+                </button> */}
             </div>
         </div>
     );
