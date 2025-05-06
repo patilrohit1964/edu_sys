@@ -155,6 +155,14 @@ const Home = () => {
 
             </div>
             <div className='border bg-[#6440FB] mt-25'>
+                <div className='text-center py-10 mt-15 leading-8'>
+                    <h2 className='text-4xl text-[#00FF84]'>
+                        What People Say
+                    </h2>
+                    <p className='text-white'>
+                        "🌟 🌟Unveiling the Voices of Excellence: Where Every Review Tells a Success Story! 🌟 🌟
+                    </p>
+                </div>
                 <Peopleslider />
                 <div className='flex items-center justify-around pb-10'>
                     {
