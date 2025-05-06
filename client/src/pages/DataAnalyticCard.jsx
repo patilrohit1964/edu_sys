@@ -1,6 +1,6 @@
-import { Play, FileText, Clock, ChevronRight, X } from "lucide-react";
+import { Play, FileText, Clock, ChevronRight, X, } from "lucide-react";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function DataAnalyticsCard({ courseName, courseInfo, infrollments, index }) {
     const [isHovered, setIsHovered] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
@@ -100,7 +100,7 @@ export default function DataAnalyticsCard({ courseName, courseInfo, infrollments
                                     onMouseEnter={() => setIsHovered(true)}
                                     onMouseLeave={() => setIsHovered(false)}
                                 >
-                                    <span>Learn More</span>
+                                    <Link to={"/course-info"}>Learn More</Link>
                                     <ChevronRight size={20} className={`ml-2 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
                                 </button>
                             </div>

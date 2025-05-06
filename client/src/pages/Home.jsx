@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import DataAnalyticsCard from "./DataAnalyticCard";
 import Peopleslider from './PeopleSlider';
 import { motion } from "framer-motion";
-
+import { GiFlowerEmblem } from "react-icons/gi";
 const features = [
     {
         title: 'Professional Counseling',
@@ -68,7 +68,12 @@ const Home = () => {
             {/* Top Hiring Companies */}
             <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
             <HiringCompanies />
-
+            <div className='relative'>
+                <img src={"./images/We.svg"} alt="" className='w-full h-full' />
+                <div className='absolute bottom-32 left-29'>
+                    <GiFlowerEmblem size={150} className="animate-spin [animation-duration:5s]" />
+                </div>
+            </div>
             {/* Why Tech Minds Education */}
             <section>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>

@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsAndConditions from './pages/TermsAndConditions'
 import Return_Policy from './pages/Return_Policy'
+import DataAnalyticInfo from './pages/coursesInfo/DataAnalyticInfo'
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -51,6 +52,7 @@ const App = () => {
         <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
         <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
         <Route path='/return-policy' element={<Return_Policy />}></Route>
+        <Route path='/course-info' element={<DataAnalyticInfo />}></Route>
       </Routes>
       <Footer />
     </div>

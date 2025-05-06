@@ -49,25 +49,25 @@ export function HoverDropdown({ isOpen, setIsOpen }) {
         {
             title: "For Non Technical",
             items: [
-                { icon: <Code size={20} />, name: 'Web Development', description: 'HTML, CSS, JavaScript' },
-                { icon: <Server size={20} />, name: 'Cloud Computing', description: 'AWS, Azure, GCP' },
-                { icon: <Database size={20} />, name: 'Data Science', description: 'Python, R, SQL, ML' },
+                { icon: <LineChart size={20} />, name: "Data Science With Analytics and AI", description: /* 'HTML, CSS, JavaScript' */ '' },
+                { icon: <Server size={20} />, name: 'Product Management With Analytics and A.I', description: /* 'AWS, Azure, GCP' */ '' },
+                { icon: <Database size={20} />, name: 'Investment Banking', description: /* 'Python, R, SQL, ML' */ '' },
             ]
         },
         {
             title: "For Technical Learners",
             items: [
-                { icon: <LineChart size={20} />, name: 'Data Analytics', description: 'Excel, Tableau, Power BI' },
-                { icon: <Briefcase size={20} />, name: 'Investment Banking', description: 'Finance, Valuation, M&A' },
-                { icon: <BarChart3 size={20} />, name: 'Business Analysis', description: 'Strategy, Operations' },
+                { icon: <Database size={20} />, name: 'Data Science With Machine Learning and AI', description: /* 'Excel, Tableau, Power BI' */ '' },
+                { icon: <Globe size={20} />, name: 'Java Full Stack', description: /* 'Finance, Valuation, M&A' */ '' },
+                { icon: <BarChart3 size={20} />, name: 'Mern Full Stack', description: /* 'Strategy, Operations' */ '' },
             ]
         },
         {
-            title: "Top Pay After Placement Course",
+            title: "Personality Development & Speaking Skills",
             items: [
-                { icon: <Clock size={20} />, name: 'MERN Stack', description: 'MongoDB, Express, React, Node' },
-                { icon: <Globe size={20} />, name: 'Java Full Stack', description: 'Spring Boot, Hibernate, React' },
-                { icon: <User size={20} />, name: 'UX/UI Design', description: 'Figma, Adobe XD, Sketch' },
+                { icon: <Clock size={20} />, name: 'Career Catalyst Pro With AI', description: /* 'MongoDB, Express, React, Node' */ '' },
+                { icon: <User size={20} />, name: 'Public Speaking Skills', description: /* 'Spring Boot, Hibernate, React' */ '' },
+                // { icon: <User size={20} />, name: 'UX/UI Design', description: 'Figma, Adobe XD, Sketch' },
             ]
         }
     ];
