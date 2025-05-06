@@ -54,7 +54,7 @@ const App = () => {
         <Route path='/return-policy' element={<Return_Policy />}></Route>
         <Route path='/course-info' element={<DataAnalyticInfo />}></Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
