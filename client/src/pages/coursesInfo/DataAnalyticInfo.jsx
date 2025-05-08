@@ -92,9 +92,9 @@ function DataScienceCurriculum() {
     ];
 
     return (
-        <div className="flex flex-col md:flex-row bg-slate-800 min-h-screen text-white">
+        <div className="flex flex-col md:flex-row bg-slate-800 min-h-screen text-white justify-around p-8">
             {/* Left Panel */}
-            <div className="w-full md:w-2/6 bg-[#22577A] p-6 md:p-8">
+            <div className="w-full md:w-2/6 bg-[#22577A] p-6 md:p-8 rounded-2xl">
                 <h1 className="text-2xl md:text-3xl font-bold mb-6">
                     Industry-Aligned Curriculum for Data Science & Analytics With AI Certification
                 </h1>
@@ -116,7 +116,7 @@ function DataScienceCurriculum() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-xl font-bold">30+</h3>
+                            <h3 className="text-black text-xl font-bold">50+</h3>
                             <p className="text-black">Case Studies & Projects</p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ function DataScienceCurriculum() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-xl font-bold">280+</h3>
+                            <h3 className="text-black text-xl font-bold">260+</h3>
                             <p className="text-black">Live Sessions Hours</p>
                         </div>
                     </div>
@@ -182,7 +182,7 @@ function DataScienceCurriculum() {
                                 <div className="flex items-center space-x-4">
                                     <div className="flex items-center text-gray-500">
                                         <Clock className="w-4 h-4 mr-1" />
-                                        <span className="text-sm">{course.duration}</span>
+                                        {/* <span className="text-sm">{course.duration}</span> */}
                                     </div>
                                     <button className="p-1 rounded-full bg-white text-black shadow-sm">
                                         {openAccordion === index ?
@@ -196,10 +196,15 @@ function DataScienceCurriculum() {
                             {/* Accordion Content */}
                             {openAccordion === index && (
                                 <div className="p-4 border-t border-gray-200 bg-gray-50">
-                                    <p className="text-gray-700">{course.content}</p>
+                                    <div className="text-gray-700 flex items-center justify-between">
+                                        <ul className='text-black list-disc px-4'>
+                                            <li>Basic</li>
+                                            <li>Intermediate</li>
+                                            <li>Advanced</li>
+                                        </ul>
+                                        <img src="./images/excel.jpeg" alt="" />
+                                    </div>
                                     <div className="mt-4 flex flex-wrap gap-2">
-                                        <button className="bg-blue-800 text-white px-4 py-2 rounded-md text-sm">View Syllabus</button>
-                                        <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm">Enroll Now</button>
                                     </div>
                                 </div>
                             )}
