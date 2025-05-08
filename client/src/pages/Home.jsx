@@ -227,7 +227,7 @@ const companies = [
     { name: 'Dell', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTADS2PgQ43jlIpX06McOVPrsEALXrtoy1nTg&s' },
 ];
 
-const HiringCompanies = () => {
+export const HiringCompanies = () => {
     const chunkedCompanies = [
         companies.slice(0, 12),
         companies.slice(12, 24),

@@ -1,13 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { HiringCompanies } from '../Home';
 
 const DataAnalyticInfo = () => {
     return (
-        <div className='bg-[url(./images/We_1.svg)] h-[800px] overflow-hidden'>
-            <div className='max-w-7xl m-aut'>
-                <h1 className='font-bold text-5xl py-27 text-white ml-5'>PG Program in Data Science <br /> With Analytics and AI</h1>
+        <div className="w-full h-screen select-none">
+            <div className='flex items-center justify-center flex-col'>
+                <div>
+                    <img src="./images/purple_black.svg" alt="" draggable="false" />
+                </div>
+                <div className='mt-20 sm:mt-5'>
+                    <img src="./images/purple_black1.svg" alt="" draggable="false" />
+                </div>
+            </div>
+            <div>
+                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
+                <HiringCompanies />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default DataAnalyticInfo
+export default DataAnalyticInfo;
