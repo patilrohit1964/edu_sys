@@ -45,7 +45,8 @@ function DataScienceCurriculum() {
             title: "Excel",
             tag: "Data",
             duration: "2.4 Weeks",
-            content: "Learn advanced Excel functions, pivot tables, data analysis, and visualization techniques essential for data science."
+            content: "Learn advanced Excel functions, pivot tables, data analysis, and visualization techniques essential for data science.",
+            icon: "./images/excel.jpeg"
         },
         {
             title: "SQL",
@@ -84,8 +85,8 @@ function DataScienceCurriculum() {
             content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis."
         },
         {
-            title: "Machine Learning",
-            tag: "ML",
+            title: "Artificial Intelligence",
+            tag: "AI",
             duration: "4.8 Weeks",
             content: "Learn supervised and unsupervised learning algorithms, model evaluation, and implementation with scikit-learn."
         },
@@ -197,12 +198,12 @@ function DataScienceCurriculum() {
                             {openAccordion === index && (
                                 <div className="p-4 border-t border-gray-200 bg-gray-50">
                                     <div className="text-gray-700 flex items-center justify-between">
-                                        <ul className='text-black list-disc px-4'>
+                                        <ul className='text-black list-disc px-4 font-bold text-xl'>
                                             <li>Basic</li>
                                             <li>Intermediate</li>
                                             <li>Advanced</li>
                                         </ul>
-                                        <img src="./images/excel.jpeg" alt="" />
+                                        <img src={course.icon} alt="" className='w-2/12 h-2/12' />
                                     </div>
                                     <div className="mt-4 flex flex-wrap gap-2">
                                     </div>
