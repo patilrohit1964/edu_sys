@@ -88,7 +88,10 @@ function DataScienceCurriculum() {
             title: "Artificial Intelligence",
             tag: "AI",
             duration: "4.8 Weeks",
-            content: "Learn supervised and unsupervised learning algorithms, model evaluation, and implementation with scikit-learn."
+            content: "Learn supervised and unsupervised learning algorithms, model evaluation, and implementation with scikit-learn.",
+            coursePoints: {
+
+            }
         },
     ];
 
@@ -174,7 +177,7 @@ function DataScienceCurriculum() {
                                                     course.tag === "Backend" ? "bg-yellow-300" :
                                                         course.tag === "NumPy" ? "bg-yellow-300" :
                                                             course.tag === "Data Analysis" ? "bg-yellow-300" :
-                                                                course.tag === "ML" ? "bg-yellow-300" : "bg-gray-200"
+                                                                course.tag === "AI" ? "bg-yellow-300" : "bg-gray-200"
                                             } text-black`}>
                                             #{course.tag}
                                         </span>
@@ -198,10 +201,33 @@ function DataScienceCurriculum() {
                             {openAccordion === index && (
                                 <div className="p-4 border-t border-gray-200 bg-gray-50">
                                     <div className="text-gray-700 flex items-center justify-between">
-                                        <ul className='text-black list-disc px-4 font-bold text-xl'>
-                                            <li>Basic</li>
-                                            <li>Intermediate</li>
-                                            <li>Advanced</li>
+                                        <ul className={`text-black list-disc px-4 ${course.title === "Artificial Intelligence" ? "" : "font-bold "} text-xl w-full `}>
+                                            {
+                                                course.title === "Artificial Intelligence" ?
+                                                    <div className={`flex gap-10 items-center  w-full`}>
+                                                        <div>
+                                                            <li>Introduction to AI</li>
+                                                            <li>Introduction to DL</li>
+                                                            <li>Artificial Neural Network Deep Dive</li>
+                                                            <li>Computer Vision</li>
+                                                            <li>Computer Vision with OpenCV</li>
+                                                            <li>Convolution Neural Network</li>
+                                                        </div>
+                                                        <div>
+                                                            <li>Natural Language Processing</li>
+                                                            <li>Recurrent Neural Network</li>
+                                                            <li>Building Chatbot</li>
+                                                            <li>Introduction to Time Series Analysis</li>
+                                                            <li>Weather Forecasting using ARIMA Model</li>
+                                                            <li>Sentiment Analysis on Amazon Reviews</li>
+                                                        </div>
+                                                    </div> :
+                                                    <>
+                                                        <li>Basic</li>
+                                                        <li>Intermediate</li>
+                                                        <li>Advanced</li>
+                                                    </>
+                                            }
                                         </ul>
                                         <img src={course.icon} alt="" className='w-2/12 h-2/12' />
                                     </div>
