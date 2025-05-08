@@ -19,6 +19,11 @@ const DataAnalyticInfo = () => {
             <div className='flex items-center justify-center'>
                 <img src="./images/3dimage.svg" alt="" draggable="false" />
             </div>
+            <div className='h-[900px]'>
+                <div className='h-[632px] w-[350px] bg-[#22577A]'>
+                    <h3 className='text-xl'>Industry-Aligned Curriculum for Data Science & Analytics With AI Certification</h3>
+                </div>
+            </div>
         </div>
     );
 };
