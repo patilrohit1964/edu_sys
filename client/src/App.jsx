@@ -1,19 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense, lazy } from 'react'
 import { Button } from './components/ui/button'
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
-import Explore_Programs from './pages/Explore_Programs'
-import Placement from './pages/Placement'
-import Hire from './pages/Hire'
-import Refer_Earn from './pages/Refer_Earn'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import TermsAndConditions from './pages/TermsAndConditions'
-import Return_Policy from './pages/Return_Policy'
-import DataAnalyticInfo from './pages/coursesInfo/DataAnalyticInfo'
+
+// Lazy load components
+const Home = lazy(() => import('./pages/Home'))
+const Explore_Programs = lazy(() => import('./pages/Explore_Programs'))
+const Placement = lazy(() => import('./pages/Placement'))
+const Hire = lazy(() => import('./pages/Hire'))
+const Refer_Earn = lazy(() => import('./pages/Refer_Earn'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'))
+const Return_Policy = lazy(() => import('./pages/Return_Policy'))
+const DataAnalyticInfo = lazy(() => import('./pages/coursesInfo/DataAnalyticInfo'))
+
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -40,25 +43,26 @@ const App = () => {
       return null;
     };
   }, [])
+
   return (
     <div className=''>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/explore-programs' element={<Explore_Programs />}></Route>
-        <Route path='/placement' element={<Placement />}></Route>
-        <Route path='/hire' element={<Hire />}></Route>
-        <Route path='/refer-earn' element={<Refer_Earn />}></Route>
-        <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
-        <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
-        <Route path='/return-policy' element={<Return_Policy />}></Route>
-        <Route path='/course-info' element={<DataAnalyticInfo />}></Route>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/explore-programs' element={<Explore_Programs />}></Route>
+          <Route path='/placement' element={<Placement />}></Route>
+          <Route path='/hire' element={<Hire />}></Route>
+          <Route path='/refer-earn' element={<Refer_Earn />}></Route>
+          <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
+          <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
+          <Route path='/return-policy' element={<Return_Policy />}></Route>
+          <Route path='/course-info' element={<DataAnalyticInfo />}></Route>
+        </Routes>
+      </Suspense>
       <Footer />
     </div>
   )
 }
 
 export default App
-
-

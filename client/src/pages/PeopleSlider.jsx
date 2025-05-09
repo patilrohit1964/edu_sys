@@ -69,8 +69,8 @@ export default function Peopleslider() {
                             profession: "ML Engineer.",
                             about: "I am very grateful to tech mind education for helping me in grasping  hands-on approach and real-world application enhances skills, making these courses valuable for anyone looking to excel in the industry."
                         },
-                    ].map((el) => (
-                        <SwiperSlide>
+                    ].map((el, index) => (
+                        <SwiperSlide key={index}>
                             <div>
                                 <h3 className='text-left text-[#6440FB] font-semibold'>{el.title}</h3>
                                 <p className='py-8 text-gray-500'>{el.about}</p>

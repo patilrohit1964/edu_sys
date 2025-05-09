@@ -53,7 +53,7 @@ const Home = () => {
             {/* Hero Section */}
             <section>
                 <div className="relative w-full" data-aos="fade-right">
-                    <img src="./images/bha.jpg" className='w-full object-cover' alt="Hero" />
+                    <img src="./images/bha.jpg" className='w-full object-cover' alt="Hero" draggable="false" />
                     <div className='absolute hidden md:flex md:w-[562px] flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4'>
                         <Link to="/placement" className='w-full md:w-auto'>
                             <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
@@ -68,12 +68,28 @@ const Home = () => {
             {/* Top Hiring Companies */}
             <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
             <HiringCompanies />
-            <div className='relative'>
-                <img src={"./images/We.svg"} alt="" className='w-full h-full' />
-                <div className='absolute bottom-32 left-29'>
-                    <GiFlowerEmblem size={150} className="animate-spin [animation-duration:5s]" />
+            <div className="relative w-full h-auto">
+                <img src="./images/We.svg" alt="" className="w-full h-auto object-cover" />
+
+                <div
+                    className="
+      absolute
+      left-4 bottom-4
+      sm:left-8 sm:bottom-8
+      md:left-12 md:bottom-24
+      lg:left-20 lg:bottom-32
+    "
+                >
+                    <GiFlowerEmblem
+                        className="
+        animate-spin
+        w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36
+        [animation-duration:5s]
+      "
+                    />
                 </div>
             </div>
+
             {/* Why Tech Minds Education */}
             <section>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
