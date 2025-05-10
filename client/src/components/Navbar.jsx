@@ -53,6 +53,7 @@ export default function Navbar() {
                     alt="Your Company"
                     src="./images/logo.png"
                     className="h-auto w-auto cursor-pointer"
+                    loading='lazy'
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block pt-4">

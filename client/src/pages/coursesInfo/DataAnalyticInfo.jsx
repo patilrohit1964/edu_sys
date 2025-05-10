@@ -7,10 +7,10 @@ const DataAnalyticInfo = () => {
         <div className="w-full">
             <div className='flex items-center justify-center flex-col'>
                 <div>
-                    <img src="./images/purple_black.svg" alt="" draggable="false" />
+                    <img src="./images/purple_black.svg" alt="" draggable="false" loading='lazy'/>
                 </div>
                 <div className='mt-20 sm:mt-5'>
-                    <img src="./images/purple_black1.svg" alt="" draggable="false" />
+                    <img src="./images/purple_black1.svg" alt="" draggable="false" loading="lazy" />
                 </div>
             </div>
             <div>
@@ -18,7 +18,7 @@ const DataAnalyticInfo = () => {
                 <HiringCompanies />
             </div>
             <div className='flex items-center justify-center'>
-                <img src="./images/3dimage.svg" alt="" draggable="false" />
+                <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
             <div className='h-[900px] mt-10'>
                 {/* <div className='h-[632px] w-[350px] bg-[#22577A]'>
@@ -54,6 +54,7 @@ function DataScienceCurriculum() {
             tag: "Database",
             duration: "2.8 Weeks",
             content: "Master database querying, data manipulation, joins, subqueries, and database design principles.",
+            icon: "./images/excel.jpeg",
             coursePoints: ["Basic", "Intermediate", "Advanced"]
         },
         {
@@ -61,6 +62,7 @@ function DataScienceCurriculum() {
             tag: "Data Visualization",
             duration: "3.2 Weeks",
             content: "Create interactive dashboards, reports, and visualizations using Power BI's comprehensive suite of tools.",
+            icon: "./images/excel.jpeg",
             coursePoints: ["Basic", "Intermediate", "Advanced"]
         },
         {
@@ -68,6 +70,7 @@ function DataScienceCurriculum() {
             tag: "Data Visualization",
             duration: "2.2 Weeks",
             content: "Design interactive data visualizations, dashboards, and stories to communicate insights effectively.",
+            icon: "./images/excel.jpeg",
             coursePoints: ["Basic", "Intermediate", "Advanced"]
         },
         {
@@ -75,6 +78,7 @@ function DataScienceCurriculum() {
             tag: "Backend",
             duration: "3.8 Weeks",
             content: "Learn Python programming fundamentals with focus on data manipulation, control structures, and functions.",
+            icon: "./images/excel.jpeg",
             coursePoints: ["Basic", "Intermediate", "Advanced"]
         },
         {
@@ -82,6 +86,7 @@ function DataScienceCurriculum() {
             tag: "NumPy",
             duration: "2.4 Weeks",
             content: "Master numerical computing with NumPy arrays and perform statistical analysis on datasets.",
+            icon: "./images/excel.jpeg",
             coursePoints: ["Basic", "Intermediate", "Advanced"]
         },
         {
@@ -89,6 +94,7 @@ function DataScienceCurriculum() {
             tag: "Data Analysis",
             duration: "2.4 Weeks",
             content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
+            icon: "./images/excel.jpeg",
             coursePoints: ["Basic", "Intermediate", "Advanced"]
         },
         {
@@ -96,6 +102,7 @@ function DataScienceCurriculum() {
             tag: "AI",
             duration: "4.8 Weeks",
             content: "Learn supervised and unsupervised learning algorithms, model evaluation, and implementation with scikit-learn.",
+            icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_zySmDbLOkdsrzURqDl_Z_psgTM7MgAUUsw&s",
             coursePoints: [
                 "Introduction to AI",
                 "Introduction to DL",
@@ -240,6 +247,7 @@ function DataScienceCurriculum() {
                                         <img
                                             src={course.icon}
                                             alt=""
+                                            loading="lazy"
                                             className="w-16 h-16 ml-3 hidden sm:block"
                                         />
                                     </div>

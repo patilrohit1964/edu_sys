@@ -42,7 +42,7 @@ const FeatureCard = ({ title, description, img }) => (
             <p className='text-black text-xl pt-2 font-bold whitespace-pre-line'>{description}</p>
         </div>
         <div className='h-[390px] w-full mt-5'>
-            <img src={img} alt={title} className='w-full h-full object-contain -mt-10' />
+            <img src={img} alt={title} className='w-full h-full object-contain -mt-10' loading='lazy' />
         </div>
     </div>
 );
@@ -53,7 +53,7 @@ const Home = () => {
             {/* Hero Section */}
             <section>
                 <div className="relative w-full" data-aos="fade-right">
-                    <img src="./images/bha.jpg" className='w-full object-cover' alt="Hero" draggable="false" />
+                    <img src="./images/bha.jpg" className='w-full object-cover' alt="Hero" draggable="false" loading='lazy' />
                     <div className='absolute hidden md:flex md:w-[562px] flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4'>
                         <Link to="/placement" className='w-full md:w-auto'>
                             <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
@@ -69,7 +69,7 @@ const Home = () => {
             <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
             <HiringCompanies />
             <div className="relative w-full h-auto">
-                <img src="./images/We.svg" alt="" className="w-full h-auto object-cover" />
+                <img src="./images/We.svg" alt="" className="w-full h-auto object-cover" loading='lazy' />
                 <div
                     className="
       absolute

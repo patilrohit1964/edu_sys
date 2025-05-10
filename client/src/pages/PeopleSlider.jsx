@@ -77,7 +77,7 @@ export default function Peopleslider() {
                             </div>
                             <div className='flex items-center border-t border-t-gray-500 w-full'>
                                 <div className='h-[80px] w-[80px] rounded-full'>
-                                    <img src={el.img} className='h-full w-full' />
+                                    <img src={el.img} className='h-full w-full' loading='lazy' />
                                 </div>
                                 <div className='flex flex-col items-center'>
                                     <h3 className='text-md text-gray-800 font-semibold'>{el.name}</h3>
