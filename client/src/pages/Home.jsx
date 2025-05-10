@@ -93,7 +93,7 @@ const Home = () => {
             {/* Why Tech Minds Education */}
             <section>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
-                <div className="lg:h-[650px] relative mt-5 lg:overflow-hidden">
+                <div className="relative h-[650px] mt-5 border border-red-500">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" className="absolute top-0 left-0 w-full h-full object-cover" preserveAspectRatio="none">
                         <rect fill="#000000" width="1000" height="120" />
                         <g fill="none" stroke="#222" strokeWidth="10" strokeOpacity="1">
@@ -121,9 +121,9 @@ const Home = () => {
             </div>
 
             {/* Course Background Image Section */}
-            <div className={'relative'}>
-                <img src={"./images/course-bg.svg"} alt="" />
-                <div className='absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-around m-auto'>
+            <div className={'relative border border-blue-500 bg-[url(./images/course-bg.svg)]'}>
+                {/* <img src={"./images/course-bg.svg"} alt="" />    */}
+                <div className='absolut top-0 left-0 w-full h-full flex flex-wrap items-center justify-around m-auto'>
                     {[
                         {
                             courseName: "Data Science With Analytics and AI",
