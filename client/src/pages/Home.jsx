@@ -93,12 +93,12 @@ const Home = () => {
             {/* Why Tech Minds Education */}
             <section>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
-                <div className="relative h-[650px] mt-5 border border-red-500">
+                <div className="relative h-[650p mt-5 border border-red-500">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" className="absolute top-0 left-0 w-full h-full object-cover" preserveAspectRatio="none">
                         <rect fill="#000000" width="1000" height="120" />
                         <g fill="none" stroke="#222" strokeWidth="10" strokeOpacity="1">
                             {[15, -15, 45, 75, 105, 135].map((y, i) => (
-                                <path key={i} d={`M-500 ${y}c0 0 125-30 250-30S0 ${y} 0 ${y}s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30`} />
+                                <path key={i} d={`M-500 ${"15"}c0 0 125-30 250-30S0 ${"-15"} 0 ${"45"}s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30`} height={"640"} />
                             ))}
                         </g>
                     </svg>
