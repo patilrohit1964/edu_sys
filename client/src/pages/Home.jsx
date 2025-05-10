@@ -70,20 +70,19 @@ const Home = () => {
             <HiringCompanies />
             <div className="relative w-full h-auto">
                 <img src="./images/We.svg" alt="" className="w-full h-auto object-cover" />
-
                 <div
                     className="
       absolute
       left-4 bottom-4
       sm:left-8 sm:bottom-8
       md:left-12 md:bottom-24
-      lg:left-20 lg:bottom-32
+      lg:left-20 lg:bottom-24
     "
                 >
                     <GiFlowerEmblem
                         className="
         animate-spin
-        w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36
+        w-20 h-20 sm:w-24 sm:h-24 md:w-56 md:h-56
         [animation-duration:5s]
       "
                     />
@@ -93,17 +92,9 @@ const Home = () => {
             {/* Why Tech Minds Education */}
             <section>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
-                <div className="relative h-[650p mt-5 border border-red-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" className="absolute top-0 left-0 w-full h-full object-cover" preserveAspectRatio="none">
-                        <rect fill="#000000" width="1000" height="120" />
-                        <g fill="none" stroke="#222" strokeWidth="10" strokeOpacity="1">
-                            {[15, -15, 45, 75, 105, 135].map((y, i) => (
-                                <path key={i} d={`M-500 ${"15"}c0 0 125-30 250-30S0 ${"-15"} 0 ${"45"}s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30`} height={"640"} />
-                            ))}
-                        </g>
-                    </svg>
-
-                    <div className="absolute top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10">
+                <div className="relative mt-5 bg-[url(./images/blackSvg.svg)] overflow-hidden">
+                    {/* <SVGComponent /> */}
+                    <div className="absolut top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10 overflow-hidden">
                         {features.map((feature, i) => (
                             <FeatureCard key={i} {...feature} />
                         ))}
@@ -112,7 +103,7 @@ const Home = () => {
             </section>
 
             {/* Career Tracks */}
-            <div className='flex items-center justify-around my-20' style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}>
+            <div className='flex items-center flex-wrap justify-around my-20' style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}>
                 <FcBullish size={240} />
                 <h1 className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 p-5 border-inset border-orange-500 mb-16 text-center'>
                     CAREER TRACKS <br /> Build your Career
@@ -185,7 +176,7 @@ const Home = () => {
                     </p>
                 </div>
                 <Peopleslider />
-                <div className='flex items-center justify-around pb-10'>
+                <div className='flex items-center justify-around pb-10 flex-wrap'>
                     {
                         [
                             { target: 10, title: "Years of experience" },
@@ -307,3 +298,26 @@ function AnimatedCounter({ target = 1000, duration = 2, title }) {
         </motion.h1>
     );
 }
+
+
+
+const SVGComponent = (props) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 120"
+        preserveAspectRatio="none"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        height={650}
+        {...props}
+    >
+        <rect fill="#000000" width={1000} height={120} />
+        <g fill="none" stroke="#222" strokeWidth={10} strokeOpacity={1}>
+            <path d="M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+            <path d="M-500 -15c0 0 125-30 250-30S0 -15 0 -15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+            <path d="M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+            <path d="M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+            <path d="M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+            <path d="M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
+        </g>
+    </svg>
+);
