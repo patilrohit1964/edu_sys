@@ -185,7 +185,7 @@ function DataScienceCurriculum() {
             {/* Left Panel */}
             <div className="w-full lg:w-2/5 xl:w-1/3 bg-[#22577A] p-5 sm:p-6 rounded-xl mb-6 lg:mb-0 lg:mr-6" data-aos="fade-right" data-aos-duration="1000">
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
-                    Industry-Aligned Curriculum for Data Science & Analytics With AI Certification
+                    Data Science With Machine Learning and AI
                 </h1>
 
                 <p className="mb-6 text-sm sm:text-base">

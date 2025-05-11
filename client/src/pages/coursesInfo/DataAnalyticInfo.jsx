@@ -41,6 +41,16 @@ const DataAnalyticInfo = () => {
             <div className='flex items-center justify-center' data-aos="flip-up" data-aos-delay="300">
                 <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
+            <div className="text-center">
+                <h1
+                    className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/6 m-auto mb-5'
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                >
+                    Course Curriculum
+                </h1>
+                <p className="text-3xl font-bold">Up-to-date industry relevant curriculum</p>
+            </div>
             <div className='mt-10'>
                 <DataScienceCurriculum />
             </div>
@@ -187,7 +197,7 @@ function DataScienceCurriculum() {
             {/* Left Panel */}
             <div className="w-full lg:w-2/5 xl:w-1/3 bg-[#22577A] p-5 sm:p-6 rounded-xl mb-6 lg:mb-0 lg:mr-6" data-aos="fade-right" data-aos-duration="1000">
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
-                    Industry-Aligned Curriculum for Data Science & Analytics With AI Certification
+                    Industry-Aligned Curriculum for Data Science With Machine Analytics With AI Certification
                 </h1>
 
                 <p className="mb-6 text-sm sm:text-base">
