@@ -107,7 +107,18 @@ function DataScienceCurriculum() {
             duration: "2.4 Weeks",
             content: "Learn advanced Excel functions, pivot tables, data analysis, and visualization techniques essential for data science.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: ["Introduction to Excel",
+                "Formula and Function",
+                "Formula Referencing",
+                "Named Ranges",
+                "Table in Excel",
+                "AutoFill and Custom Lists",
+                "Conditional Formatting",
+                "Logical Functions",
+                "Reference Functions",
+                "Data Validation",
+                "Pivot Table",
+                "Data Visualization"]
         },
         {
             title: "SQL",
@@ -115,7 +126,11 @@ function DataScienceCurriculum() {
             duration: "2.8 Weeks",
             content: "Master database querying, data manipulation, joins, subqueries, and database design principles.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: ["SQL Launchpad",
+                "Crafting SQL Databases (DDL) & Mastering Data Control (DML)",
+                "Querying into Data (DQL)",
+                "Unlock the Built in Functions",
+                "Connecting Data for Insights"]
         },
         {
             title: "POWER BI",
@@ -123,7 +138,16 @@ function DataScienceCurriculum() {
             duration: "3.2 Weeks",
             content: "Create interactive dashboards, reports, and visualizations using Power BI's comprehensive suite of tools.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: [
+                "Introduction to Power BI",
+                "Power BI Desktop & Power Query",
+                "Modelling with Power BI",
+                "Data Analysis Expressions (DAX)",
+                "Data Visualization",
+                "Introduction to Power BI Dashboard, Q&A and Data Insights",
+                "Power BI Service",
+                "Power BI Direct Connectivity"
+            ]
         },
         {
             title: "Tableau",
@@ -131,7 +155,17 @@ function DataScienceCurriculum() {
             duration: "2.2 Weeks",
             content: "Design interactive data visualizations, dashboards, and stories to communicate insights effectively.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: [
+                "Introduction to Tableau",
+                "Tableau Shelf and Card",
+                "Data Types in Tableau",
+                "Connecting to and Preparing Data",
+                "Organizing and Simplify Data",
+                "Learn Tableau Built-In and Custom Chart",
+                "Analytics",
+                "Tableau Dashboard",
+                "Performance improvement of Dashboard"
+            ]
         },
         {
             title: "Python",
@@ -139,7 +173,17 @@ function DataScienceCurriculum() {
             duration: "3.8 Weeks",
             content: "Learn Python programming fundamentals with focus on data manipulation, control structures, and functions.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: [
+                "Introduction to Python",
+                "Data Types & Variable",
+                "Conditional Statement",
+                "Loops in Python",
+                "More on Data types",
+                "Function and Modules",
+                "Object Oriented Programming",
+                "File Handling",
+                "Regular Expression & Web Scraping"
+            ]
         },
         {
             title: "NumPy and Statistical Analysis",
@@ -147,7 +191,14 @@ function DataScienceCurriculum() {
             duration: "2.4 Weeks",
             content: "Master numerical computing with NumPy arrays and perform statistical analysis on datasets.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: [
+                "Introduction to NumPy",
+                "NumPy Arrays",
+                "NumPy Functions",
+                "Working with Multiple Dimensions",
+                "Characterising Data (Descriptive Statistics)",
+                "Predicting from Data (Inferential Statistics)"
+            ]
         },
         {
             title: "Applied Data Analysis with Python",
@@ -155,7 +206,37 @@ function DataScienceCurriculum() {
             duration: "2.4 Weeks",
             content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
             icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
+            coursePoints: [
+                "Introduction to Pandas",
+                "DataFrames Basics",
+                "Indexing and Selecting Data",
+                "Data Manipulation",
+                "Visualising Data",
+                "Introduction to Matplotlib",
+                "Customizing Plots",
+                "Introduction to Seaborn Library"
+            ]
+        },
+        {
+            title: "Machine Learning",
+            tag: "Data Analysis",
+            duration: "2.4 Weeks",
+            content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
+            icon: "./images/excel.jpeg",
+            coursePoints: [
+                "ML Fundamentals",
+                "EDA",
+                "Linear Regression",
+                "Logistic Regression",
+                "Decision Tree",
+                "Random Forests",
+                "Ensemble Techniques",
+                "Neighbours (K-NN)",
+                "Support Vector Machines (SVM)",
+                "PCA",
+                "K-means",
+                "Hierarchical Clustering"
+            ]
         },
         {
             title: "Artificial Intelligence",
@@ -178,6 +259,7 @@ function DataScienceCurriculum() {
                 "Sentiment Analysis on Amazon Reviews"
             ]
         },
+
     ];
 
     return (
@@ -205,7 +287,7 @@ function DataScienceCurriculum() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-lg sm:text-xl font-bold">50+</h3>
+                            <h3 className="text-black text-lg sm:text-xl font-bold">80+</h3>
                             <p className="text-black text-sm sm:text-base">Case Studies & Projects</p>
                         </div>
                     </div>
@@ -219,7 +301,7 @@ function DataScienceCurriculum() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-lg sm:text-xl font-bold">10+</h3>
+                            <h3 className="text-black text-lg sm:text-xl font-bold">20+</h3>
                             <p className="text-black text-sm sm:text-base">Languages & Tools</p>
                         </div>
                     </div>
