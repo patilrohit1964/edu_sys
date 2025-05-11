@@ -309,23 +309,23 @@ const CertificationTabs = () => {
     const certifications = [
         {
             name: "Certificate of Complition",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0I5pC67t2GJq9YpKPH3hnM1JSSVhOeEmhcA&s",
-            description: "Amazon Web Services certified professional capable of designing distributed systems on AWS."
+            image: "./images/certi1.jpg",
+            description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
         },
         {
-            name: "Intership Experince Letter",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6xZn0YPz69mHlRgzTO5kVCB5pSxOnUZOGPg&s",
-            description: "Foundation-level certification for Microsoft Azure cloud services and concepts."
+            name: "Intership Experience Letter",
+            image: "./images/certi2.jpg",
+            description: "Internship experience certified by Tech Minds Education, premier practical institute."
         },
         {
             name: "MNC Project Completion Certificate",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiDx59Qtp6wBA7YGeFE0JR0RarYIhyNtBCYg&s",
-            description: "Expert-level certification for designing and building data processing systems on Google Cloud."
+            image: "./images/certi3.jpg",
+            description: "Project successfully completed, certified by MNC – global excellence recognized."
         },
         {
             name: "MNC Project Completion Certificate 2",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VPcmr63T8-0NxS-ABlcpuKxj1ye-2TK_YQ&s",
-            description: "Advanced security certification demonstrating expertise in designing, implementing, and managing cybersecurity programs."
+            image: "./images/certi3.jpg",
+            description: "Project successfully completed, certified by MNC – global excellence recognized."
         }
     ];
 
@@ -334,7 +334,7 @@ const CertificationTabs = () => {
             <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Professional Certifications</h2>
 
             {/* Tabs */}
-            <div className="flex flex-wrp mb-6 border-b border-red-500 overflow-x-auto m-auto md:items-center md:justify-center">
+            <div className="flex flex-wrp mb-6 border-b overflow-x-auto m-auto md:items-center md:justify-center">
                 {certifications.map((cert, index) => (
                     <button
                         key={index}
@@ -356,7 +356,8 @@ const CertificationTabs = () => {
                         <img
                             src={certifications[activeTab].image}
                             alt={`${certifications[activeTab].name} Certificate`}
-                            className="w-full rounded-lg shadow-md"
+                            className={`w-full object-cover rounded-lg shadow-md ${activeTab == 1 ? 'h-[800px]' : ''}`}
+                            draggable="false"
                         />
                     </div>
                     <div className="md:w-1/2">
