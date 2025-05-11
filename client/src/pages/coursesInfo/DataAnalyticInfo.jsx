@@ -63,6 +63,19 @@ const DataAnalyticInfo = () => {
                 <h3 className='text-center text-4xl font-bold my-5'>Become Eligible For 4 Industry-Recognized Certificates</h3>
                 <CertificationTabs />
             </div>
+            <div>
+                <h1
+                    className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/6 m-auto'
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                >
+                    Program Fees
+                </h1>
+                <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Data Science with Analytics and A.I  Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
+                <div>
+                    <PricingBoxes />
+                </div>
+            </div>
         </div>
     );
 };
@@ -395,12 +408,18 @@ function CarouselSize() {
             className="w-full max-w-4xl m-auto"
         >
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {[
+                    "./images/mentor1.jpg",
+                    "./images/mentor2.jpg",
+                    "./images/mentor3.jpg",
+                    "./images/mentor4.jpg",
+                    "./images/mentor5.jpg",
+                ].map((_, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
                             <Card>
-                                <CardContent className="flex aspect-square items-center justify-center p-6">
-                                    {/* <img src="./images/metor1.jpg" alt="" className='object-cover w-full h-full' /> */}
+                                <CardContent className="flex aspect-squar items-center justify-center p-6">
+                                    <img src={_} alt="" className='object-cover w-full h-full' />
                                 </CardContent>
                             </Card>
                         </div>
@@ -411,4 +430,145 @@ function CarouselSize() {
             <CarouselNext />
         </Carousel>
     )
+}
+
+
+import { Check } from 'lucide-react';
+
+function PricingBoxes() {
+    const [billingPeriod, setBillingPeriod] = useState('monthly');
+
+    const toggleBillingPeriod = () => {
+        setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly');
+    };
+
+    const plans = [
+        // {
+        //     name: 'Basic',
+        //     monthlyPrice: '$9',
+        //     yearlyPrice: '$90',
+        //     description: 'Perfect for individuals and small projects',
+        //     features: [
+        //         '1 user',
+        //         '5 projects',
+        //         '5GB storage',
+        //         'Basic support',
+        //         'Access to core features'
+        //     ],
+        //     buttonText: 'Get Started',
+        //     featured: false
+        // },
+        {
+            name: 'Program Fees',
+            monthlyPrice: '$29',
+            yearlyPrice: '$290',
+            description: 'Great for growing teams and businesses',
+            features: [
+                '5 users',
+                'Unlimited projects',
+                '50GB storage',
+                'Priority support',
+                'Advanced analytics',
+                'All core features'
+            ],
+            buttonText: 'Get Started',
+            featured: true
+        },
+        // {
+        //     name: 'Enterprise',
+        //     monthlyPrice: '$99',
+        //     yearlyPrice: '$990',
+        //     description: 'For large organizations with complex needs',
+        //     features: [
+        //         'Unlimited users',
+        //         'Unlimited projects',
+        //         'Unlimited storage',
+        //         '24/7 dedicated support',
+        //         'Custom integrations',
+        //         'Advanced security',
+        //         'All features included'
+        //     ],
+        //     buttonText: 'Contact Sales',
+        //     featured: false
+        // }
+    ];
+
+    return (
+        <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+                {/* Pricing Header */}
+                <div className="text-center mb-12">
+                    {/* Billing Toggle */}
+                    <div className="flex items-center justify-center ">
+                        <span className={`mr-3 text-sm ${billingPeriod === 'monthly' ? 'font-semibold text-gray-900' : 'text-gray-500'}`}>
+                            Monthly
+                        </span>
+                        <button
+                            type="button"
+                            className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${billingPeriod === 'yearly' ? 'bg-indigo-600' : 'bg-gray-200'
+                                }`}
+                            onClick={toggleBillingPeriod}
+                        >
+                            <span className="sr-only">Toggle billing period</span>
+                            <span
+                                className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${billingPeriod === 'yearly' ? 'translate-x-5' : 'translate-x-0'
+                                    }`}
+                            />
+                        </button>
+                        <span className={`ml-3 text-sm ${billingPeriod === 'yearly' ? 'font-semibold text-gray-900' : 'text-gray-500'}`}>
+                            Yearly <span className="text-green-500 font-medium">(Save 16%)</span>
+                        </span>
+                    </div>
+                </div>
+
+                {/* Pricing Boxes */}
+                <div className="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-1 sm:gap-6 sm:space-y-0 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 items-center justify-center">
+                    {plans.map((plan) => (
+                        <div
+                            key={plan.name}
+                            className={`rounded-lg shadow-lg divide-y divide-gray-200 ${plan.featured ? 'border-2 border-indigo-600 scale-105 z-10' : 'border border-gray-200'
+                                }`}
+                        >
+                            {plan.featured && (
+                                <div className="absolute top-0 right-6 -mt-3 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full transform translate-y-0">
+                                    Most Popular
+                                </div>
+                            )}
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold text-gray-900">{plan.name}</h3>
+                                <p className="mt-1 text-sm text-gray-500">{plan.description}</p>
+                                <p className="mt-4">
+                                    <span className="text-4xl font-extrabold text-gray-900">
+                                        {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
+                                    </span>
+                                    <span className="text-base font-medium text-gray-500">
+                                        /{billingPeriod === 'monthly' ? 'mo' : 'year'}
+                                    </span>
+                                </p>
+                                <button
+                                    className={`mt-6 w-full py-3 px-4 rounded-md shadow ${plan.featured
+                                        ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                        : 'bg-white border border-gray-300 text-gray-900 hover:bg-gray-50'
+                                        } focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 font-medium`}
+                                >
+                                    {plan.buttonText}
+                                </button>
+                            </div>
+                            <div className="pt-6 pb-8 px-6">
+                                <h4 className="text-sm font-medium text-gray-900 tracking-wide uppercase">What's included</h4>
+                                <ul className="mt-6 space-y-4">
+                                    {plan.features.map((feature, index) => (
+                                        <li key={index} className="flex">
+                                            <Check size={20} className="flex-shrink-0 text-green-500" />
+                                            <span className="ml-3 text-sm text-gray-500">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
 }
