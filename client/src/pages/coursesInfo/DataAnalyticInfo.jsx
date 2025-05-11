@@ -1,9 +1,16 @@
-import React, { useEffect } from 'react';
-import { HiringCompanies } from '../Home';
-import { ChevronDown, Clock, Plus } from 'lucide-react';
-import { useState } from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ChevronDown, Clock, Plus } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { HiringCompanies } from '../Home';
 
 const DataAnalyticInfo = () => {
     // Initialize AOS
@@ -36,6 +43,14 @@ const DataAnalyticInfo = () => {
             </div>
             <div className='mt-10'>
                 <DataScienceCurriculum />
+            </div>
+            <div>
+                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] lg:w-2/ m-auto'
+                    data-aos="zoom-in"
+                    data-aos-duration="800"><span className='border-8 border-orange-500 inline-block mb-5'>Our Expert</span> <br /> <span className='font-bold'>Learn From The real Industry Experts</span></h1>
+                <div className="my-5">
+                    <CarouselSize />
+                </div>
             </div>
             <div>
                 <h1
@@ -320,12 +335,12 @@ const CertificationTabs = () => {
         {
             name: "MNC Project Completion Certificate",
             image: "./images/certi3.jpg",
-            description: "Project successfully completed, certified by MNC – global excellence recognized."
+            description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
         },
         {
             name: "MNC Project Completion Certificate 2",
             image: "./images/certi3.jpg",
-            description: "Project successfully completed, certified by MNC – global excellence recognized."
+            description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
         }
     ];
 
@@ -370,3 +385,30 @@ const CertificationTabs = () => {
     );
 };
 
+
+function CarouselSize() {
+    return (
+        <Carousel
+            opts={{
+                align: "start",
+            }}
+            className="w-full max-w-4xl m-auto"
+        >
+            <CarouselContent>
+                {Array.from({ length: 5 }).map((_, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                        <div className="p-1">
+                            <Card>
+                                <CardContent className="flex aspect-square items-center justify-center p-6">
+                                    {/* <img src="./images/metor1.jpg" alt="" className='object-cover w-full h-full' /> */}
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </CarouselItem>
+                ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+        </Carousel>
+    )
+}

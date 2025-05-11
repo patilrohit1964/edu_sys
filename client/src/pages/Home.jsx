@@ -266,7 +266,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div data-aos="fade-in" data-aos-duration="1200">
-                    <Peopleslider />
+                    <Peopleslider/>
                 </div>
                 <div className='flex items-center justify-around pb-10 flex-wrap'>
                     {

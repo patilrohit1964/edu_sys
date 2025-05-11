@@ -26,6 +26,7 @@ export default function Peopleslider() {
                 className="mySwiper"
             >
                 {
+
                     [
                         {
                             title: "Best Platform ",
