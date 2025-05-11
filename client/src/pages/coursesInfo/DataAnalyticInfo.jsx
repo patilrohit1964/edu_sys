@@ -34,8 +34,19 @@ const DataAnalyticInfo = () => {
             <div className='flex items-center justify-center' data-aos="flip-up" data-aos-delay="300">
                 <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
-            <div className='h-[900px] mt-10'>
+            <div className='mt-10'>
                 <DataScienceCurriculum />
+            </div>
+            <div>
+                <h1
+                    className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/6 m-auto'
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                >
+                    Certification
+                </h1>
+                <h3 className='text-center text-4xl font-bold my-5'>Become Eligible For 4 Industry-Recognized Certificates</h3>
+                <CertificationTabs />
             </div>
         </div>
     );
@@ -290,3 +301,71 @@ function DataScienceCurriculum() {
         </div>
     );
 }
+
+
+const CertificationTabs = () => {
+    const [activeTab, setActiveTab] = useState(0);
+
+    const certifications = [
+        {
+            name: "Certificate of Complition",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0I5pC67t2GJq9YpKPH3hnM1JSSVhOeEmhcA&s",
+            description: "Amazon Web Services certified professional capable of designing distributed systems on AWS."
+        },
+        {
+            name: "Intership Experince Letter",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6xZn0YPz69mHlRgzTO5kVCB5pSxOnUZOGPg&s",
+            description: "Foundation-level certification for Microsoft Azure cloud services and concepts."
+        },
+        {
+            name: "MNC Project Completion Certificate",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiDx59Qtp6wBA7YGeFE0JR0RarYIhyNtBCYg&s",
+            description: "Expert-level certification for designing and building data processing systems on Google Cloud."
+        },
+        {
+            name: "MNC Project Completion Certificate 2",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VPcmr63T8-0NxS-ABlcpuKxj1ye-2TK_YQ&s",
+            description: "Advanced security certification demonstrating expertise in designing, implementing, and managing cybersecurity programs."
+        }
+    ];
+
+    return (
+        <div className="w-full p-6 bg-white rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Professional Certifications</h2>
+
+            {/* Tabs */}
+            <div className="flex flex-wrp mb-6 border-b border-red-500 overflow-x-auto m-auto md:items-center md:justify-center">
+                {certifications.map((cert, index) => (
+                    <button
+                        key={index}
+                        className={`px-4 py-2 mr-2 mb-2 rounded-t-lg font-medium transition-colors duration-200 ${activeTab === index
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                            }`}
+                        onClick={() => setActiveTab(index)}
+                    >
+                        {cert.name}
+                    </button>
+                ))}
+            </div>
+
+            {/* Content */}
+            <div className="bg-gray-100 rounded-lg p-6">
+                <div className="flex flex-col md:flex-row items-center">
+                    <div className="md:w-1/2 mb-4 md:mb-0 md:mr-6">
+                        <img
+                            src={certifications[activeTab].image}
+                            alt={`${certifications[activeTab].name} Certificate`}
+                            className="w-full rounded-lg shadow-md"
+                        />
+                    </div>
+                    <div className="md:w-1/2">
+                        <h3 className="text-xl font-bold mb-3 text-gray-800">{certifications[activeTab].name}</h3>
+                        <p className="text-gray-700">{certifications[activeTab].description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
