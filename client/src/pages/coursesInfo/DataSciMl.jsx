@@ -125,7 +125,7 @@ function DataScienceCurriculum() {
             tag: "Database",
             duration: "2.8 Weeks",
             content: "Master database querying, data manipulation, joins, subqueries, and database design principles.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/sql.png",
             coursePoints: ["SQL Launchpad",
                 "Crafting SQL Databases (DDL) & Mastering Data Control (DML)",
                 "Querying into Data (DQL)",
@@ -137,14 +137,14 @@ function DataScienceCurriculum() {
             tag: "Data Visualization",
             duration: "3.2 Weeks",
             content: "Create interactive dashboards, reports, and visualizations using Power BI's comprehensive suite of tools.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/powerbi.jpeg",
             coursePoints: [
                 "Introduction to Power BI",
                 "Power BI Desktop & Power Query",
                 "Modelling with Power BI",
                 "Data Analysis Expressions (DAX)",
                 "Data Visualization",
-                "Introduction to Power BI Dashboard, Q&A and Data Insights",
+                "Introduction to Power BI Dashboard, Q  &A and Data Insights",
                 "Power BI Service",
                 "Power BI Direct Connectivity"
             ]
@@ -154,7 +154,7 @@ function DataScienceCurriculum() {
             tag: "Data Visualization",
             duration: "2.2 Weeks",
             content: "Design interactive data visualizations, dashboards, and stories to communicate insights effectively.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/tableau.png",
             coursePoints: [
                 "Introduction to Tableau",
                 "Tableau Shelf and Card",
@@ -172,7 +172,7 @@ function DataScienceCurriculum() {
             tag: "Backend",
             duration: "3.8 Weeks",
             content: "Learn Python programming fundamentals with focus on data manipulation, control structures, and functions.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/python.jpeg",
             coursePoints: [
                 "Introduction to Python",
                 "Data Types & Variable",
@@ -190,7 +190,7 @@ function DataScienceCurriculum() {
             tag: "NumPy",
             duration: "2.4 Weeks",
             content: "Master numerical computing with NumPy arrays and perform statistical analysis on datasets.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/numpy.png",
             coursePoints: [
                 "Introduction to NumPy",
                 "NumPy Arrays",
@@ -205,7 +205,7 @@ function DataScienceCurriculum() {
             tag: "Data Analysis",
             duration: "2.4 Weeks",
             content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/datanlysis.png",
             coursePoints: [
                 "Introduction to Pandas",
                 "DataFrames Basics",
@@ -219,10 +219,10 @@ function DataScienceCurriculum() {
         },
         {
             title: "Machine Learning",
-            tag: "Data Analysis",
+            tag: "ML",
             duration: "2.4 Weeks",
             content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
-            icon: "./images/excel.jpeg",
+            icon: "./images/machine.png",
             coursePoints: [
                 "ML Fundamentals",
                 "EDA",
@@ -340,7 +340,7 @@ function DataScienceCurriculum() {
                                 <div className="flex-1">
                                     <div className="flex flex-wrap items-center gap-2">
                                         <h3 className="text-black font-medium text-sm sm:text-base">{course.title}</h3>
-                                        <span className={`text-xs px-2 py-1 rounded-full ${["Data", "Database", "Data Visualization", "Backend", "NumPy", "Data Analysis", "AI"].includes(course.tag)
+                                        <span className={`text-xs px-2 py-1 rounded-full ${["Data", "Database", "Data Visualization", "Backend", "NumPy", "Data Analysis", "AI","ML"].includes(course.tag)
                                             ? "bg-yellow-300"
                                             : "bg-gray-200"
                                             } text-black`}>
@@ -370,28 +370,20 @@ function DataScienceCurriculum() {
                                     data-aos-duration="500"
                                 >
                                     <div className="text-gray-700 flex items-start justify-between">
-                                        {course.title === "Artificial Intelligence" ? (
-                                            <div className="text-black text-sm sm:text-base w-full">
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                                    <ul className="list-disc pl-5">
-                                                        {course.coursePoints.slice(0, 6).map((el, i) => (
-                                                            <li key={i} data-aos="fade-right" data-aos-delay={i * 50}>{el}</li>
-                                                        ))}
-                                                    </ul>
-                                                    <ul className="list-disc pl-5">
-                                                        {course.coursePoints.slice(6, 12).map((el, i) => (
-                                                            <li key={i} data-aos="fade-left" data-aos-delay={i * 50}>{el}</li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
+                                        <div className="text-black text-sm sm:text-base w-full">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                <ul className="list-disc pl-5">
+                                                    {course.coursePoints.slice(0, 6).map((el, i) => (
+                                                        <li key={i} data-aos="fade-right" data-aos-delay={i * 50}>{el}</li>
+                                                    ))}
+                                                </ul>
+                                                <ul className="list-disc pl-5">
+                                                    {course.coursePoints.slice(6, 12).map((el, i) => (
+                                                        <li key={i} data-aos="fade-left" data-aos-delay={i * 50}>{el}</li>
+                                                    ))}
+                                                </ul>
                                             </div>
-                                        ) : (
-                                            <ul className="text-black list-disc pl-5 font-bold text-base sm:text-lg flex-1">
-                                                {course.coursePoints.map((el, i) => (
-                                                    <li key={i} data-aos="fade-right" data-aos-delay={i * 100}>{el}</li>
-                                                ))}
-                                            </ul>
-                                        )}
+                                        </div>
                                         <img
                                             src={course.icon}
                                             alt=""
