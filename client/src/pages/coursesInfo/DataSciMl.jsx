@@ -25,9 +25,9 @@ const DataSciMl = () => {
         <div className="w-full overflow-hidden">
             <div className='flex items-center justify-center flex-col'>
                 <div data-aos="fade-down">
-                    <img src="./images/purple_blackorg.svg" alt="" draggable="false" loading='lazy' />
+                    <img src="./images/ML.svg" alt="" draggable="false" loading='lazy' />
                 </div>
-                <div className='mt-20 sm:mt-5' data-aos="fade-up" data-aos-delay="300">
+                <div className='sm:mt-5' data-aos="fade-up" data-aos-delay="300">
                     <img src="./images/purple_black1.svg" alt="" draggable="false" loading="lazy" />
                 </div>
             </div>
@@ -340,7 +340,7 @@ function DataScienceCurriculum() {
                                 <div className="flex-1">
                                     <div className="flex flex-wrap items-center gap-2">
                                         <h3 className="text-black font-medium text-sm sm:text-base">{course.title}</h3>
-                                        <span className={`text-xs px-2 py-1 rounded-full ${["Data", "Database", "Data Visualization", "Backend", "NumPy", "Data Analysis", "AI","ML"].includes(course.tag)
+                                        <span className={`text-xs px-2 py-1 rounded-full ${["Data", "Database", "Data Visualization", "Backend", "NumPy", "Data Analysis", "AI", "ML"].includes(course.tag)
                                             ? "bg-yellow-300"
                                             : "bg-gray-200"
                                             } text-black`}>
@@ -409,7 +409,7 @@ const CertificationTabs = () => {
     const certifications = [
         {
             name: "Certificate of Complition",
-            image: "./images/certi1.jpg",
+            image: "./images/certiml1.jpg",
             description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
         },
         {
@@ -481,7 +481,7 @@ function CarouselSize() {
         >
             <CarouselContent>
                 {[
-                    "./images/mentor1.jpg",
+                    "./images/mentorml1.jpg",
                     "./images/mentor2.jpg",
                     "./images/mentor3.jpg",
                     "./images/mentor4.jpg",
