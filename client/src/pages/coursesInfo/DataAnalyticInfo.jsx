@@ -1,29 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { ChevronDown, Clock, Plus } from 'lucide-react';
 import { useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const DataAnalyticInfo = () => {
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+        });
+    }, []);
+
     return (
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
             <div className='flex items-center justify-center flex-col'>
-                <div>
-                    <img src="./images/purple_black.svg" alt="" draggable="false" loading='lazy'/>
+                <div data-aos="fade-down">
+                    <img src="./images/purple_black.svg" alt="" draggable="false" loading='lazy' />
                 </div>
-                <div className='mt-20 sm:mt-5'>
+                <div className='mt-20 sm:mt-5' data-aos="fade-up" data-aos-delay="300">
                     <img src="./images/purple_black1.svg" alt="" draggable="false" loading="lazy" />
                 </div>
             </div>
             <div>
-                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
-                <HiringCompanies />
+                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto' data-aos="zoom-in" data-aos-delay="400">Top Hiring Companies</h1>
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <HiringCompanies />
+                </div>
             </div>
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center' data-aos="flip-up" data-aos-delay="300">
                 <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
             <div className='h-[900px] mt-10'>
-                {/* <div className='h-[632px] w-[350px] bg-[#22577A]'>
-                    <h3 className='text-xl'>Industry-Aligned Curriculum for Data Science & Analytics With AI Certification</h3>
-                </div> */}
                 <DataScienceCurriculum />
             </div>
         </div>
@@ -35,6 +46,18 @@ export default DataAnalyticInfo;
 
 function DataScienceCurriculum() {
     const [openAccordion, setOpenAccordion] = useState(-1);
+
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+        });
+
+        // Refresh AOS when accordion state changes
+        AOS.refresh();
+    }, [openAccordion]);
 
     const toggleAccordion = (index) => {
         setOpenAccordion(openAccordion === index ? -1 : index);
@@ -123,7 +146,7 @@ function DataScienceCurriculum() {
     return (
         <div className="flex flex-col lg:flex-row bg-slate-800 min-h-screen text-white p-4 sm:p-6 lg:p-8">
             {/* Left Panel */}
-            <div className="w-full lg:w-2/5 xl:w-1/3 bg-[#22577A] p-5 sm:p-6 rounded-xl mb-6 lg:mb-0 lg:mr-6">
+            <div className="w-full lg:w-2/5 xl:w-1/3 bg-[#22577A] p-5 sm:p-6 rounded-xl mb-6 lg:mb-0 lg:mr-6" data-aos="fade-right" data-aos-duration="1000">
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
                     Industry-Aligned Curriculum for Data Science & Analytics With AI Certification
                 </h1>
@@ -134,7 +157,7 @@ function DataScienceCurriculum() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
                     {/* Stats Cards */}
-                    <div className="bg-white rounded-lg p-4 flex items-center">
+                    <div className="bg-white rounded-lg p-4 flex items-center" data-aos="fade-up" data-aos-delay="200">
                         <div className="bg-gray-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
                             <div className="text-blue-800">
                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -150,7 +173,7 @@ function DataScienceCurriculum() {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg p-4 flex items-center">
+                    <div className="bg-white rounded-lg p-4 flex items-center" data-aos="fade-up" data-aos-delay="400">
                         <div className="bg-gray-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
                             <div className="text-blue-800">
                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -164,7 +187,7 @@ function DataScienceCurriculum() {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg p-4 flex items-center">
+                    <div className="bg-white rounded-lg p-4 flex items-center" data-aos="fade-up" data-aos-delay="600">
                         <div className="bg-gray-100 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
                             <div className="text-blue-800">
                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -182,12 +205,14 @@ function DataScienceCurriculum() {
             </div>
 
             {/* Right Panel - Accordion */}
-            <div className="w-full lg:w-3/5 xl:w-2/3">
+            <div className="w-full lg:w-3/5 xl:w-2/3" data-aos="fade-left" data-aos-duration="1000">
                 <div className="space-y-3 sm:space-y-4">
                     {courses.map((course, index) => (
                         <div
                             key={index}
                             className="bg-white rounded-lg overflow-hidden"
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
                         >
                             <div
                                 className="flex justify-between items-center p-3 sm:p-4 cursor-pointer"
@@ -220,27 +245,31 @@ function DataScienceCurriculum() {
 
                             {/* Accordion Content */}
                             {openAccordion === index && (
-                                <div className="p-3 sm:p-4 border-t border-gray-200 bg-gray-50">
+                                <div
+                                    className="p-3 sm:p-4 border-t border-gray-200 bg-gray-50"
+                                    data-aos="fade-down"
+                                    data-aos-duration="500"
+                                >
                                     <div className="text-gray-700 flex items-start justify-between">
                                         {course.title === "Artificial Intelligence" ? (
                                             <div className="text-black text-sm sm:text-base w-full">
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                     <ul className="list-disc pl-5">
-                                                        {course.coursePoints.slice(0, 6).map(el => (
-                                                            <li>{el}</li>
+                                                        {course.coursePoints.slice(0, 6).map((el, i) => (
+                                                            <li key={i} data-aos="fade-right" data-aos-delay={i * 50}>{el}</li>
                                                         ))}
                                                     </ul>
                                                     <ul className="list-disc pl-5">
-                                                        {course.coursePoints.slice(6, 12).map(el => (
-                                                            <li>{el}</li>
+                                                        {course.coursePoints.slice(6, 12).map((el, i) => (
+                                                            <li key={i} data-aos="fade-left" data-aos-delay={i * 50}>{el}</li>
                                                         ))}
                                                     </ul>
                                                 </div>
                                             </div>
                                         ) : (
                                             <ul className="text-black list-disc pl-5 font-bold text-base sm:text-lg flex-1">
-                                                {course.coursePoints.map(el => (
-                                                    <li>{el}</li>
+                                                {course.coursePoints.map((el, i) => (
+                                                    <li key={i} data-aos="fade-right" data-aos-delay={i * 100}>{el}</li>
                                                 ))}
                                             </ul>
                                         )}
@@ -249,6 +278,7 @@ function DataScienceCurriculum() {
                                             alt=""
                                             loading="lazy"
                                             className="w-16 h-16 ml-3 hidden sm:block"
+                                            data-aos="zoom-in"
                                         />
                                     </div>
                                 </div>

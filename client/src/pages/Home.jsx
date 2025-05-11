@@ -7,6 +7,9 @@ import DataAnalyticsCard from "./DataAnalyticCard";
 import Peopleslider from './PeopleSlider';
 import { motion } from "framer-motion";
 import { GiFlowerEmblem } from "react-icons/gi";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const features = [
     {
         title: 'Professional Counseling',
@@ -30,8 +33,13 @@ const features = [
     },
 ];
 
-const FeatureCard = ({ title, description, img }) => (
-    <div className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4">
+const FeatureCard = ({ title, description, img, index }) => (
+    <div
+        className="h-[480px] w-[300px] border-8 border-white text-center text-white font-bold py-4"
+        data-aos="flip-left"
+        data-aos-delay={index * 150}
+        data-aos-duration="1000"
+    >
         <h2 className='text-2xl font-[agrandir] mb-4 truncate'>{title}</h2>
         <div className='h-36 w-[250px] bg-white border border-white m-auto p-2'>
             <div className='flex items-center justify-center'>
@@ -42,23 +50,41 @@ const FeatureCard = ({ title, description, img }) => (
             <p className='text-black text-xl pt-2 font-bold whitespace-pre-line'>{description}</p>
         </div>
         <div className='h-[390px] w-full mt-5'>
-            <img src={img} alt={title} className='w-full h-full object-contain -mt-10' loading='lazy' />
+            <img
+                src={img}
+                alt={title}
+                className='w-full h-full object-contain -mt-10'
+                loading='lazy'
+                data-aos="zoom-in"
+                data-aos-delay={(index * 150) + 300}
+                data-aos-duration="800"
+            />
         </div>
     </div>
 );
 
 const Home = () => {
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+            easing: 'ease-in-out',
+        });
+    }, []);
+
     return (
-        <>
+        <div className='lg:overflow-hidden'>
             {/* Hero Section */}
             <section>
-                <div className="relative w-full" data-aos="fade-right">
+                <div className="relative w-full" data-aos="fade-right" data-aos-duration="1200">
                     <img src="./images/bha.jpg" className='w-full object-cover' alt="Hero" draggable="false" loading='lazy' />
                     <div className='absolute hidden md:flex md:w-[562px] flex-col md:flex-row justify-between items-center md:bottom-[312px] bottom-[200px] left-0 md:left-[122px] gap-4'>
-                        <Link to="/placement" className='w-full md:w-auto'>
+                        <Link to="/placement" className='w-full md:w-auto' data-aos="fade-up" data-aos-delay="400">
                             <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
                         </Link>
-                        <Link to="/refer-earn" className='w-full md:w-auto'>
+                        <Link to="/refer-earn" className='w-full md:w-auto' data-aos="fade-up" data-aos-delay="600">
                             <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2'>Pay Your Fees</button>
                         </Link>
                     </div>
@@ -66,53 +92,91 @@ const Home = () => {
             </section>
 
             {/* Top Hiring Companies */}
-            <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'>Top Hiring Companies</h1>
-            <HiringCompanies />
-            <div className="relative w-full h-auto">
+            <h1
+                className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/5 m-auto'
+                data-aos="zoom-in"
+                data-aos-duration="800"
+            >
+                Top Hiring Companies
+            </h1>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <HiringCompanies />
+            </div>
+            <div className="relative w-full h-auto" data-aos="fade-in" data-aos-duration="1500">
                 <img src="./images/We.svg" alt="" className="w-full h-auto object-cover" loading='lazy' />
                 <div
                     className="
-      absolute
-      left-4 bottom-4
-      sm:left-8 sm:bottom-8
-      md:left-12 md:bottom-24
-      lg:left-20 lg:bottom-24
-    "
+                      absolute
+                      left-4 bottom-4
+                      sm:left-8 sm:bottom-8
+                      md:left-12 md:bottom-24
+                      lg:left-20 lg:bottom-24
+                    "
+                    data-aos="zoom-in-up"
+                    data-aos-delay="500"
                 >
                     <GiFlowerEmblem
                         className="
-        animate-spin
-        w-20 h-20 sm:w-24 sm:h-24 md:w-56 md:h-56
-        [animation-duration:5s]
-      "
+                          animate-spin
+                          w-20 h-20 sm:w-24 sm:h-24 md:w-56 md:h-56
+                          [animation-duration:5s]
+                        "
                     />
                 </div>
             </div>
 
             {/* Why Tech Minds Education */}
             <section>
-                <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'>Why Tech Minds Education</h1>
-                <div className="relative mt-5 bg-[url(./images/blackSvg.svg)] overflow-hidden">
+                <h1
+                    className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/5 m-auto'
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                >
+                    Why Tech Minds Education
+                </h1>
+                <div
+                    className="relative mt-5 bg-[url(./images/blackSvg.svg)] overflow-hidden"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
                     {/* <SVGComponent /> */}
                     <div className="absolut top-0 left-0 w-full h-full flex flex-wrap items-center justify-center gap-6 p-10 overflow-hidden">
                         {features.map((feature, i) => (
-                            <FeatureCard key={i} {...feature} />
+                            <FeatureCard key={i} {...feature} index={i} />
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* Career Tracks */}
-            <div className='flex items-center flex-wrap justify-around my-20' style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}>
-                <FcBullish size={240} />
-                <h1 className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 p-5 border-inset border-orange-500 mb-16 text-center'>
+            <div
+                className='flex items-center flex-wrap justify-around my-20'
+                style={{ backgroundImage: "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)" }}
+                data-aos="fade-in"
+                data-aos-duration="1200"
+            >
+                <div data-aos="slide-right" data-aos-duration="1000">
+                    <FcBullish size={240} />
+                </div>
+                <h1
+                    className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 p-5 border-inset border-orange-500 mb-16 text-center'
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="400"
+                >
                     CAREER TRACKS <br /> Build your Career
                 </h1>
-                <FcBullish size={240} />
+                <div data-aos="slide-left" data-aos-duration="1000">
+                    <FcBullish size={240} />
+                </div>
             </div>
 
             {/* Course Background Image Section */}
-            <div className={'relative border border-blue-500 bg-[url(./images/course-bg.svg)]'}>
+            <div
+                className={'relative border border-blue-500 bg-[url(./images/course-bg.svg)]'}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
                 {/* <img src={"./images/course-bg.svg"} alt="" />    */}
                 <div className='absolut top-0 left-0 w-full h-full flex flex-wrap items-center justify-around m-auto'>
                     {[
@@ -139,43 +203,71 @@ const Home = () => {
                             if (index === 0) {
                                 const parts = el.courseName.split(/ (AI|Ai)/i);
                                 return (
-                                    <DataAnalyticsCard
+                                    <div
                                         key={index}
-                                        courseName={
-                                            <>
-                                                {parts[0]}
-                                                <br />
-                                                {parts[1] && parts[1].toUpperCase()}
-                                            </>
-                                        }
-                                        courseInfo={el.courseInfo}
-                                        infrollments={el.infrollments}
-                                        index={index}
-                                    />
+                                        data-aos="fade-up"
+                                        data-aos-delay={index * 200}
+                                        data-aos-duration="1000"
+                                    >
+                                        <DataAnalyticsCard
+                                            courseName={
+                                                <>
+                                                    {parts[0]}
+                                                    <br />
+                                                    {parts[1] && parts[1].toUpperCase()}
+                                                </>
+                                            }
+                                            courseInfo={el.courseInfo}
+                                            infrollments={el.infrollments}
+                                            index={index}
+                                        />
+                                    </div>
                                 );
                             } else {
-                                return <DataAnalyticsCard
-                                    key={index}
-                                    courseName={el.courseName}
-                                    courseInfo={el.courseInfo}
-                                    infrollments={el.infrollments}
-                                    index={index}
-                                />;
+                                return (
+                                    <div
+                                        key={index}
+                                        data-aos="fade-up"
+                                        data-aos-delay={index * 200}
+                                        data-aos-duration="1000"
+                                    >
+                                        <DataAnalyticsCard
+                                            courseName={el.courseName}
+                                            courseInfo={el.courseInfo}
+                                            infrollments={el.infrollments}
+                                            index={index}
+                                        />
+                                    </div>
+                                );
                             }
                         })}
                 </div>
-
             </div>
-            <div className='border bg-[#6440FB] mt-25'>
+
+            <div
+                className='border bg-[#6440FB] mt-25'
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
                 <div className='text-center py-10 leading-8'>
-                    <h2 className='text-4xl text-[#00FF84]'>
+                    <h2
+                        className='text-4xl text-[#00FF84]'
+                        data-aos="fade-down"
+                        data-aos-duration="800"
+                    >
                         What People Say
                     </h2>
-                    <p className='text-white'>
+                    <p
+                        className='text-white'
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
                         "🌟 🌟Unveiling the Voices of Excellence: Where Every Review Tells a Success Story! 🌟 🌟
                     </p>
                 </div>
-                <Peopleslider />
+                <div data-aos="fade-in" data-aos-duration="1200">
+                    <Peopleslider />
+                </div>
                 <div className='flex items-center justify-around pb-10 flex-wrap'>
                     {
                         [
@@ -184,11 +276,17 @@ const Home = () => {
                             { target: 18010, title: "Number of Requests" },
                             { target: 350, title: "Hiring Companies" },
                         ].map((el, idx) => (
-                            <AnimatedCounter target={el.target} title={el.title} key={idx} />
+                            <div
+                                key={idx}
+                                data-aos="zoom-in"
+                                data-aos-delay={idx * 150}
+                            >
+                                <AnimatedCounter target={el.target} title={el.title} />
+                            </div>
                         ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
@@ -235,6 +333,13 @@ const companies = [
 ];
 
 export const HiringCompanies = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+        });
+    }, []);
+
     const chunkedCompanies = [
         companies.slice(0, 12),
         companies.slice(12, 24),
@@ -244,7 +349,13 @@ export const HiringCompanies = () => {
     return (
         <div className="bg-white py-6 mt-10">
             {chunkedCompanies.map((group, index) => (
-                <div key={index} className="mb-20">
+                <div
+                    key={index}
+                    className="mb-20"
+                    data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                    data-aos-duration="1000"
+                    data-aos-delay={index * 200}
+                >
                     <Marquee speed={50 + index * 10} gradient={true} pauseOnHover={false}
                         direction={index == 0 ? "right" : index == 2 ? 'right' : 'left'}
                     >
@@ -298,26 +409,3 @@ function AnimatedCounter({ target = 1000, duration = 2, title }) {
         </motion.h1>
     );
 }
-
-
-
-const SVGComponent = (props) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1000 120"
-        preserveAspectRatio="none"
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        height={650}
-        {...props}
-    >
-        <rect fill="#000000" width={1000} height={120} />
-        <g fill="none" stroke="#222" strokeWidth={10} strokeOpacity={1}>
-            <path d="M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-            <path d="M-500 -15c0 0 125-30 250-30S0 -15 0 -15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-            <path d="M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-            <path d="M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-            <path d="M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-            <path d="M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30" />
-        </g>
-    </svg>
-);

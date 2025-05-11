@@ -38,6 +38,7 @@ const App = () => {
     AOS.init({
       duration: 1000, // animation duration
       once: true,     // whether animation should happen only once
+      mirror:true
     });
     return () => {
       return null;
