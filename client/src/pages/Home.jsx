@@ -183,22 +183,26 @@ const Home = () => {
                         {
                             courseName: "Data Science With Analytics and AI",
                             courseInfo: "Master Data Analytics with AI. Pay nothing until placement. Guaranteed salary: ₹6–15 LPA. Launch your high-paying career risk-free.",
-                            infrollments: "18k"
+                            infrollments: "18k",
+                            link: "/course-info"
                         },
                         {
                             courseName: "Data Science With Machine Learning and AI",
                             courseInfo: "No fees until you're hired! Master AI + ML with Data Science . Land ₹6–15 LPA jobs For Fresher and 60% Hike for Experienced Individual. Zero risk. All reward.",
-                            infrollments: "22k"
+                            infrollments: "22k",
+                            link: "/course-infoml"
                         },
                         {
                             courseName: "Product Management With Analytics and A.I",
                             courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program.",
-                            infrollments: "16k"
+                            infrollments: "16k",
+                            link: "/"
                         },
                         {
                             courseName: "Career Catalyst Pro With AI",
                             courseInfo: "Level up your career! Master communication, confidence, and growth skills with Career Catalyst Pro. Be job-ready, earn more, shine bright",
-                            infrollments: "30k"
+                            infrollments: "30k",
+                            link: "/"
                         }].map((el, index) => {
                             if (index === 0) {
                                 const parts = el.courseName.split(/ (AI|Ai)/i);
@@ -220,6 +224,7 @@ const Home = () => {
                                             courseInfo={el.courseInfo}
                                             infrollments={el.infrollments}
                                             index={index}
+                                            link={el.link}
                                         />
                                     </div>
                                 );
@@ -236,6 +241,7 @@ const Home = () => {
                                             courseInfo={el.courseInfo}
                                             infrollments={el.infrollments}
                                             index={index}
+                                            link={el.link}
                                         />
                                     </div>
                                 );
@@ -266,7 +272,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div data-aos="fade-in" data-aos-duration="1200">
-                    <Peopleslider/>
+                    <Peopleslider />
                 </div>
                 <div className='flex items-center justify-around pb-10 flex-wrap'>
                     {

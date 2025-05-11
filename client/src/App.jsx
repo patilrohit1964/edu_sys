@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from './components/Footer'
+import DataSciMl from './pages/coursesInfo/DataSciMl';
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'))
@@ -59,6 +60,7 @@ const App = () => {
           <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
           <Route path='/return-policy' element={<Return_Policy />}></Route>
           <Route path='/course-info' element={<DataAnalyticInfo />}></Route>
+          <Route path='/course-infoml' element={<DataSciMl />}></Route>
         </Routes>
       </Suspense>
       <Footer />

@@ -11,7 +11,7 @@ import 'aos/dist/aos.css';
 import { ChevronDown, Clock, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { HiringCompanies } from '../Home';
-
+import { Link } from "react-router-dom";
 const DataAnalyticInfo = () => {
     // Initialize AOS
     useEffect(() => {
@@ -47,20 +47,20 @@ const DataAnalyticInfo = () => {
             <div>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] lg:w-2/ m-auto'
                     data-aos="zoom-in"
-                    data-aos-duration="800"><span className='border-8 border-orange-500 inline-block mb-5'>Our Expert</span> <br /> <span className='font-bold'>Learn From The real Industry Experts</span></h1>
+                    data-aos-duration="800"><span className='border-b-2 border-orange-500 inline-block mb-5'>Our Expert</span> <br /> <span className='font-bold'>Learn From The real Industry Experts</span></h1>
                 <div className="my-5">
                     <CarouselSize />
                 </div>
             </div>
             <div>
                 <h1
-                    className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-8 border-orange-500 lg:w-2/6 m-auto'
+                    className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] border-b-2 border-orange-500 lg:w-2/6 m-auto'
                     data-aos="zoom-in"
                     data-aos-duration="800"
                 >
                     Certification
                 </h1>
-                <h3 className='text-center text-4xl font-bold my-5'>Become Eligible For 4 Industry-Recognized Certificates</h3>
+                <h3 className='text-center text-4xl font-bold my-5' data-aos="zoom-in">Become Eligible For 4 Industry-Recognized Certificates</h3>
                 <CertificationTabs />
             </div>
             <div>
@@ -433,7 +433,7 @@ function CarouselSize() {
 }
 
 
-import { Check } from 'lucide-react';
+
 
 function PricingBoxes() {
     const [billingPeriod, setBillingPeriod] = useState('monthly');
@@ -460,9 +460,9 @@ function PricingBoxes() {
         // },
         {
             name: 'Program Fees',
-            monthlyPrice: '$29',
-            yearlyPrice: '$290',
-            description: 'Great for growing teams and businesses',
+            monthlyPrice: '₹3334',
+            yearlyPrice: '₹85,000',
+            description: 'Only',
             features: [
                 '5 users',
                 'Unlimited projects',
@@ -471,7 +471,7 @@ function PricingBoxes() {
                 'Advanced analytics',
                 'All core features'
             ],
-            buttonText: 'Get Started',
+            buttonText: 'Join Now This Golden Opportunity',
             featured: true
         },
         // {
@@ -500,8 +500,8 @@ function PricingBoxes() {
                 <div className="text-center mb-12">
                     {/* Billing Toggle */}
                     <div className="flex items-center justify-center ">
-                        <span className={`mr-3 text-sm ${billingPeriod === 'monthly' ? 'font-semibold text-gray-900' : 'text-gray-500'}`}>
-                            Monthly
+                        <span className={`mr-3 text-sm ${billingPeriod === 'monthly' ? 'font-semibold text-gray-900' : 'text-gray-900'}`}>
+                            Registration Fees
                         </span>
                         <button
                             type="button"
@@ -516,7 +516,7 @@ function PricingBoxes() {
                             />
                         </button>
                         <span className={`ml-3 text-sm ${billingPeriod === 'yearly' ? 'font-semibold text-gray-900' : 'text-gray-500'}`}>
-                            Yearly <span className="text-green-500 font-medium">(Save 16%)</span>
+                            Total Fees
                         </span>
                     </div>
                 </div>
@@ -535,38 +535,46 @@ function PricingBoxes() {
                                 </div>
                             )}
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold text-gray-900">{plan.name}</h3>
-                                <p className="mt-1 text-sm text-gray-500">{plan.description}</p>
-                                <p className="mt-4">
+                                <h3 className="text-xl font-semibold text-gray-900 text-center">{billingPeriod === 'monthly' ? "Registration Fees" : plan.name}</h3>
+                                <p className="mt-1 text-sm text-gray-500 text-center">{plan.description}</p>
+                                <p className="mt-4 text-center">
                                     <span className="text-4xl font-extrabold text-gray-900">
                                         {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
                                     </span>
                                     <span className="text-base font-medium text-gray-500">
-                                        /{billingPeriod === 'monthly' ? 'mo' : 'year'}
+                                        /{billingPeriod === 'monthly' ? 'monthly' : ''}
                                     </span>
                                 </p>
-                                <button
-                                    className={`mt-6 w-full py-3 px-4 rounded-md shadow ${plan.featured
-                                        ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                                        : 'bg-white border border-gray-300 text-gray-900 hover:bg-gray-50'
-                                        } focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 font-medium`}
-                                >
-                                    {plan.buttonText}
-                                </button>
+                                <Link to={"https://pages.razorpay.com/techmindseducation"} target="_blank">
+                                    <button
+                                        className={`mt-6 w-full py-3 px-4 rounded-md shadow ${plan.featured
+                                            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                            : 'bg-white border border-gray-300 text-gray-900 hover:bg-gray-50'
+                                            } focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 font-medium cursor-pointer`}
+                                    >
+                                        {plan.buttonText}
+                                    </button>
+                                </Link>
                             </div>
-                            <div className="pt-6 pb-8 px-6">
-                                <h4 className="text-sm font-medium text-gray-900 tracking-wide uppercase">What's included</h4>
+                            <div className="pt-6 pb-8 px-6 text-center">
+                                <h4 className="text-xl font-medium text-gray-900 tracking-wide uppercase">Join India's best Job oriented program with Pay after Placement Facility. <br />Pay in 6 to 8 months of No Cost EMI Provided by our Finance Partner</h4>
                                 <ul className="mt-6 space-y-4">
-                                    {plan.features.map((feature, index) => (
+                                    {/* {plan.features.map((feature, index) => (
                                         <li key={index} className="flex">
                                             <Check size={20} className="flex-shrink-0 text-green-500" />
                                             <span className="ml-3 text-sm text-gray-500">{feature}</span>
                                         </li>
-                                    ))}
+                                    ))} */}
                                 </ul>
+                            </div>
+                            <div className="flex items-center justify-around">
+                                <div><img src="./images/razorpay.jpeg" alt="" /></div>
+                                <div><img src="./images/bajaj.jpeg" alt="" /></div>
+                                <div><img src="./images/sbi.png" alt="" /></div>
                             </div>
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>
