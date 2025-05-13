@@ -37,7 +37,7 @@ const DataSciMl = () => {
                     caseProject: "80+",
                     langTool: "10+",
                     liveSession: "280+",
-                    image:""
+                    image: "./images/ml80img.svg"
                 }
                 } />
             </div>
