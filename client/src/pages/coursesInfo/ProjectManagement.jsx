@@ -36,7 +36,7 @@ const ProjectManagement = () => {
                     caseProject: "45+",
                     langTool: "6+",
                     liveSession: "200+",
-                    image: "./images/"
+                    image: "./images/Product_Mang_45_Image"
                 }
                 } />
             </div>
