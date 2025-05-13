@@ -93,7 +93,7 @@ const DataAnalyticInfo = () => {
 export default DataAnalyticInfo;
 
 
-function DataScienceCurriculum() {
+export function DataScienceCurriculum() {
     const [openAccordion, setOpenAccordion] = useState(-1);
 
     // Initialize AOS
@@ -341,7 +341,7 @@ function DataScienceCurriculum() {
 }
 
 
-const CertificationTabs = () => {
+export const CertificationTabs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const certifications = [
@@ -409,7 +409,7 @@ const CertificationTabs = () => {
 };
 
 
-function CarouselSize() {
+export function CarouselSize() {
     return (
         <Carousel
             opts={{
@@ -445,7 +445,7 @@ function CarouselSize() {
 
 
 
-function PricingBoxes() {
+export function PricingBoxes() {
     const [billingPeriod, setBillingPeriod] = useState('monthly');
 
     const toggleBillingPeriod = () => {
