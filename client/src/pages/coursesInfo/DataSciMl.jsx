@@ -1,16 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ChevronDown, Clock, Plus } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";
 const DataSciMl = () => {

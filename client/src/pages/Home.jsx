@@ -196,7 +196,7 @@ const Home = () => {
                             courseName: "Product Management With Analytics and A.I",
                             courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program.",
                             infrollments: "16k",
-                            link: "/"
+                            link: "/course-product-management"
                         },
                         {
                             courseName: "Career Catalyst Pro With AI",

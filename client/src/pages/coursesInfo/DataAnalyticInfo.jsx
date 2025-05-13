@@ -92,8 +92,33 @@ const DataAnalyticInfo = () => {
 
 export default DataAnalyticInfo;
 
-
-export function DataScienceCurriculum() {
+const courseCurriculum = {
+    dataSci: {
+        title: "Data Science Analytics With AI Certification",
+        caseProject: "50+",
+        langTool: "8+",
+        liveSession: "260+"
+    },
+    dataSciML: {
+        title: "Data Science With Machine Learning and AI",
+        caseProject: "80+",
+        langTool: "10+",
+        liveSession: "280+"
+    },
+    projectManagementAnalytic: {
+        title: "Product Management With Analytics and A.I",
+        caseProject: "45+",
+        langTool: "6+",
+        liveSession: "200+"
+    },
+    careerCatalyst: {
+        title: "Career Catalyst Pro With AI",
+        caseProject: "25+",
+        langTool: "2+",
+        liveSession: "200+"
+    }
+}
+export function DataScienceCurriculum({courseCurriculumInfo}) {
     const [openAccordion, setOpenAccordion] = useState(-1);
 
     // Initialize AOS
@@ -217,7 +242,7 @@ export function DataScienceCurriculum() {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-lg sm:text-xl font-bold">50+</h3>
+                            <h3 className="text-black text-lg sm:text-xl font-bold">45+</h3>
                             <p className="text-black text-sm sm:text-base">Case Studies & Projects</p>
                         </div>
                     </div>
@@ -339,7 +364,7 @@ export function DataScienceCurriculum() {
         </div>
     );
 }
-
+// 1.80+
 
 export const CertificationTabs = () => {
     const [activeTab, setActiveTab] = useState(0);
