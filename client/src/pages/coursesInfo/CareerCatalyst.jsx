@@ -1,11 +1,12 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react'
+import React from 'react'
 import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";
-const DataSciMl = () => {
+import Aos from 'aos';
+const CareerCatalyst = () => {
     useEffect(() => {
-        AOS.init({
+        Aos.init({
             duration: 800,
             once: false,
             mirror: true,
@@ -16,9 +17,9 @@ const DataSciMl = () => {
         <div className="w-full overflow-hidden">
             <div className='flex items-center justify-center flex-col'>
                 <div data-aos="fade-down">
-                    <img src="./images/ML.svg" alt="" draggable="false" loading='lazy' />
+                    <img src="./images/analytic.svg" alt="" draggable="false" loading='lazy' />
                 </div>
-                <div className='sm:mt-5' data-aos="fade-up" data-aos-delay="300">
+                <div className='mt-20 sm:mt-5' data-aos="fade-up" data-aos-delay="300">
                     <img src="./images/purple_black1.svg" alt="" draggable="false" loading="lazy" />
                 </div>
             </div>
@@ -31,15 +32,24 @@ const DataSciMl = () => {
             <div className='flex items-center justify-center' data-aos="flip-up" data-aos-delay="300">
                 <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
+            <div className="text-center">
+                <h1
+                    className='text-3xl md:text-5xl mt-10 font-[agrandir] border-8 border-yellow-500 lg:w-2/6 m-auto mb-5'
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                >
+                    Course Curriculum
+                </h1>
+                <p className="text-3xl font-bold">Up-to-date industry relevant curriculum</p>
+            </div>
             <div className='mt-10'>
                 <DataScienceCurriculum courseCurriculumInfo={{
-                    title: "Data Science With Machine Learning and AI",
-                    caseProject: "80+",
-                    langTool: "10+",
-                    liveSession: "280+",
+                    title: "Career Catalyst Pro With AI",
+                    caseProject: "25+",
+                    langTool: "2+",
+                    liveSession: "200+",
                     image:""
-                }
-                } />
+                }} />
             </div>
             <div>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] lg:w-2/ m-auto'
@@ -77,4 +87,5 @@ const DataSciMl = () => {
     );
 }
 
-export default DataSciMl
+export default CareerCatalyst
+

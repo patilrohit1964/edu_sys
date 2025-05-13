@@ -2,7 +2,15 @@ import React from 'react'
 import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";
+import Aos from 'aos';
 const ProjectManagement = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+        });
+    }, []);
     return (
         <div className="w-full overflow-hidden">
             <div className='flex items-center justify-center flex-col'>
@@ -23,7 +31,14 @@ const ProjectManagement = () => {
                 <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
             <div className='mt-10'>
-                <DataScienceCurriculum />
+                <DataScienceCurriculum courseCurriculumInfo={{
+                    title: "Product Management With Analytics and A.I",
+                    caseProject: "45+",
+                    langTool: "6+",
+                    liveSession: "200+",
+                    image: ""
+                }
+                } />
             </div>
             <div>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] lg:w-2/ m-auto'

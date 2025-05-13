@@ -52,7 +52,13 @@ const DataAnalyticInfo = () => {
                 <p className="text-3xl font-bold">Up-to-date industry relevant curriculum</p>
             </div>
             <div className='mt-10'>
-                <DataScienceCurriculum />
+                <DataScienceCurriculum courseCurriculumInfo={{
+                    title: "Data Science Analytics With AI Certification",
+                    caseProject: "50+",
+                    langTool: "8+",
+                    liveSession: "260+",
+                    image:""
+                }} />
             </div>
             <div>
                 <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] lg:w-2/ m-auto'
@@ -92,33 +98,33 @@ const DataAnalyticInfo = () => {
 
 export default DataAnalyticInfo;
 
-const courseCurriculum = {
-    dataSci: {
-        title: "Data Science Analytics With AI Certification",
-        caseProject: "50+",
-        langTool: "8+",
-        liveSession: "260+"
-    },
-    dataSciML: {
-        title: "Data Science With Machine Learning and AI",
-        caseProject: "80+",
-        langTool: "10+",
-        liveSession: "280+"
-    },
-    projectManagementAnalytic: {
-        title: "Product Management With Analytics and A.I",
-        caseProject: "45+",
-        langTool: "6+",
-        liveSession: "200+"
-    },
-    careerCatalyst: {
-        title: "Career Catalyst Pro With AI",
-        caseProject: "25+",
-        langTool: "2+",
-        liveSession: "200+"
-    }
-}
-export function DataScienceCurriculum({courseCurriculumInfo}) {
+// const courseCurriculum = {
+//     dataSci: {
+//         title: "Data Science Analytics With AI Certification",
+//         caseProject: "50+",
+//         langTool: "8+",
+//         liveSession: "260+"
+//     },
+//     dataSciML: {
+//         title: "Data Science With Machine Learning and AI",
+//         caseProject: "80+",
+//         langTool: "10+",
+//         liveSession: "280+"
+//     },
+//     projectManagementAnalytic: {
+//         title: "Product Management With Analytics and A.I",
+//         caseProject: "45+",
+//         langTool: "6+",
+//         liveSession: "200+"
+//     },
+//     careerCatalyst: {
+//         title: "Career Catalyst Pro With AI",
+//         caseProject: "25+",
+//         langTool: "2+",
+//         liveSession: "200+"
+//     }
+// }
+export function DataScienceCurriculum({ courseCurriculumInfo }) {
     const [openAccordion, setOpenAccordion] = useState(-1);
 
     // Initialize AOS
@@ -222,7 +228,7 @@ export function DataScienceCurriculum({courseCurriculumInfo}) {
             {/* Left Panel */}
             <div className="w-full lg:w-2/5 xl:w-1/3 bg-[#22577A] p-5 sm:p-6 rounded-xl mb-6 lg:mb-0 lg:mr-6" data-aos="fade-right" data-aos-duration="1000">
                 <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
-                    Industry-Aligned Curriculum for Data Science With Machine Analytics With AI Certification
+                    Industry-Aligned Curriculum for {courseCurriculumInfo.title}
                 </h1>
 
                 <p className="mb-6 text-sm sm:text-base">
@@ -242,7 +248,7 @@ export function DataScienceCurriculum({courseCurriculumInfo}) {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-lg sm:text-xl font-bold">45+</h3>
+                            <h3 className="text-black text-lg sm:text-xl font-bold">{courseCurriculumInfo.caseProject}</h3>
                             <p className="text-black text-sm sm:text-base">Case Studies & Projects</p>
                         </div>
                     </div>
@@ -256,7 +262,7 @@ export function DataScienceCurriculum({courseCurriculumInfo}) {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-lg sm:text-xl font-bold">10+</h3>
+                            <h3 className="text-black text-lg sm:text-xl font-bold">{courseCurriculumInfo.langTool}</h3>
                             <p className="text-black text-sm sm:text-base">Languages & Tools</p>
                         </div>
                     </div>
@@ -271,7 +277,7 @@ export function DataScienceCurriculum({courseCurriculumInfo}) {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-black text-lg sm:text-xl font-bold">260+</h3>
+                            <h3 className="text-black text-lg sm:text-xl font-bold">{courseCurriculumInfo.liveSession}</h3>
                             <p className="text-black text-sm sm:text-base">Live Sessions Hours</p>
                         </div>
                     </div>
