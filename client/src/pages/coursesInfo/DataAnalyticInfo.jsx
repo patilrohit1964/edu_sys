@@ -12,7 +12,7 @@ import { ChevronDown, Clock, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { HiringCompanies } from '../Home';
 import { Link } from "react-router-dom";
-const DataAnalyticInfo = ({image}) => {
+const DataAnalyticInfo = () => {
     // Initialize AOS
     useEffect(() => {
         AOS.init({
