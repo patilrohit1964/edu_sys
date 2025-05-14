@@ -59,10 +59,10 @@ const App = () => {
           <Route path='/refer-earn' element={<Refer_Earn />}></Route>
           <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
           <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
-          <Route path='/return-policy' element={<Return_Policy />}></Route>
-          <Route path='/data-analytics-course' element={<DataAnalyticInfo />}></Route>
-          <Route path='/data-science-ml' element={<DataSciMl />}></Route>
-          <Route path='/product-management-course' element={<ProjectManagement />}></Route>
+          <Route path='/return-policy' element={<Return_Policy image={"./images"} />}></Route>
+          <Route path='/data-analytics-course' element={<DataAnalyticInfo image={"./images/3dimage.svg"} />}></Route>
+          <Route path='/data-science-ml' element={<DataSciMl image={"./images/ml80img.svg"} />}></Route>
+          <Route path='/product-management-course' element={<ProjectManagement image={"./images/product_mang_45_image.svg"} />}></Route>
         </Routes>
       </Suspense>
       <Footer />
