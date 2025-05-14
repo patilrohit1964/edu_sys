@@ -38,7 +38,7 @@ const DataAnalyticInfo = () => {
                     <HiringCompanies />
                 </div>
             </div>
-            <div className='flex items-center justify-center' data-aos="flip-up" data-aos-delay="300">
+            <div className='flex items-center justify-center border border-red-500' data-aos="flip-up" data-aos-delay="300">
                 <img src="./images/3dimage.svg" alt="" draggable="false" loading='lazy' />
             </div>
             <div className="text-center">
@@ -57,7 +57,7 @@ const DataAnalyticInfo = () => {
                     caseProject: "50+",
                     langTool: "8+",
                     liveSession: "260+",
-                    image:""
+                    image: ""
                 }} />
             </div>
             <div>

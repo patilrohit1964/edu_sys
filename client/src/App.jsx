@@ -60,9 +60,9 @@ const App = () => {
           <Route path='/privacy-policy' element={<PrivacyPolicy />}></Route>
           <Route path='/terms-conditions' element={<TermsAndConditions />}></Route>
           <Route path='/return-policy' element={<Return_Policy />}></Route>
-          <Route path='/course-info' element={<DataAnalyticInfo />}></Route>
-          <Route path='/course-infoml' element={<DataSciMl />}></Route>
-          <Route path='/course-product-management' element={<ProjectManagement />}></Route>
+          <Route path='/data-analytics-course' element={<DataAnalyticInfo />}></Route>
+          <Route path='/data-science-ml' element={<DataSciMl />}></Route>
+          <Route path='/product-management-course' element={<ProjectManagement />}></Route>
         </Routes>
       </Suspense>
       <Footer />

@@ -184,19 +184,19 @@ const Home = () => {
                             courseName: "Data Science With Analytics and AI",
                             courseInfo: "Master Data Analytics with AI. Pay nothing until placement. Guaranteed salary: ₹6–15 LPA. Launch your high-paying career risk-free.",
                             infrollments: "18k",
-                            link: "/course-info"
+                            link: "/data-analytics-course"
                         },
                         {
                             courseName: "Data Science With Machine Learning and AI",
                             courseInfo: "No fees until you're hired! Master AI + ML with Data Science . Land ₹6–15 LPA jobs For Fresher and 60% Hike for Experienced Individual. Zero risk. All reward.",
                             infrollments: "22k",
-                            link: "/course-infoml"
+                            link: "/data-science-ml"
                         },
                         {
                             courseName: "Product Management With Analytics and A.I",
                             courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program.",
                             infrollments: "16k",
-                            link: "/course-product-management"
+                            link: "/product-management-course"
                         },
                         {
                             courseName: "Career Catalyst Pro With AI",
