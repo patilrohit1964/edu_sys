@@ -220,7 +220,8 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
             ]
         },
     ];
-
+    const tp = courses.map(el => ({ title: el.title, points: el.coursePoints }))
+    console.log(tp)
     return (
         <div className="flex flex-col lg:flex-row bg-slate-800 min-h-screen text-white p-4 sm:p-6 lg:p-8">
             {/* Left Panel */}
