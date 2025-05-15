@@ -12,6 +12,56 @@ import { ChevronDown, Clock, Plus } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { HiringCompanies } from '../Home';
 import { Link } from "react-router-dom";
+
+const coursePoint = [
+    {
+        title: "Excel",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "SQL",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "POWER BI",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "Tableau",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "Python",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "NumPy and Statistical Analysis",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "Applied Data Analysis with Python",
+        points: ["Basic", "Intermediate", "Advanced"]
+    },
+    {
+        title: "Artificial Intelligence",
+        points: [
+            "Introduction to AI",
+            "Introduction to DL",
+            "Artificial Neural Network Deep Dive",
+            "Computer Vision",
+            "Computer Vision with OpenCV",
+            "Convolution Neural Network",
+            "Natural Language Processing",
+            "Recurrent Neural Network",
+            "Building Chatbot",
+            "Introduction to Time Series Analysis",
+            "Weather Forecasting using ARIMA Model",
+            "Sentiment Analysis on Amazon Reviews"
+        ]
+    }
+];
+
+
 const DataAnalyticInfo = () => {
     // Initialize AOS
     useEffect(() => {
@@ -57,6 +107,7 @@ const DataAnalyticInfo = () => {
                     caseProject: "50+",
                     langTool: "8+",
                     liveSession: "260+",
+                    coursePoint: coursePoint
                 }} />
             </div>
             <div>
@@ -220,8 +271,7 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
             ]
         },
     ];
-    const tp = courses.map(el => ({ title: el.title, points: el.coursePoints }))
-    console.log(tp)
+
     return (
         <div className="flex flex-col lg:flex-row bg-slate-800 min-h-screen text-white p-4 sm:p-6 lg:p-8">
             {/* Left Panel */}
