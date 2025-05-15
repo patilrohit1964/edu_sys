@@ -1,5 +1,4 @@
 import React from 'react'
-import React from 'react'
 import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";

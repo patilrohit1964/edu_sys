@@ -202,7 +202,7 @@ const Home = () => {
                             courseName: "Career Catalyst Pro With AI",
                             courseInfo: "Level up your career! Master communication, confidence, and growth skills with Career Catalyst Pro. Be job-ready, earn more, shine bright",
                             infrollments: "30k",
-                            link: "/"
+                            link: "/career-catalyst-course"
                         }].map((el, index) => {
                             if (index === 0) {
                                 const parts = el.courseName.split(/ (AI|Ai)/i);

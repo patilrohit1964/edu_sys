@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Footer from './components/Footer'
 import DataSciMl from './pages/coursesInfo/DataSciMl';
 import ProjectManagement from './pages/coursesInfo/ProjectManagement';
+import CareerCatalyst from './pages/coursesInfo/CareerCatalyst';
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'))
@@ -63,6 +64,7 @@ const App = () => {
           <Route path='/data-analytics-course' element={<DataAnalyticInfo />}></Route>
           <Route path='/data-science-ml' element={<DataSciMl />}></Route>
           <Route path='/product-management-course' element={<ProjectManagement />}></Route>
+          <Route path='/career-catalyst-course' element={<CareerCatalyst />}></Route>
         </Routes>
       </Suspense>
       <Footer />
