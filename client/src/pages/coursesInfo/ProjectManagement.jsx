@@ -3,6 +3,84 @@ import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";
 import Aos from 'aos';
+
+const coursePoint = [
+    {
+        title: "Foundations of Product Management",
+        points: [
+            "What is Product Management?",
+            "Lifecycle: Idea → Launch → Scale",
+            "PM vs Project Manager vs Product Owner",
+            "Agile, Scrum, and Kanban frameworks",
+            "MVP thinking & lean experimentation"
+        ]
+    },
+    {
+        title: "Understanding Artificial Intelligence",
+        points: [
+            "AI vs ML vs Deep Learning: A quick breakdown",
+            "Key concepts: datasets, training, inference",
+            "AI use cases in B2B, B2C, SaaS, and platforms",
+            "No-code & low-code AI tools overview"
+        ]
+    },
+    {
+        title: "Product Discovery with AI",
+        points: [
+            "User research + AI tools (e.g., user segmentation using clustering)",
+            "Market analysis using NLP & trend mining",
+            "Problem validation via data-backed decisions",
+            "Competitive analysis with AI-powered tools"
+        ]
+    },
+    {
+        title: "Designing AI Products",
+        points: [
+            "Data as a product feature",
+            "AI-first vs AI-augmented product models",
+            "Designing user experience with AI (predictive UX)",
+            "Ethical AI & fairness in product design"
+        ]
+    },
+    {
+        title: "Data & Metrics for PMs",
+        points: [
+            "Defining North Star Metrics",
+            "Product Analytics: Mixpanel, GA4, Amplitude",
+            "A/B Testing with AI insights",
+            "Using LLMs to summarize feedback"
+        ]
+    },
+    {
+        title: "Working with AI/ML Teams",
+        points: [
+            "Communicating with Data Scientists",
+            "Understanding model scope & limitations",
+            "How to write an AI Product Requirements Document (AI-PRD)",
+            "AI Model lifecycle & experimentation tracking"
+        ]
+    },
+    {
+        title: "Go-to-Market & Monetization",
+        points: [
+            "Launching AI products",
+            "Growth loops powered by AI",
+            "Personalization, recommendation engines",
+            "Pricing & monetization strategies"
+        ]
+    },
+    {
+        title: "Capstone Project",
+        points: [
+            "Build a live AI-powered product with a team",
+            "Sample projects:",
+            "AI-based resume matcher for recruiters",
+            "Smart feature prioritization engine for SaaS PMs",
+            "AI chatbot for internal product feedback collection"
+        ]
+    }
+];
+
 const ProjectManagement = () => {
     useEffect(() => {
         Aos.init({
@@ -36,7 +114,8 @@ const ProjectManagement = () => {
                     caseProject: "45+",
                     langTool: "6+",
                     liveSession: "200+",
-                    image: "./images/Product_Mang_45_Image"
+                    image: "./images/Product_Mang_45_Image",
+                    coursePoint: coursePoint
                 }
                 } />
             </div>

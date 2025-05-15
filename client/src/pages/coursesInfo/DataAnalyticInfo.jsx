@@ -57,7 +57,6 @@ const DataAnalyticInfo = () => {
                     caseProject: "50+",
                     langTool: "8+",
                     liveSession: "260+",
-                    image: ""
                 }} />
             </div>
             <div>
@@ -126,7 +125,6 @@ export default DataAnalyticInfo;
 // }
 export function DataScienceCurriculum({ courseCurriculumInfo }) {
     const [openAccordion, setOpenAccordion] = useState(-1);
-
     // Initialize AOS
     useEffect(() => {
         AOS.init({
@@ -287,7 +285,7 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
             {/* Right Panel - Accordion */}
             <div className="w-full lg:w-3/5 xl:w-2/3" data-aos="fade-left" data-aos-duration="1000">
                 <div className="space-y-3 sm:space-y-4">
-                    {courses.map((course, index) => (
+                    {courseCurriculumInfo.coursePoint.map((course, index) => (
                         <div
                             key={index}
                             className="bg-white rounded-lg overflow-hidden"
