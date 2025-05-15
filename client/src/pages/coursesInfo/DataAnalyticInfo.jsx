@@ -333,12 +333,12 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
                                             <div className="text-black text-sm sm:text-base w-full">
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                     <ul className="list-disc pl-5">
-                                                        {course.coursePoints.slice(0, 6).map((el, i) => (
+                                                        {course.points.slice(0, 6).map((el, i) => (
                                                             <li key={i} data-aos="fade-right" data-aos-delay={i * 50}>{el}</li>
                                                         ))}
                                                     </ul>
                                                     <ul className="list-disc pl-5">
-                                                        {course.coursePoints.slice(6, 12).map((el, i) => (
+                                                        {course.points.slice(6, 12).map((el, i) => (
                                                             <li key={i} data-aos="fade-left" data-aos-delay={i * 50}>{el}</li>
                                                         ))}
                                                     </ul>
@@ -346,7 +346,7 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
                                             </div>
                                         ) : (
                                             <ul className="text-black list-disc pl-5 font-bold text-base sm:text-lg flex-1">
-                                                {course.coursePoints.map((el, i) => (
+                                                {course.points.map((el, i) => (
                                                     <li key={i} data-aos="fade-right" data-aos-delay={i * 100}>{el}</li>
                                                 ))}
                                             </ul>
