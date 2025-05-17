@@ -17,34 +17,42 @@ import TitleComp from "../../widgets/TitleComp";
 const coursePoint = [
     {
         title: "Excel",
-        points: ["Basic", "Intermediate", "Advanced"]
+        points: ["Basic", "Intermediate", "Advanced"],
+        tag: "Data",
     },
     {
         title: "SQL",
+        tag: "Database",
         points: ["Basic", "Intermediate", "Advanced"]
     },
     {
         title: "POWER BI",
+        tag: "Data Visualization",
         points: ["Basic", "Intermediate", "Advanced"]
     },
     {
         title: "Tableau",
+        tag: "Data Visualization",
         points: ["Basic", "Intermediate", "Advanced"]
     },
     {
         title: "Python",
+        tag: "Backend",
         points: ["Basic", "Intermediate", "Advanced"]
     },
     {
         title: "NumPy and Statistical Analysis",
+        tag: "NumPy",
         points: ["Basic", "Intermediate", "Advanced"]
     },
     {
         title: "Applied Data Analysis with Python",
+        tag: "Data Analysis",
         points: ["Basic", "Intermediate", "Advanced"]
     },
     {
         title: "Artificial Intelligence",
+        tag: "AI",
         points: [
             "Introduction to AI",
             "Introduction to DL",
@@ -62,7 +70,28 @@ const coursePoint = [
     }
 ];
 
-
+const certifications = [
+    {
+        name: "Certificate of Complition",
+        image: "./images/certi1.jpg",
+        description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
+    },
+    {
+        name: "Intership Experience Letter",
+        image: "./images/certi2.jpg",
+        description: "Internship experience certified by Tech Minds Education, premier practical institute."
+    },
+    {
+        name: "MNC Project Completion Certificate",
+        image: "./images/certi3.jpg",
+        description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
+    },
+    {
+        name: "MNC Project Completion Certificate 2",
+        image: "./images/certi3.jpg",
+        description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
+    }
+];
 const DataAnalyticInfo = () => {
     // Initialize AOS
     useEffect(() => {
@@ -130,7 +159,7 @@ const DataAnalyticInfo = () => {
                         Certification
                     </h1>
                     <h3 className='text-center text-4xl font-bold my-5' data-aos="zoom-in">Become Eligible For 4 Industry-Recognized Certificates</h3>
-                    <CertificationTabs />
+                    <CertificationTabs certifications={certifications} />
                 </div>
                 <div>
                     <h1
@@ -425,32 +454,8 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
 }
 // 1.80+
 
-export const CertificationTabs = () => {
+export const CertificationTabs = ({ certifications }) => {
     const [activeTab, setActiveTab] = useState(0);
-
-    const certifications = [
-        {
-            name: "Certificate of Complition",
-            image: "./images/certi1.jpg",
-            description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
-        },
-        {
-            name: "Intership Experience Letter",
-            image: "./images/certi2.jpg",
-            description: "Internship experience certified by Tech Minds Education, premier practical institute."
-        },
-        {
-            name: "MNC Project Completion Certificate",
-            image: "./images/certi3.jpg",
-            description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
-        },
-        {
-            name: "MNC Project Completion Certificate 2",
-            image: "./images/certi3.jpg",
-            description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
-        }
-    ];
-
     return (
         <div className="w-full p-6 bg-white rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Professional Certifications</h2>

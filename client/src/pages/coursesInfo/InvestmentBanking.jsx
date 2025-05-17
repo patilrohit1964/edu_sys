@@ -1,4 +1,4 @@
-// investmentbanking
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -83,6 +83,29 @@ const coursePoint = [
     }
 ];
 
+const certifications = [
+    {
+        name: "Certificate of Complition",
+        image: "./images/investcerti.jpg",
+        description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
+    },
+    {
+        name: "Intership Experience Letter",
+        image: "./images/investcertiintern.jpg",
+        description: "Internship experience certified by Tech Minds Education, premier practical institute."
+    },
+    {
+        name: "MNC Project Completion Certificate",
+        image: "./images/certi3.jpg",
+        description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
+    },
+    {
+        name: "MNC Project Completion Certificate 2",
+        image: "./images/certi3.jpg",
+        description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
+    },
+];
+
 const InvestmentBanking = () => {
     useEffect(() => {
         AOS.init({
@@ -141,7 +164,7 @@ const InvestmentBanking = () => {
                         Certification
                     </h1>
                     <h3 className='text-center text-4xl font-bold my-5' data-aos="zoom-in">Become Eligible For 4 Industry-Recognized Certificates</h3>
-                    <CertificationTabs />
+                    <CertificationTabs certifications={certifications} />
                 </div>
                 <div>
                     <h1

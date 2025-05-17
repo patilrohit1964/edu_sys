@@ -59,8 +59,8 @@ export function HoverDropdown({ isOpen, setIsOpen }) {
             title: "For Technical Learners",
             items: [
                 { icon: <Database size={20} />, name: 'Data Science With Machine Learning and AI', link: '/data-science-ml' },
-                { icon: <Globe size={20} />, name: 'Java Full Stack', link: /* 'Finance, Valuation, M&A' */ '' },
-                { icon: <BarChart3 size={20} />, name: 'Mern Full Stack', link: /* 'Strategy, Operations' */ '' },
+                { icon: <Globe size={20} />, name: 'Java Full Stack', link: "/java-course" },
+                { icon: <BarChart3 size={20} />, name: 'Mern Full Stack', link: '/mern-course' },
             ]
         },
         {
