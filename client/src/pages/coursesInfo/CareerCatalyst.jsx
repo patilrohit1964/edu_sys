@@ -41,10 +41,10 @@ const CareerCatalyst = () => {
             <div className="w-full overflow-hidden">
                 <div className='flex items-center justify-center flex-col'>
                     <div data-aos="fade-down" className='md:mb-30'>
-                        <img src="./images/analytic.svg" alt="" draggable="false" loading='lazy' />
+                        <img src="./images/careercatlyst1.svg" alt="" draggable="false" loading='lazy' />
                     </div>
                     <div className='mt-20 sm:mt-5' data-aos="fade-up" data-aos-delay="300">
-                        <img src="./images/purple_black1.svg" alt="" draggable="false" loading="lazy" />
+                        <img src="./images/careercatlyst2.svg" alt="" draggable="false" loading="lazy" />
                     </div>
                 </div>
                 <div>
