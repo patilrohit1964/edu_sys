@@ -8,80 +8,106 @@ import TitleComp from '../../widgets/TitleComp';
 
 const coursePoint = [
     {
-        title: "Introduction to Investment Banking & Financial Markets",
+        title: "Java Development",
+        tag: "#Java",
         points: [
-            "What is Investment Banking?",
-            "IB Divisions: M&A, ECM, DCM, S&T, Research",
-            "Overview of Capital Markets & Instruments",
-            "Regulatory Bodies (SEBI, SEC, FINRA)",
-            "Types of IB Firms (Bulge Bracket vs Boutique)"
+            "Core Java & OOP Fundamentals",
+            "Java syntax, data types, operators",
+            "Control flow, loops, methods",
+            "Object-Oriented Programming (OOP)",
+            "Classes, objects, inheritance",
+            "Polymorphism, abstraction, encapsulation",
+            "Exception handling",
+            "Java Collections Framework"
         ]
     },
     {
-        title: "Financial Accounting & Statement Analysis",
+        title: "Advanced Java & Multithreading",
+        tag: "#Java",
         points: [
-            "Income Statement, Balance Sheet, Cash Flow",
-            "Interpreting Financial Statements",
-            "Key Ratios: Liquidity, Profitability, Efficiency",
-            "GAAP vs IFRS – Basics"
+            "File I/O (Streams, Readers, Writers)",
+            "Multithreading and Concurrency",
+            "Lambda expressions, Streams API",
+            "Java 8+ features",
+            "Unit testing with JUnit"
         ]
     },
     {
-        title: "Excel for Finance & Financial Modeling Foundations",
+        title: "Java Database Connectivity (JDBC) & ORM",
+        tag: "#Java",
         points: [
-            "Excel Formulas for Finance (IF, VLOOKUP, INDEX-MATCH, etc.)",
-            "Building a 3-Statement Financial Model",
-            "Forecasting Revenue, Costs, CapEx, Depreciation",
-            "Model Assumptions & Sensitivity Analysis"
+            "JDBC API: connection, statements, result sets",
+            "Transactions and batch processing",
+            "Introduction to ORM and Hibernate",
+            "Annotations, HQL, Relationships",
+            "Caching, Lazy loading",
+            "Introduction to JPA"
         ]
     },
     {
-        title: "Business Valuation Techniques",
+        title: "Spring Ecosystem",
+        tag: "#Java",
         points: [
-            "Discounted Cash Flow (DCF) Valuation",
-            "Comparable Company Analysis (Trading Comps)",
-            "Precedent Transaction Analysis (Deal Comps)",
-            "Terminal Value, WACC, Multiples (EV/EBITDA, P/E)"
+            "Spring Core (IoC, DI, Beans, AOP)",
+            "Spring Boot",
+            "Spring MVC: REST APIs",
+            "Spring Data JPA",
+            "Security with Spring Security (JWT basics)",
+            "Build Tools: Maven/Gradle"
         ]
     },
     {
-        title: "Mergers & Acquisitions (M&A)",
+        title: "MERN Stack Development",
+        tag: "#MERN",
         points: [
-            "Deal Process: NDA, LOI, Due Diligence, Closing",
-            "Synergies Estimation",
-            "Accretion/Dilution Analysis",
-            "Real-World M&A Case Studies"
+            "Frontend Development with react",
+            "HTML5, CSS3, ES6 JavaScript (recap)",
+            "React basics: Components, Props, State",
+            "React Router",
+            "React Hooks (useState, useEffect, etc.)",
+            "Form handling, validation",
+            "State management (Context API / Redux)"
         ]
     },
     {
-        title: "Capital Markets (ECM & DCM)",
+        title: "Backend Development with Node.js & Express",
+        tag: "#MERN",
         points: [
-            "IPO Process, Follow-on Offerings, Rights Issues",
-            "Bond Issuance, Credit Ratings, Debt Structures",
-            "Equity Syndication and Roadshows",
-            "Deal Documentation (Red Herring, Prospectus)"
+            "Node.js fundamentals",
+            "NPM, Modules",
+            "Express.js: REST API development",
+            "Middleware, CORS, error handling",
+            "API authentication with JWT"
         ]
     },
     {
-        title: "Pitchbook Development & Tools Used in IB",
+        title: "MongoDB & Fullstack Integration",
+        tag: "#MERN",
         points: [
-            "Anatomy of a Sell-side & Buy-side Pitchbook",
-            "Slides: Company Overview, Valuation Summary, Deal Rationale",
-            "PowerPoint Design for IB",
-            "Intro to Bloomberg, Capital IQ (simulated tools)"
+            "MongoDB basics (documents, collections)",
+            "Mongoose: schema design, validation",
+            "CRUD operations with MongoDB",
+            "Connecting React frontend to Node backend",
+            "Environment management, version control (Git, GitHub)",
+            "Project architecture: MVC pattern"
         ]
     },
     {
-        title: "Capstone Project + Career Readiness",
+        title: "DevOps, Testing, & Capstone Project",
+        tag: "#DevOps",
         points: [
-            "Capstone: Prepare a Pitchbook + Valuation for a real/public company",
-            "Resume Writing for IB Roles",
-            "Technical + Behavioral Interview Preparation",
-            "Mock Interviews, Group Discussions",
-            "LinkedIn & Networking Strategy"
+            "Unit testing: Mocha/Chai/Jest",
+            "Docker basics",
+            "CI/CD pipeline overview (GitHub Actions / Jenkins)",
+            "Hosting: Vercel, Netlify, or Render for MERN",
+            "Capstone project combining Java or MERN (team-based)",
+            "Example: eCommerce platform, Chat app, LMS",
+            "Resume & portfolio building, mock interviews",
+            "Deploy Java app on a cloud platform (e.g., Heroku or AWS)"
         ]
     }
 ];
+
 
 const certifications = [
     {
@@ -138,10 +164,10 @@ const Java = () => {
                 </div>
                 <div className='mt-10'>
                     <DataScienceCurriculum courseCurriculumInfo={{
-                        title: "Data Science With Machine Learning and AI",
-                        caseProject: "45+",
-                        langTool: "2+",
-                        liveSession: "240+",
+                        title: "Java/Mern Full Stack Development",
+                        caseProject: "60+",
+                        langTool: "16+",
+                        liveSession: "280+",
                         image: "./images/ml80img.svg",
                         coursePoint: coursePoint
                     }

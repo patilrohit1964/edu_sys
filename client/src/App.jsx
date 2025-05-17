@@ -9,6 +9,7 @@ import DataSciMl from './pages/coursesInfo/DataSciMl';
 import ProjectManagement from './pages/coursesInfo/ProjectManagement';
 import CareerCatalyst from './pages/coursesInfo/CareerCatalyst';
 import InvestmentBanking from './pages/coursesInfo/InvestmentBanking';
+import Java from './pages/coursesInfo/JavaCourse';
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'))
@@ -67,7 +68,7 @@ const App = () => {
           <Route path='/product-management-course' element={<ProjectManagement />}></Route>
           <Route path='/career-catalyst-course' element={<CareerCatalyst />}></Route>
           <Route path='/investment-banking-course' element={<InvestmentBanking />}></Route>
-          <Route path='/java-course' element={<InvestmentBanking />}></Route>
+          <Route path='/java-course' element={<Java />}></Route>
         </Routes>
       </Suspense>
       <Footer />
