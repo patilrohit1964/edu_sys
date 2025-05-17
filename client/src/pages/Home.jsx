@@ -182,27 +182,35 @@ const Home = () => {
                     {[
                         {
                             courseName: "Data Science With Analytics and AI",
-                            courseInfo: "Master Data Analytics with AI. Pay nothing until placement. Guaranteed salary: ₹6–15 LPA. Launch your high-paying career risk-free.",
+                            courseInfo: "Master Data Analytics with AI. Pay nothing until placement. minimum salary: ₹6–15 LPA for freshers and 60% hike for Experienced individual. Launch your high-paying career risk-free.",
                             infrollments: "18k",
-                            link: "/data-analytics-course"
+                            link: "/data-analytics-course",
+                            projects: "50+ Projects",
+                            duration: "4 Months"
                         },
                         {
                             courseName: "Data Science With Machine Learning and AI",
                             courseInfo: "No fees until you're hired! Master AI + ML with Data Science . Land ₹6–15 LPA jobs For Fresher and 60% Hike for Experienced Individual. Zero risk. All reward.",
                             infrollments: "22k",
-                            link: "/data-science-ml"
+                            link: "/data-science-ml",
+                            projects: "80+ Projects",
+                            duration: "6 Months"
                         },
                         {
                             courseName: "Product Management With Analytics and A.I",
                             courseInfo: "Master Product Management + AI. Minimal fees now, pay later after placement. Land top roles with our career-backed program.",
                             infrollments: "16k",
-                            link: "/product-management-course"
+                            link: "/product-management-course",
+                            projects: "20+ Projects",
+                            duration: "4 Months"
                         },
                         {
                             courseName: "Career Catalyst Pro With AI",
                             courseInfo: "Level up your career! Master communication, confidence, and growth skills with Career Catalyst Pro. Be job-ready, earn more, shine bright",
                             infrollments: "30k",
-                            link: "/career-catalyst-course"
+                            link: "/career-catalyst-course",
+                            projects: "30+ Projects",
+                            duration: "4 Months"
                         }].map((el, index) => {
                             if (index === 0) {
                                 const parts = el.courseName.split(/ (AI|Ai)/i);
@@ -225,6 +233,8 @@ const Home = () => {
                                             infrollments={el.infrollments}
                                             index={index}
                                             link={el.link}
+                                            projects={el.projects}
+                                            duration={el.duration}
                                         />
                                     </div>
                                 );
@@ -242,6 +252,8 @@ const Home = () => {
                                             infrollments={el.infrollments}
                                             index={index}
                                             link={el.link}
+                                            projects={el.projects}
+                                            duration={el.duration}
                                         />
                                     </div>
                                 );

@@ -1,7 +1,7 @@
 import { Play, FileText, Clock, ChevronRight, X, } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-export default function DataAnalyticsCard({ courseName, courseInfo, infrollments, index, link }) {
+export default function DataAnalyticsCard({ courseName, courseInfo, infrollments, index, link, projects, duration }) {
     const [isHovered, setIsHovered] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [formData, setFormData] = useState({
@@ -67,15 +67,15 @@ export default function DataAnalyticsCard({ courseName, courseInfo, infrollments
                             <div className="flex flex-wrap gap-4 mt-6">
                                 <div className="flex items-center text-purple-700">
                                     <Play size={18} className="mr-2" />
-                                    <span>16 Live Classes</span>
+                                    <span>Live Classes</span>
                                 </div>
                                 <div className="flex items-center text-purple-700">
                                     <FileText size={18} className="mr-2" />
-                                    <span>7 Projects</span>
+                                    <span>{projects}</span>
                                 </div>
                                 <div className="flex items-center text-purple-700">
                                     <Clock size={18} className="mr-2" />
-                                    <span>14 hr/week</span>
+                                    <span>{duration}</span>
                                 </div>
                             </div>
 
