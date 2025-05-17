@@ -5,6 +5,84 @@ import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";
 import TitleComp from '../../widgets/TitleComp';
+
+const coursePoint = [
+    {
+        title: "Introduction to Investment Banking & Financial Markets",
+        points: [
+            "What is Investment Banking?",
+            "IB Divisions: M&A, ECM, DCM, S&T, Research",
+            "Overview of Capital Markets & Instruments",
+            "Regulatory Bodies (SEBI, SEC, FINRA)",
+            "Types of IB Firms (Bulge Bracket vs Boutique)"
+        ]
+    },
+    {
+        title: "Financial Accounting & Statement Analysis",
+        points: [
+            "Income Statement, Balance Sheet, Cash Flow",
+            "Interpreting Financial Statements",
+            "Key Ratios: Liquidity, Profitability, Efficiency",
+            "GAAP vs IFRS – Basics"
+        ]
+    },
+    {
+        title: "Excel for Finance & Financial Modeling Foundations",
+        points: [
+            "Excel Formulas for Finance (IF, VLOOKUP, INDEX-MATCH, etc.)",
+            "Building a 3-Statement Financial Model",
+            "Forecasting Revenue, Costs, CapEx, Depreciation",
+            "Model Assumptions & Sensitivity Analysis"
+        ]
+    },
+    {
+        title: "Business Valuation Techniques",
+        points: [
+            "Discounted Cash Flow (DCF) Valuation",
+            "Comparable Company Analysis (Trading Comps)",
+            "Precedent Transaction Analysis (Deal Comps)",
+            "Terminal Value, WACC, Multiples (EV/EBITDA, P/E)"
+        ]
+    },
+    {
+        title: "Mergers & Acquisitions (M&A)",
+        points: [
+            "Deal Process: NDA, LOI, Due Diligence, Closing",
+            "Synergies Estimation",
+            "Accretion/Dilution Analysis",
+            "Real-World M&A Case Studies"
+        ]
+    },
+    {
+        title: "Capital Markets (ECM & DCM)",
+        points: [
+            "IPO Process, Follow-on Offerings, Rights Issues",
+            "Bond Issuance, Credit Ratings, Debt Structures",
+            "Equity Syndication and Roadshows",
+            "Deal Documentation (Red Herring, Prospectus)"
+        ]
+    },
+    {
+        title: "Pitchbook Development & Tools Used in IB",
+        points: [
+            "Anatomy of a Sell-side & Buy-side Pitchbook",
+            "Slides: Company Overview, Valuation Summary, Deal Rationale",
+            "PowerPoint Design for IB",
+            "Intro to Bloomberg, Capital IQ (simulated tools)"
+        ]
+    },
+    {
+        title: "Capstone Project + Career Readiness",
+        points: [
+            "Capstone: Prepare a Pitchbook + Valuation for a real/public company",
+            "Resume Writing for IB Roles",
+            "Technical + Behavioral Interview Preparation",
+            "Mock Interviews, Group Discussions",
+            "LinkedIn & Networking Strategy"
+        ]
+    }
+];
+
 const InvestmentBanking = () => {
     useEffect(() => {
         AOS.init({
@@ -16,7 +94,7 @@ const InvestmentBanking = () => {
 
     return (
         <>
-            <TitleComp title={"Data Science Course"} />
+            <TitleComp title={"investment banking course"} />
             <div className="w-full overflow-hidden">
                 <div className='flex items-center justify-center flex-col'>
                     <div data-aos="fade-down" className='md:mb-30'>
@@ -33,16 +111,16 @@ const InvestmentBanking = () => {
                     </div>
                 </div>
                 <div className='flex items-center justify-center' data-aos="flip-up" data-aos-delay="300">
-                    <img src="./images/ml80img.svg" alt="" draggable="false" loading='lazy' />
+                    <img src="./images/product_mang_45_image.svg" alt="" draggable="false" loading='lazy' />
                 </div>
                 <div className='mt-10'>
                     <DataScienceCurriculum courseCurriculumInfo={{
                         title: "Data Science With Machine Learning and AI",
-                        caseProject: "80+",
-                        langTool: "10+",
-                        liveSession: "280+",
+                        caseProject: "45+",
+                        langTool: "2+",
+                        liveSession: "240+",
                         image: "./images/ml80img.svg",
-                        coursePoint: []
+                        coursePoint: coursePoint
                     }
                     } />
                 </div>

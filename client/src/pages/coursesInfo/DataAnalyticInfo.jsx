@@ -354,7 +354,7 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
                                 <div className="flex-1">
                                     <div className="flex flex-wrap items-center gap-2">
                                         <h3 className="text-black font-medium text-sm sm:text-base">{course.title}</h3>
-                                        <span className={`text-xs px-2 py-1 rounded-full ${["Data", "Database", "Data Visualization", "Backend", "NumPy", "Data Analysis", "AI"].includes(course.tag)
+                                        <span className={`text-xs px-2 py-1 rounded-full ${["Data", "Database", "Data Visualization", "Backend", "NumPy", "Data Analysis", "AI", "ML"].includes(course.tag)
                                             ? "bg-yellow-300"
                                             : "bg-gray-200"
                                             } text-black`}>
@@ -400,7 +400,7 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
                                                 </div>
                                             </div>
                                         ) : (
-                                            <ul className="text-black list-disc pl-5 font-bold text-base sm:text-lg flex-1">
+                                            <ul className="text-black list-disc pl-5 text-base sm:text-lg flex-1">
                                                 {course.points.map((el, i) => (
                                                     <li key={i} data-aos="fade-right" data-aos-delay={i * 100}>{el}</li>
                                                 ))}

@@ -4,6 +4,146 @@ import { useEffect } from 'react';
 import { HiringCompanies } from '../Home';
 import { CarouselSize, CertificationTabs, DataScienceCurriculum, PricingBoxes } from "./DataAnalyticInfo";
 import TitleComp from '../../widgets/TitleComp';
+
+const coursePoint = [
+    {
+        title: "Excel",
+        tag: "Data",
+        points: [
+            "Introduction to Excel",
+            "Formula and Function",
+            "Formula Referencing",
+            "Named Ranges",
+            "Table in Excel",
+            "AutoFill and Custom Lists",
+            "Conditional Formatting",
+            "Logical Functions",
+            "Reference Functions",
+            "Data Validation",
+            "Pivot Table",
+            "Data Visualization"
+        ]
+    },
+    {
+        title: "SQL",
+        tag: "Database",
+        points: [
+            "SQL Launchpad",
+            "Crafting SQL Databases (DDL) & Mastering Data Control (DML)",
+            "Querying into Data (DQL)",
+            "Unlock the Built in Functions",
+            "Connecting Data for Insights"
+        ]
+    },
+    {
+        title: "POWER BI",
+        tag: "Data Visualization",
+        points: [
+            "Introduction to Power BI",
+            "Power BI Desktop & Power Query",
+            "Modelling with Power BI",
+            "Data Analysis Expressions (DAX)",
+            "Data Visualization",
+            "Introduction to Power BI Dashboard, Q&A and Data Insights",
+            "Power BI Service",
+            "Power BI Direct Connectivity"
+        ]
+    },
+    {
+        title: "Tableau",
+        tag: "Data Visualization",
+        points: [
+            "Introduction to Tableau",
+            "Tableau Shelf and Card",
+            "Data Types in Tableau",
+            "Connecting to and Preparing Data",
+            "Organizing and Simplify Data",
+            "Learn Tableau Built-In and Custom Chart",
+            "Analytics",
+            "Tableau Dashboard",
+            "Performance improvement of Dashboard"
+        ]
+    },
+    {
+        title: "Python",
+        tag: "Backend",
+        points: [
+            "Introduction to Python",
+            "Data Types & Variable",
+            "Conditional Statement",
+            "Loops in Python",
+            "More on Data types",
+            "Function and Modules",
+            "Object Oriented Programming",
+            "File Handling",
+            "Regular Expression & Web Scraping"
+        ]
+    },
+    {
+        title: "NumPy and Statistical Analysis",
+        tag: "NumPy",
+        points: [
+            "Introduction to NumPy",
+            "NumPy Arrays",
+            "NumPy Functions",
+            "Working with Multiple Dimensions",
+            "Characterising Data (Descriptive Statistics)",
+            "Predicting from Data (Inferential Statistics)"
+        ]
+    },
+    {
+        title: "Applied Data Analysis with Python",
+        tag: "Data Analysis",
+        points: [
+            "Introduction to Pandas",
+            "DataFrames Basics",
+            "Indexing and Selecting Data",
+            "Data Manipulation",
+            "Visualising Data",
+            "Introduction to Matplotlib",
+            "Customizing Plots",
+            "Introduction to Seaborn Library"
+        ]
+    },
+    {
+        title: "Machine Learning",
+        tag: "ML",
+        points: [
+            "ML Fundamentals",
+            "EDA",
+            "Linear Regression",
+            "Logistic Regression",
+            "Decision Tree",
+            "Random Forests",
+            "Ensemble Techniques",
+            "Neighbours (K-NN)",
+            "Support Vector Machines (SVM)",
+            "PCA",
+            "K-means",
+            "Hierarchical Clustering"
+        ]
+    },
+    {
+        title: "Artificial Intelligence",
+        tag: "AI",
+        points: [
+            "Introduction to AI",
+            "Introduction to DL",
+            "Artificial Neural Network Deep Dive",
+            "Computer Vision",
+            "Computer Vision with OpenCV",
+            "Convolution Neural Network",
+            "Natural Language Processing",
+            "Recurrent Neural Network",
+            "Building Chatbot",
+            "Introduction to Time Series Analysis",
+            "Weather Forecasting using ARIMA Model",
+            "Sentiment Analysis on Amazon Reviews"
+        ]
+    }
+];
+
+
 const DataSciMl = () => {
     useEffect(() => {
         AOS.init({
@@ -15,7 +155,7 @@ const DataSciMl = () => {
 
     return (
         <>
-            <TitleComp title={"Data Science Course"} />
+            <TitleComp title={"Data Science With Machine Learning"} />
             <div className="w-full overflow-hidden">
                 <div className='flex items-center justify-center flex-col'>
                     <div data-aos="fade-down" className='md:mb-30'>
@@ -41,7 +181,7 @@ const DataSciMl = () => {
                         langTool: "10+",
                         liveSession: "280+",
                         image: "./images/ml80img.svg",
-                        coursePoint: []
+                        coursePoint: coursePoint
                     }
                     } />
                 </div>
