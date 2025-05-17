@@ -26,6 +26,89 @@ const certifications = [
         description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
     }
 ];
+const coursePoint = [
+    {
+        title: "Foundations of Effective Communication",
+        tag: "#Communication",
+        points: [
+            "Communication styles & the psychology behind them",
+            "Verbal vs Non-verbal communication",
+            "Cultural nuances in corporate communication (especially for global companies)",
+            "Practical Exercises: Self-assessment, tone practice"
+        ]
+    },
+    {
+        title: "AI-Powered Communication Techniques",
+        tag: "#AI",
+        points: [
+            "Using tools like ChatGPT for content clarity and tone",
+            "Writing better emails, resumes, cover letters with AI",
+            "Voice AI tools for accent, intonation & fluency training",
+            "Responsible AI usage"
+        ]
+    },
+    {
+        title: "English Fluency & Vocabulary Enhancement",
+        tag: "#English",
+        points: [
+            "Everyday professional vocabulary",
+            "Voice modulation, filler-word reduction",
+            "Confidence through storytelling techniques",
+            "Role-play: Elevator pitch + self-introduction"
+        ]
+    },
+    {
+        title: "Interview Mastery with AI Simulation",
+        tag: "#Interview",
+        points: [
+            "HR & technical interview mock simulations",
+            "Body language coaching",
+            "AI feedback on verbal performance",
+            "Industry-specific interview preparation (IT, Marketing, Finance, etc.)"
+        ]
+    },
+    {
+        title: "Presentation & Public Speaking Mastery",
+        tag: "#PublicSpeaking",
+        points: [
+            "Structuring impactful presentations",
+            "TED-style speaking drills",
+            "AI slide-making tools",
+            "Recorded presentations with peer and AI review"
+        ]
+    },
+    {
+        title: "Workplace Communication Excellence",
+        tag: "#Communication",
+        points: [
+            "Writing professional reports, chat, and emails",
+            "Handling conflict and feedback",
+            "Cross-functional team collaboration",
+            "Real-world business case simulations"
+        ]
+    },
+    {
+        title: "Personal Branding & LinkedIn Makeover",
+        tag: "#Career",
+        points: [
+            "Building a strong online presence",
+            "Resume & LinkedIn AI optimization (keywords, ATS-friendly formats)",
+            "Thought leadership content strategy",
+            "Weekly post challenges with peer feedback"
+        ]
+    },
+    {
+        title: "Capstone – Future Ready You",
+        tag: "#Career",
+        points: [
+            "Live job simulations (interviews, meetings, pitches)",
+            "Final assessment: Job-ready communication test",
+            "Personalized feedback report",
+            "Certification + Placement support"
+        ]
+    }
+];
+
 const CareerCatalyst = () => {
     useEffect(() => {
         Aos.init({
@@ -69,11 +152,11 @@ const CareerCatalyst = () => {
                 <div className='mt-10'>
                     <DataScienceCurriculum courseCurriculumInfo={{
                         title: "Career Catalyst Pro With AI",
-                        caseProject: "25+",
-                        langTool: "2+",
+                        caseProject: "30+",
+                        langTool: "5+",
                         liveSession: "200+",
                         image: "",
-                        coursePoint: []
+                        coursePoint: coursePoint
                     }} />
                 </div>
                 <div>
