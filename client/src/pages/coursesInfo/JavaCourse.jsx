@@ -170,13 +170,16 @@ const Java = () => {
                         liveSession: "280+",
                         image: "./images/ml80img.svg",
                         coursePoint: coursePoint
-                    }
-                    } />
+                    }} />
                 </div>
                 <div>
                     <h1 className='text-3xl md:text-5xl text-center mt-10 font-[agrandir] lg:w-2/ m-auto'
                         data-aos="zoom-in"
-                        data-aos-duration="800"><span className='border-b-2 border-orange-500 inline-block mb-5'>Our Expert</span> <br /> <span className='font-bold'>Learn From The real Industry Experts</span></h1>
+                        data-aos-duration="800">
+                        <span className='border-b-2 border-orange-500 inline-block mb-5'>Our Expert</span>
+                        <br />
+                        <span className='font-bold'>Learn From The real Industry Experts</span>
+                    </h1>
                     <div className="my-5">
                         <CarouselSize />
                     </div>
