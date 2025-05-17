@@ -363,7 +363,7 @@ export const HiringCompanies = () => {
         companies.slice(12, 24),
         companies.slice(24, 36)
     ];
-
+console.log(chunkedCompanies)
     return (
         <div className="bg-white py-6 mt-10">
             {chunkedCompanies.map((group, index) => (

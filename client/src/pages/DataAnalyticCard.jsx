@@ -1,5 +1,6 @@
 import { Play, FileText, Clock, ChevronRight, X, } from "lucide-react";
 import { useState } from "react";
+import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 export default function DataAnalyticsCard({ courseName, courseInfo, infrollments, index, link, projects, duration }) {
     const [isHovered, setIsHovered] = useState(false);
@@ -58,7 +59,7 @@ export default function DataAnalyticsCard({ courseName, courseInfo, infrollments
                             </div>
                         </div>
 
-                        <div className="flex-grow">
+                        <div className="flex-grow overflow-hidden">
                             <h2 className="text-2xl font-bold text-gray-800 break-words">{courseName}</h2>
                             <p className="text-gray-500 mt-5">
                                 {courseInfo}
@@ -79,13 +80,44 @@ export default function DataAnalyticsCard({ courseName, courseInfo, infrollments
                                 </div>
                             </div>
 
-                            <div className="bg-gray-200 rounded-lg p-4 mt-6 flex items-center">
-                                <span className="text-gray-600">Designed by experts from</span>
-                                <div className="ml-2 flex space-x-2">
-                                    <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-xs text-white font-bold">S</div>
-                                    <div className="w-8 h-8 bg-orange-500 rounded-full"></div>
-                                    <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
-                                </div>
+                            <div className="bg-black rounded-lg p-4 mt-6 flex items-center overflow-hidden">
+                                <span className="text-white">Top Hiring Companies</span>
+                                {/* <div className="ml-2 flex space-x-2 border-blue-500">
+                                    <div className="w-8 h-8 border-gray-900 rounded-full flex items-center justify-center text-xs text-white font-bold">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="" className="h-full w-full object-contain" />
+                                    </div>
+                                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                                        <img src="./images/logo4.jpg" alt="" className="h-full w-full object-contain" />
+                                    </div>
+                                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                                        <img src="./images/logo3.jpg" alt="" className="h-full w-full object-contain" />
+                                    </div>
+                                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="" className="h-full w-full object-contain" />
+                                    </div>
+                                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7qY9eeSbwLtO_OZtOk16-yItU17QyXJqJ-Q&s" alt="" className="h-full w-full object-contain" />
+                                    </div>
+                                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKIoTiOTD1A1CILUhNUgKP6y2z67D2BBlQtQ&s" alt="" className="h-full w-full object-contain" />
+                                    </div>
+                                </div> */}
+                                <Marquee pauseOnHover={true} className="flex justify-between items-center">
+                                    {
+                                        [
+                                            "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+                                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsf7sBxCpX8MjWR81GUFYERgvVVZzGJkuzg&s",
+                                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfHQ-hngeukNj7qtlgG9NqH5w5kaxkBtjB8g&s",
+                                            "./images/netflix.jpeg",
+                                            "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+                                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7qY9eeSbwLtO_OZtOk16-yItU17QyXJqJ-Q&s"
+                                        ].map(el => (
+                                            <div className="w-12 h-12 border-gray-900 rounded-full mr-5">
+                                                <img src={el} alt="" className="h-full w-full object-contain" />
+                                            </div>
+                                        ))
+                                    }
+                                </Marquee>
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -178,21 +210,22 @@ export default function DataAnalyticsCard({ courseName, courseInfo, infrollments
 
                                     <div>
                                         <label htmlFor="interest" className="block text-sm font-medium text-gray-700 mb-1">Area of Interest</label>
-                                        <select
+                                        <input
                                             id="interest"
                                             name="interest"
-                                            value={formData.interest}
+                                            // value={formData.interest}
                                             onChange={handleChange}
                                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                            readonly
+                                            value={"Data Science With Analytics and AI"}
                                             required
-                                        >
-                                            <option value="" disabled>Select your course</option>
+                                        />
+                                            {/* <option value="" disabled>Select your course</option>
                                             <option value="business-analytics">Business Analytics</option>
                                             <option value="data-science">Data Science</option>
                                             <option value="machine-learning">Machine Learning</option>
                                             <option value="data-visualization">Data Visualization</option>
-                                            <option value="big-data">Big Data</option>
-                                        </select>
+                                            <option value="big-data">Big Data</option> */}
                                     </div>
                                 </div>
 
