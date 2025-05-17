@@ -52,7 +52,7 @@ export function HoverDropdown({ isOpen, setIsOpen }) {
             items: [
                 { icon: <LineChart size={20} />, name: "Data Science With Analytics and AI", link: '/data-analytics-course' },
                 { icon: <Server size={20} />, name: 'Product Management With Analytics and A.I', link: '/product-management-course' },
-                { icon: <Database size={20} />, name: 'Investment Banking', link: /* 'Python, R, SQL, ML' */ '' },
+                { icon: <Database size={20} />, name: 'Investment Banking', link: "/investment-banking-course" },
             ]
         },
         {

@@ -78,7 +78,7 @@ const DataAnalyticInfo = () => {
             <TitleComp title={"Data Analytic Course"} />
             <div className="w-full overflow-hidden">
                 <div className='flex items-center justify-center flex-col'>
-                    <div data-aos="fade-down">
+                    <div data-aos="fade-down" className='md:mb-30'>
                         <img src="./images/analytic.svg" alt="" draggable="false" loading='lazy' />
                     </div>
                     <div className='mt-20 sm:mt-5' data-aos="fade-up" data-aos-delay="300">
