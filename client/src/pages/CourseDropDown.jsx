@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, BookOpen, Code, Database, BarChart3, Globe, User, Briefcase, Server, Clock, LineChart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function HoverDropdown({ isOpen, setIsOpen }) {
     const dropdownRef = useRef(null);
@@ -49,24 +50,24 @@ export function HoverDropdown({ isOpen, setIsOpen }) {
         {
             title: "For Non Technical",
             items: [
-                { icon: <LineChart size={20} />, name: "Data Science With Analytics and AI", description: /* 'HTML, CSS, JavaScript' */ '' },
-                { icon: <Server size={20} />, name: 'Product Management With Analytics and A.I', description: /* 'AWS, Azure, GCP' */ '' },
-                { icon: <Database size={20} />, name: 'Investment Banking', description: /* 'Python, R, SQL, ML' */ '' },
+                { icon: <LineChart size={20} />, name: "Data Science With Analytics and AI", link: '/data-analytics-course' },
+                { icon: <Server size={20} />, name: 'Product Management With Analytics and A.I', link: '/product-management-course' },
+                { icon: <Database size={20} />, name: 'Investment Banking', link: /* 'Python, R, SQL, ML' */ '' },
             ]
         },
         {
             title: "For Technical Learners",
             items: [
-                { icon: <Database size={20} />, name: 'Data Science With Machine Learning and AI', description: /* 'Excel, Tableau, Power BI' */ '' },
-                { icon: <Globe size={20} />, name: 'Java Full Stack', description: /* 'Finance, Valuation, M&A' */ '' },
-                { icon: <BarChart3 size={20} />, name: 'Mern Full Stack', description: /* 'Strategy, Operations' */ '' },
+                { icon: <Database size={20} />, name: 'Data Science With Machine Learning and AI', link: '/data-science-ml' },
+                { icon: <Globe size={20} />, name: 'Java Full Stack', link: /* 'Finance, Valuation, M&A' */ '' },
+                { icon: <BarChart3 size={20} />, name: 'Mern Full Stack', link: /* 'Strategy, Operations' */ '' },
             ]
         },
         {
             title: "Personality Development & Speaking Skills",
             items: [
-                { icon: <Clock size={20} />, name: 'Career Catalyst Pro With AI', description: /* 'MongoDB, Express, React, Node' */ '' },
-                { icon: <User size={20} />, name: 'Public Speaking Skills', description: /* 'Spring Boot, Hibernate, React' */ '' },
+                { icon: <Clock size={20} />, name: 'Career Catalyst Pro With AI', link: '/career-catalyst-course' },
+                { icon: <User size={20} />, name: 'Public Speaking Skills', link: /* 'Spring Boot, Hibernate, React' */ '' },
                 // { icon: <User size={20} />, name: 'UX/UI Design', description: 'Figma, Adobe XD, Sketch' },
             ]
         }
@@ -106,7 +107,7 @@ export function HoverDropdown({ isOpen, setIsOpen }) {
                             >
                                 <div className="text-blue-600 mt-1">{item.icon}</div>
                                 <div>
-                                    <h4 className="font-medium text-gray-800">{item.name}</h4>
+                                    <Link to={item.link}><h4 className="font-medium text-gray-800">{item.name}</h4></Link>
                                     <p className="text-xs md:text-sm text-gray-500">{item.description}</p>
                                 </div>
                             </div>
