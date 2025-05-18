@@ -109,7 +109,7 @@ const plans = [
     {
         name: 'Program Fees',
         monthlyPrice: '₹3334',
-        yearlyPrice: '₹85,000',
+        yearlyPrice: '₹70,000',
         description: 'Only',
         features: [
             '5 users',
@@ -191,7 +191,7 @@ const InvestmentBanking = () => {
                     >
                         Program Fees
                     </h1>
-                    <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Data Science with Analytics and A.I  Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
+                    <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Investment Banking Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
                     <div>
                         <PricingBoxes plans={plans} />
                     </div>

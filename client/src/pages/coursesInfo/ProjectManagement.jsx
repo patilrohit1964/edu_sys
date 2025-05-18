@@ -188,7 +188,7 @@ const ProjectManagement = () => {
                     >
                         Program Fees
                     </h1>
-                    <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Data Science with Analytics and A.I  Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
+                    <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Product Management With AI Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
                     <div>
                         <PricingBoxes plans={plans} />
                     </div>
