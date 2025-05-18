@@ -79,8 +79,8 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
-                <Link to={"/contact"}>
-                  <button className='py-2 text-md px-2 bg-purple-500 rounded-lg bottom-8 text-white'>Contact Us</button>
+                <Link to={"/https://techmindseducation.online/lp-profile/"}>
+                  <button className='py-2 text-md px-2 bg-gray-800 rounded-lg bottom-8 text-white'>Login</button>
                 </Link>
               </div>
             </div>
