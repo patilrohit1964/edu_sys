@@ -1,20 +1,20 @@
 import React from 'react';
 // Import Swiper React components
+import { Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-import '../App.css';
+import '../../App.css';
 
 // import required modules
 import { FreeMode } from 'swiper/modules';
 
 export default function Peopleslider() {
     return (
-        <>
+        <div className='peopleslider'>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
@@ -89,9 +89,35 @@ export default function Peopleslider() {
                     ))
                 }
             </Swiper>
-        </>
+        </div>
     );
 }
 
+export function PlacementSlider() {
+    return (
+        <>
+            <Swiper
+                scrollbar={{
+                    hide: true,
+                }}
+                modules={[Scrollbar]}
+                className="mySwiper"
+            >
+                {
+                    [
+                        "./images/placementImages/placement1.jpg",
+                        "./images/placementImages/placement2.jpg",
+                        "./images/placementImages/placement3.jpg",
+                    ].map(image => (
+                        <SwiperSlide>
+                            <img src={image} alt="" />
+                        </SwiperSlide>
+
+                    ))
+                }
+            </Swiper>
+        </>
+    );
+}
 
 

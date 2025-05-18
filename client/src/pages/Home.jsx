@@ -4,7 +4,7 @@ import { FaStarHalfAlt } from "react-icons/fa";
 import { FcBullish } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import DataAnalyticsCard from "./DataAnalyticCard";
-import Peopleslider from './PeopleSlider';
+import Peopleslider from '../components/sliders/PeopleSlider';
 import { motion } from "framer-motion";
 import { GiFlowerEmblem } from "react-icons/gi";
 import AOS from 'aos';
@@ -363,7 +363,6 @@ export const HiringCompanies = () => {
         companies.slice(12, 24),
         companies.slice(24, 36)
     ];
-console.log(chunkedCompanies)
     return (
         <div className="bg-white py-6 mt-10">
             {chunkedCompanies.map((group, index) => (

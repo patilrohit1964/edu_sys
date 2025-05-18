@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useState } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaHashtag } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import Peopleslider from '../pages/PeopleSlider';
+import Peopleslider from './sliders/PeopleSlider';
 const Footer = () => {
     return (
         <>

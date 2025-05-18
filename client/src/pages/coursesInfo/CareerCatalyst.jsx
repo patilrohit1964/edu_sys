@@ -7,12 +7,12 @@ import TitleComp from '../../widgets/TitleComp';
 const certifications = [
     {
         name: "Certificate of Complition",
-        image: "./images/certi1.jpg",
+        image: "./images/investcerti.jpg",
         description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
     },
     {
         name: "Intership Experience Letter",
-        image: "./images/certi2.jpg",
+        image: "./images/investcertiintern.jpg",
         description: "Internship experience certified by Tech Minds Education, premier practical institute."
     },
     {
