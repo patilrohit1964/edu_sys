@@ -12,6 +12,7 @@ import InvestmentBanking from './pages/coursesInfo/InvestmentBanking';
 import Java from './pages/coursesInfo/JavaCourse';
 import SuccessStory from './pages/SuccessStory';
 import Contact from './pages/Contact';
+import About from './pages/About';
 
 // Lazy load components
 const Home = lazy(() => import('./pages/Home'))
@@ -72,6 +73,7 @@ const App = () => {
           <Route path='/java-course' element={<Java />}></Route>
           <Route path='/success-story' element={<SuccessStory />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/about' element={<About />}></Route>
         </Routes>
       </Suspense>
       <Footer />

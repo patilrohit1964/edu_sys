@@ -85,7 +85,7 @@ const Home = () => {
                             <button className='bg-gradient-to-r from-purple-700 to-pink-500 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] border-2'>Join Now</button>
                         </Link>
                         <Link to="/refer-earn" className='w-full md:w-auto' data-aos="fade-up" data-aos-delay="600">
-                            <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2'>Pay Your Fees</button>
+                            <button className='bg-gradient-to-r from-pink-500 to-pink-600 w-full md:w-[270px] py-4 px-10 text-white text-sm md:text-2xl font-[agrandir] ml-5 border-2 -translate-x-4'>Pay Your Fees</button>
                         </Link>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ const Footer = () => {
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content flex items-center justify-around p-10">
                 <nav>
                     <h6 className="footer-title">Company</h6>
-                    <Link className="link link-hover">About us</Link>
+                    <Link className="link link-hover" to={"/about"}>About us</Link>
                     <Link className="link link-hover" to={"/success-story"}>Success Story</Link>
                     <Link className="link link-hover" to={"https://pages.razorpay.com/techmindseducation"}>Payment</Link>
                 </nav>
