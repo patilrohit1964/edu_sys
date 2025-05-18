@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { PlacementSlider } from '../components/sliders/PeopleSlider'
 import { HiringCompanies } from './Home'
-
+import FormfacadeEmbed from "@formfacade/embed-react";
 const Placement = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     mobile: "",
-    interest: "Data Science With Analytics and AI"
+    interest: ""
   });
 
   const handleChange = (e) => {
@@ -15,12 +15,45 @@ const Placement = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! Your brochure will be sent to your email shortly.");
-    setShowPopup(false);
-    setFormData({ ...formData, name: "", email: "", mobile: "" });
+    // console.log("Form submitted:", formData);
+    // alert("Thank you! Your brochure will be sent to your email shortly.");
+    const data = {
+      data: [
+        {
+          Name: formData.name,
+          Email: formData.email,
+          Course: formData.interest,
+          Mobile: formData.mobile
+        }
+      ]
+    };
+    try {
+      const res = await fetch(
+        'https://v1.nocodeapi.com/vijay1128/google_sheets/jqmEFeAmDaoWoCQi?tabId=Inquries%20Details',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (res.ok) {
+        alert('Form submitted successfully!');
+        setForm({ name: '', email: '', course: '' });
+      } else {
+        alert('Error submitting the form');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Submission failed');
+    }
+
+    // setShowPopup(false);
+    // setFormData({ ...formData, name: "", email: "", mobile: "" });
   };
 
   return (
@@ -42,7 +75,7 @@ const Placement = () => {
         <img src="./images/placement2.svg" alt="" loading='lazy' />
       </div>
       <section>
-        <PlacementSlider />
+        <PlacementSlider word={"Placement"} />
       </section>
       <div>
         <HiringCompanies />
@@ -50,8 +83,57 @@ const Placement = () => {
       <div className='flex items-center justify-center my-20'>
         <img src="./images/placement3.svg" alt="" />
       </div>
-      <div className='flex items-center justify-center border border-red-500'>
-        <AnimatedForm />
+      <div className=' mt-60'>
+        {/* <form onSubmit={handleSubmit}>
+          <div className="space-y-4">
+            {["name", "email", "mobile"].map((field) => (
+              <div key={field}>
+                <label htmlFor={field} className="block text-sm font-medium text-gray-700 mb-1">
+                  {field === "name" ? "Full Name" : field === "email" ? "Email Address" : "Mobile Number"}
+                </label>
+                <input
+                  type={field === "email" ? "email" : field === "mobile" ? "tel" : "text"}
+                  id={field}
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  placeholder={`Enter your ${field === "name" ? "full name" : field === "email" ? "email address" : "mobile number"}`}
+                  required
+                />
+              </div>
+            ))}
+
+            <div>
+              <label htmlFor="interest" className="block text-sm font-medium text-gray-700 mb-1">Area of Interest</label>
+              <input
+                id="interest"
+                name="interest"
+                value={formData.interest}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <button
+              type="submit"
+              className="w-full bg-purple-700 text-white py-2 px-4 rounded-md hover:bg-purple-800 transition duration-300"
+            >
+              Download Now
+            </button>
+          </div>
+
+          <p className="text-xs text-gray-500 mt-4">
+            By submitting this form, you agree to our privacy policy and terms of service.
+          </p>
+        </form> */}
+        {/* <FormfacadeEmbed
+          formFacadeURL="https://formfacade.com/include/108273435865862627885/form/1FAIpQLSdOp8OreTIr0Bwruxhf4aUaJONNqSbtfzjy1AvllQp1aG0q7g/classic.js/?div=ff-compose"
+          onSubmitForm={() => console.log('Form submitted')}
+        /> */}
+        <h1 className='text-6xl text-center'>form coming soon</h1>
       </div>
     </div >
   )

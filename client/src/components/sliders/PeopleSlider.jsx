@@ -102,7 +102,7 @@ const SwiperSlider = ({ children }) => {
     );
 };
 
-export function PlacementSlider() {
+export function PlacementSlider({word}) {
     const images = [
         "./images/placementImages/placement1.jpg",
         "./images/placementImages/placement2.jpg",
@@ -143,7 +143,7 @@ export function PlacementSlider() {
 
     return (
         <div className="w-full max-w-6xl mx-auto my-30 px-4">
-            <h2 className="text-2xl font-bold mb-4 text-center">Placement</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">{word}</h2>
             <div
                 className="placementslider overflow-x-auto pb-4 pt-2 flex items-center cursor-grab active:cursor-grabbing"
                 onMouseDown={handleMouseDown}
