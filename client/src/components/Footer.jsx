@@ -26,7 +26,7 @@ const Footer = () => {
                     <h6 className="footer-title">Company</h6>
                     <Link className="link link-hover">About us</Link>
                     <Link className="link link-hover" to={"/success-story"}>Success Story</Link>
-                    <Link className="link link-hover">Payment</Link>
+                    <Link className="link link-hover" to={"https://pages.razorpay.com/techmindseducation"}>Payment</Link>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Placement</h6>
@@ -38,7 +38,7 @@ const Footer = () => {
                     <Link className="link link-hover" to={"/terms-conditions"}>Terms & Condition</Link>
                     <Link className="link link-hover" to={"/privacy-policy"}>Privacy policy</Link>
                     <Link className="link link-hover" to={"/return-policy"}>Return Policy</Link>
-                    <Link className="link link-hover">Contact</Link>
+                    <Link className="link link-hover" to={"/contact"}>Contact</Link>
                 </nav>
             </footer>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
