@@ -81,7 +81,46 @@ const coursePoint = [
         ]
     }
 ];
-
+const certifications = [
+    {
+        name: "Certificate of Complition",
+        image: "./images/certi1.jpg",
+        description: "Certified completion of India’s best job-oriented program – Tech Minds Education."
+    },
+    {
+        name: "Intership Experience Letter",
+        image: "./images/certi2.jpg",
+        description: "Internship experience certified by Tech Minds Education, premier practical institute."
+    },
+    {
+        name: "MNC Project Completion Certificate",
+        image: "./images/certi3.jpg",
+        description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
+    },
+    {
+        name: "MNC Project Completion Certificate 2",
+        image: "./images/certi3.jpg",
+        description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
+    }
+];
+const plans = [
+    {
+        name: 'Program Fees',
+        monthlyPrice: '₹3334',
+        yearlyPrice: '₹85,000',
+        description: 'Only',
+        features: [
+            '5 users',
+            'Unlimited projects',
+            '50GB storage',
+            'Priority support',
+            'Advanced analytics',
+            'All core features'
+        ],
+        buttonText: 'Join Now This Golden Opportunity',
+        featured: true
+    },
+];
 const ProjectManagement = () => {
     useEffect(() => {
         Aos.init({
@@ -139,7 +178,7 @@ const ProjectManagement = () => {
                         Certification
                     </h1>
                     <h3 className='text-center text-4xl font-bold my-5' data-aos="zoom-in">Become Eligible For 4 Industry-Recognized Certificates</h3>
-                    <CertificationTabs />
+                    <CertificationTabs certifications={certifications} />
                 </div>
                 <div>
                     <h1
@@ -151,7 +190,7 @@ const ProjectManagement = () => {
                     </h1>
                     <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Data Science with Analytics and A.I  Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
                     <div>
-                        <PricingBoxes />
+                        <PricingBoxes plans={plans} />
                     </div>
                 </div>
             </div>

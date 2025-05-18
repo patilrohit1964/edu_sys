@@ -105,7 +105,24 @@ const certifications = [
         description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
     },
 ];
-
+const plans = [
+    {
+        name: 'Program Fees',
+        monthlyPrice: '₹3334',
+        yearlyPrice: '₹85,000',
+        description: 'Only',
+        features: [
+            '5 users',
+            'Unlimited projects',
+            '50GB storage',
+            'Priority support',
+            'Advanced analytics',
+            'All core features'
+        ],
+        buttonText: 'Join Now This Golden Opportunity',
+        featured: true
+    },
+];
 const InvestmentBanking = () => {
     useEffect(() => {
         AOS.init({
@@ -176,7 +193,7 @@ const InvestmentBanking = () => {
                     </h1>
                     <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Data Science with Analytics and A.I  Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
                     <div>
-                        <PricingBoxes />
+                        <PricingBoxes plans={plans} />
                     </div>
                 </div>
             </div>

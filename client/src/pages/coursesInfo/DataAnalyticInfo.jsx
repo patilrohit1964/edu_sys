@@ -92,6 +92,24 @@ const certifications = [
         description: "Project successfully completed, certified by MNC – global excellence recognized. Any 1 company project completion certificate you will get based on your specialization."
     }
 ];
+const plans = [
+    {
+        name: 'Program Fees',
+        monthlyPrice: '₹3334',
+        yearlyPrice: '₹85,000',
+        description: 'Only',
+        features: [
+            '5 users',
+            'Unlimited projects',
+            '50GB storage',
+            'Priority support',
+            'Advanced analytics',
+            'All core features'
+        ],
+        buttonText: 'Join Now This Golden Opportunity',
+        featured: true
+    },
+];
 const DataAnalyticInfo = () => {
     // Initialize AOS
     useEffect(() => {
@@ -171,7 +189,7 @@ const DataAnalyticInfo = () => {
                     </h1>
                     <h2 className="text-2xl text-center lg:w-2/3 my-5 font-bold m-auto">Our Data Science with Analytics and A.I  Program offers comprehensive training, hands-on projects, and expert mentorship at an affordable cost with pay after placement option available. Enroll today to jumpstart your career in Our Program!</h2>
                     <div>
-                        <PricingBoxes />
+                        <PricingBoxes plans={plans} />
                     </div>
                 </div>
             </div>
@@ -225,85 +243,85 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
         setOpenAccordion(openAccordion === index ? -1 : index);
     };
 
-    const courses = [
-        {
-            title: "Excel",
-            tag: "Data",
-            duration: "2.4 Weeks",
-            content: "Learn advanced Excel functions, pivot tables, data analysis, and visualization techniques essential for data science.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "SQL",
-            tag: "Database",
-            duration: "2.8 Weeks",
-            content: "Master database querying, data manipulation, joins, subqueries, and database design principles.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "POWER BI",
-            tag: "Data Visualization",
-            duration: "3.2 Weeks",
-            content: "Create interactive dashboards, reports, and visualizations using Power BI's comprehensive suite of tools.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "Tableau",
-            tag: "Data Visualization",
-            duration: "2.2 Weeks",
-            content: "Design interactive data visualizations, dashboards, and stories to communicate insights effectively.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "Python",
-            tag: "Backend",
-            duration: "3.8 Weeks",
-            content: "Learn Python programming fundamentals with focus on data manipulation, control structures, and functions.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "NumPy and Statistical Analysis",
-            tag: "NumPy",
-            duration: "2.4 Weeks",
-            content: "Master numerical computing with NumPy arrays and perform statistical analysis on datasets.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "Applied Data Analysis with Python",
-            tag: "Data Analysis",
-            duration: "2.4 Weeks",
-            content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
-            icon: "./images/excel.jpeg",
-            coursePoints: ["Basic", "Intermediate", "Advanced"]
-        },
-        {
-            title: "Artificial Intelligence",
-            tag: "AI",
-            duration: "4.8 Weeks",
-            content: "Learn supervised and unsupervised learning algorithms, model evaluation, and implementation with scikit-learn.",
-            icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_zySmDbLOkdsrzURqDl_Z_psgTM7MgAUUsw&s",
-            coursePoints: [
-                "Introduction to AI",
-                "Introduction to DL",
-                "Artificial Neural Network Deep Dive",
-                "Computer Vision",
-                "Computer Vision with OpenCV",
-                "Convolution Neural Network",
-                "Natural Language Processing",
-                "Recurrent Neural Network",
-                "Building Chatbot",
-                "Introduction to Time Series Analysis",
-                "Weather Forecasting using ARIMA Model",
-                "Sentiment Analysis on Amazon Reviews"
-            ]
-        },
-    ];
+    // const courses = [
+    //     {
+    //         title: "Excel",
+    //         tag: "Data",
+    //         duration: "2.4 Weeks",
+    //         content: "Learn advanced Excel functions, pivot tables, data analysis, and visualization techniques essential for data science.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "SQL",
+    //         tag: "Database",
+    //         duration: "2.8 Weeks",
+    //         content: "Master database querying, data manipulation, joins, subqueries, and database design principles.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "POWER BI",
+    //         tag: "Data Visualization",
+    //         duration: "3.2 Weeks",
+    //         content: "Create interactive dashboards, reports, and visualizations using Power BI's comprehensive suite of tools.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "Tableau",
+    //         tag: "Data Visualization",
+    //         duration: "2.2 Weeks",
+    //         content: "Design interactive data visualizations, dashboards, and stories to communicate insights effectively.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "Python",
+    //         tag: "Backend",
+    //         duration: "3.8 Weeks",
+    //         content: "Learn Python programming fundamentals with focus on data manipulation, control structures, and functions.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "NumPy and Statistical Analysis",
+    //         tag: "NumPy",
+    //         duration: "2.4 Weeks",
+    //         content: "Master numerical computing with NumPy arrays and perform statistical analysis on datasets.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "Applied Data Analysis with Python",
+    //         tag: "Data Analysis",
+    //         duration: "2.4 Weeks",
+    //         content: "Apply Python for real-world data analysis scenarios, including data cleaning, transformation, and exploratory analysis.",
+    //         icon: "./images/excel.jpeg",
+    //         coursePoints: ["Basic", "Intermediate", "Advanced"]
+    //     },
+    //     {
+    //         title: "Artificial Intelligence",
+    //         tag: "AI",
+    //         duration: "4.8 Weeks",
+    //         content: "Learn supervised and unsupervised learning algorithms, model evaluation, and implementation with scikit-learn.",
+    //         icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_zySmDbLOkdsrzURqDl_Z_psgTM7MgAUUsw&s",
+    //         coursePoints: [
+    //             "Introduction to AI",
+    //             "Introduction to DL",
+    //             "Artificial Neural Network Deep Dive",
+    //             "Computer Vision",
+    //             "Computer Vision with OpenCV",
+    //             "Convolution Neural Network",
+    //             "Natural Language Processing",
+    //             "Recurrent Neural Network",
+    //             "Building Chatbot",
+    //             "Introduction to Time Series Analysis",
+    //             "Weather Forecasting using ARIMA Model",
+    //             "Sentiment Analysis on Amazon Reviews"
+    //         ]
+    //     },
+    // ];
 
     return (
         <div className="flex flex-col lg:flex-row bg-slate-800 min-h-screen text-white p-4 sm:p-6 lg:p-8">
@@ -454,7 +472,7 @@ export function DataScienceCurriculum({ courseCurriculumInfo }) {
 }
 // 1.80+
 
-export const CertificationTabs = ({ certifications }) => {
+export const CertificationTabs = ({ certifications = [] }) => {
     const [activeTab, setActiveTab] = useState(0);
     return (
         <div className="w-full p-6 bg-white rounded-lg shadow-lg">
@@ -534,63 +552,12 @@ export function CarouselSize() {
 
 
 
-export function PricingBoxes() {
+export function PricingBoxes({ plans = [] }) {
     const [billingPeriod, setBillingPeriod] = useState('monthly');
 
     const toggleBillingPeriod = () => {
         setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly');
     };
-
-    const plans = [
-        // {
-        //     name: 'Basic',
-        //     monthlyPrice: '$9',
-        //     yearlyPrice: '$90',
-        //     description: 'Perfect for individuals and small projects',
-        //     features: [
-        //         '1 user',
-        //         '5 projects',
-        //         '5GB storage',
-        //         'Basic support',
-        //         'Access to core features'
-        //     ],
-        //     buttonText: 'Get Started',
-        //     featured: false
-        // },
-        {
-            name: 'Program Fees',
-            monthlyPrice: '₹3334',
-            yearlyPrice: '₹85,000',
-            description: 'Only',
-            features: [
-                '5 users',
-                'Unlimited projects',
-                '50GB storage',
-                'Priority support',
-                'Advanced analytics',
-                'All core features'
-            ],
-            buttonText: 'Join Now This Golden Opportunity',
-            featured: true
-        },
-        // {
-        //     name: 'Enterprise',
-        //     monthlyPrice: '$99',
-        //     yearlyPrice: '$990',
-        //     description: 'For large organizations with complex needs',
-        //     features: [
-        //         'Unlimited users',
-        //         'Unlimited projects',
-        //         'Unlimited storage',
-        //         '24/7 dedicated support',
-        //         'Custom integrations',
-        //         'Advanced security',
-        //         'All features included'
-        //     ],
-        //     buttonText: 'Contact Sales',
-        //     featured: false
-        // }
-    ];
 
     return (
         <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
