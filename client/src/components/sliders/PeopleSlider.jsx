@@ -1,6 +1,5 @@
-import React from 'react';
+
 // Import Swiper React components
-import { Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
@@ -10,6 +9,7 @@ import 'swiper/css/pagination';
 import '../../App.css';
 
 // import required modules
+import React, { useState } from 'react';
 import { FreeMode } from 'swiper/modules';
 
 export default function Peopleslider() {
@@ -93,31 +93,82 @@ export default function Peopleslider() {
     );
 }
 
-export function PlacementSlider() {
+// Mock Swiper component and modules for demonstration
+const SwiperSlider = ({ children }) => {
     return (
-        <>
-            <Swiper
-                scrollbar={{
-                    hide: true,
-                }}
-                modules={[Scrollbar]}
-                className="mySwiper"
-            >
-                {
-                    [
-                        "./images/placementImages/placement1.jpg",
-                        "./images/placementImages/placement2.jpg",
-                        "./images/placementImages/placement3.jpg",
-                    ].map(image => (
-                        <SwiperSlide>
-                            <img src={image} alt="" />
-                        </SwiperSlide>
+        <div className="swiper-slide rounded-lg shadow-md mx-2">
+            {children}
+        </div>
+    );
+};
 
-                    ))
-                }
-            </Swiper>
-        </>
+export function PlacementSlider() {
+    const images = [
+        "./images/placementImages/placement1.jpg",
+        "./images/placementImages/placement2.jpg",
+        "./images/placementImages/placement3.jpg",
+        "./images/placementImages/placement4.jpg",
+        "./images/placementImages/placement5.jpg",
+        "./images/placementImages/placement6.jpg",
+        "./images/placementImages/placement7.jpg",
+        "./images/placementImages/placement8.jpg",
+        "./images/placementImages/placement9.jpg",
+    ];
+
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - e.currentTarget.offsetLeft);
+        setScrollLeft(e.currentTarget.scrollLeft);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - e.currentTarget.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        e.currentTarget.scrollLeft = scrollLeft - walk;
+    };
+
+    return (
+        <div className="w-full max-w-6xl mx-auto my-30 px-4">
+            <h2 className="text-2xl font-bold mb-4 text-center">Placement</h2>
+            <div
+                className="placementslider overflow-x-auto pb-4 pt-2 flex items-center cursor-grab active:cursor-grabbing"
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+                style={{ scrollBehavior: 'smooth', scrollbarWidth: 'thin' }}
+            >
+                <div className="swiper-wrappe flex w-96">
+                    {images.map((image, index) => (
+                        <SwiperSlider key={index} className="border border-yellow-700 w-20">
+                            <div className="h-full w-full relative">
+                                <img
+                                    src={image}
+                                    alt={`Placement ${index + 1}`}
+                                    className="h-full w-full object-cover"
+                                />
+                            </div>
+                        </SwiperSlider>
+                    ))}
+                </div>
+            </div>
+            <div className="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div className="scrollbar-indicator h-full bg-gray-400 rounded-full w-1/3"></div>
+            </div>
+        </div>
     );
 }
-
-

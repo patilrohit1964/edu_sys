@@ -24,6 +24,15 @@ const Placement = () => {
       <section>
         <PlacementSlider />
       </section>
+      <div>
+        <HiringCompanies />
+      </div>
+      <div className='flex items-center justify-center my-20'>
+        <img src="./images/placement3.svg" alt="" />
+      </div>
+      <div>
+        form
+      </div>
     </div >
   )
 }
